@@ -1,15 +1,23 @@
 {
-  "name": "desafioentregablequince",
+  "name": "tercerentregafinal",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "0x main.js",
-    "test": "node main.js"
+    "start": "npx nodemon main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SantiagoDiDeo/desafios-backend.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SantiagoDiDeo/desafios-backend/issues"
+  },
+  "homepage": "https://github.com/SantiagoDiDeo/desafios-backend#readme",
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
     "autocannon": "^7.10.0",
@@ -21,11 +29,11 @@
     "connect-mongodb-session": "^3.1.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "express-handlebars": "^7.0.2",
+    "express-handlebars": "^7.0.4",
     "express-session": "^1.17.3",
     "handlebars": "^4.7.7",
     "log4js": "^6.9.1",
-    "mongoose": "^7.0.2",
+    "mongoose": "^7.0.3",
     "normalizr": "^3.6.2",
     "passport": "^0.6.0",
     "passport-local": "^1.0.0",

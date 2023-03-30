@@ -18,14 +18,14 @@ const benchmark = () => {
     
         outputStream.on('data', data => buf.push(data));
         inst.on('done', () => {
-            process.stdout.write(Buffer.concat(buf))
+            process.stdout.write(Buffer.concat(buf));
         })
     
     };
 
-    logger.info('running benchmarks..')
+    logger.info('running benchmarks..');
 
-    run('http://localhost:8081/info')
+    run('http://localhost:8081/info');
 
 };
 

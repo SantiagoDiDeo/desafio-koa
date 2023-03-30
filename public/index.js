@@ -1,3 +1,5 @@
+const logger = require("../logger/logger");
+
 const socket = io.connect();
 
 const myButton = document.getElementById('myButton');
@@ -6,32 +8,32 @@ myButton.addEventListener('click', async () => {
     window.location.href = '/logout';
     return;
   } catch (error) {
-    console.log(Error('error'))
-  }
+    logger.error(Error('error'))
+  };
 
 });
 
 socket.on('connect', () => {
-    console.log('connected')
+    logger.info('connected');
 });
 
 //agregar nuevo producto
-const formulario = document.getElementById('form')
+const formulario = document.getElementById('form');
 
 const formAddE = async () => {
 
     let formulario = await formulario.addEventListener('submit',  e => {
-        e.preventDefault()
+        e.preventDefault();
         const product = {
             "title": title.value,
             "price": price.value,
             "thumbnail": thumbnail.value
-        }
-         socket.emit('newProduct', product)
+        };
+         socket.emit('newProduct', product);
         
-        })
+        });
 
-}
+};
 
 
 
@@ -60,10 +62,10 @@ socket.on('products',  (data) => {
           <td><img src=${element.thumbnail} style="max-width: 50px; height: auto;"</td>
         </tr>` 
     
-    })
+    });
     htmlToRender = htmlToRender + '</tbody></table>';
     document.getElementById('tableProducts').innerHTML = htmlToRender;
-})
+});
 
 
 
@@ -81,21 +83,21 @@ socket.on('chat', async (data) => {
             <th><h1 class='date'>${element.date}</h1></th>
         </tr>
         `
-    })
+    });
 
     document.getElementById('message').innerHTML = htmlToRender;
-    })
+    });
     
 
 function validateEmail(email) {
     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
     if(email.match(mailformat)) {
-      return true
+      return true;
     } else {
       alert("You have entered an invalid email address!");
-      return false
-    }
-  }
+      return false;
+    };
+  };
   
   
   const addMessage = async (addMessage) => {
@@ -110,13 +112,13 @@ function validateEmail(email) {
         avatar: userAvatar.value
       },
       text: userMensaje.value
-    }
+    };
     
     userMensaje.value = '';
 
 
 if(validateEmail(email.value)) {
 
-   await socket.emit('newMessage', messageToAdd)
-}
-}
+   await socket.emit('newMessage', messageToAdd);
+  };
+};

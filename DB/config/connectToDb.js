@@ -1,9 +1,9 @@
 const express = require('express');
 const session = require('express-session');
-const { options } = require('yargs');
 const  {mongoUrl}  = require('../../enviroments/enviroment');
 const app = express();
 const MongoStore = require('connect-mongo');
+const logger = require('../../logger/logger');
 
 
 let isConnected;
@@ -21,12 +21,12 @@ const connectToDb = async () => {
       }));
     
           isConected = true;
-          console.log('MongoAtlasDB Connected');
+          logger.info('MongoAtlasDB Connected');
            
     return;
   } else {
     
-    console.log("Conexion existente")
+    logger.info("Conexion existente");
     return;
   };
 };

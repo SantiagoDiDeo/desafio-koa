@@ -1,3 +1,0 @@
-compression:
-bytes devueltos sin compression: 179B
-bytes desvueltos con compression: 708B

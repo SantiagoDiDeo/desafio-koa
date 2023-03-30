@@ -4,7 +4,7 @@ const app = express();
 const httpServer = require('http').createServer(app);
 const io = require('socket.io')(httpServer, {cors: {origin: "*"}});
 const session = require('express-session');
-const process = require('process')
+const process = require('process');
 const { PORT }  = require('./enviroments/enviroment');
 const prodRouter = require('./routes/prodRouter');
 const {products} = require('./class/prodClass');
@@ -24,8 +24,8 @@ app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: true }));
 app.use('/public', express.static(__dirname + '/public'));
 app.use(session({connectToDb, secret: 'secreto1', resave: true, saveUninitialized: true}));
-app.use(passport.initialize())
-app.use(passport.session())
+app.use(passport.initialize());
+app.use(passport.session());
 
 httpServer.on('error', (error) => {
   logger.error('ocurrio un error: ', error);
@@ -57,7 +57,7 @@ app.get('/', async (req, res) => {
   
     }
     res.send(JSON.stringify({datos, },null,2))
-    logger.info(`Ruta: /info, metodo: ${req.method}`)
+    // logger.info(`Ruta: /info, metodo: ${req.method}`)
   })
 
   app.get('/api/randoms', (req, res) => {
@@ -79,7 +79,7 @@ app.get('/', async (req, res) => {
   
 //socket
 io.on('connection', async socket => {
-  console.log(`New connection id: ${socket.id}`);
+  logger.info(`New connection id: ${socket.id}`);
 
 //tabla productos
   socket.emit('products', await products.getArray())
@@ -108,7 +108,7 @@ io.on('connection', async socket => {
 
 
 
-app.use('/api', prodRouter)
+app.use('/api', prodRouter);
 
 let mode = 'FORK';
 
@@ -117,8 +117,8 @@ if (process.argv.length > 2) {
   const procArgv = process.argv[2].toUpperCase();
   if (procArgv === 'CLUSTER') {
     mode = 'CLUSTER';
-  }
-}
+  };
+};
 
 if (mode === 'CLUSTER') {
   if (cluster.isPrimary) {
@@ -128,21 +128,21 @@ if (mode === 'CLUSTER') {
       cluster.fork();
     }
     cluster.on('exit', (worker, code, signal) => {
-      console.log(`PRocess ${worker.process.pid} died`);
+      logger.info(`Process ${worker.process.pid} died`);
       cluster.fork();
     });
   } else {
     
     httpServer.listen(PORT, () => {
-      console.log(`Servidor en modo cluster corriendo en el proceso ${process.pid}`);
+      logger.info(`Servidor en modo cluster corriendo en el proceso ${process.pid}`);
     });
   }
 } else {
 
   httpServer.listen(PORT, () => {
     benchmark();
-    console.log(`Servidor en modo fork corriendo en el proceso ${process.pid}`);
+    logger.info(`Servidor en modo fork corriendo en el proceso ${process.pid}`);
   });
-}
+};
 
 
