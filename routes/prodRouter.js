@@ -11,12 +11,12 @@ require('../DB/config/auth');
 const prodRouter = Router();
 const { fork } = require('child_process');
 const logger = require('../logger/logger');
-
+const users = require('../class/userClass');
 
 prodRouter.use(passport.initialize());
 prodRouter.use(passport.session());
 
-let users = [];
+
 
 
 

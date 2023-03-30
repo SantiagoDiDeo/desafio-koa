@@ -3,13 +3,14 @@ const {userSchema} = require('../DB/model/modelMongo');
 const bcrypt = require('bcrypt');
 const logger = require('../logger/logger');
 
+
 class Container {
     contructor(schema) {
         this.schema = schema;
     };
 };
 
-async addUser(obj) {
+async function createUser(obj) {
     try {
         const encriptedPass = bcrypt.hashSync(obj.password)
         await connectToDb();
@@ -22,12 +23,26 @@ async addUser(obj) {
             phoneNumber: obj.phoneNumber,
             avatar: obj.avatar,
             cart: []
-        })
-        await newUser.save()
+        });
+        await newUser.push()
         .then(user => logger.info(`usuario agregado. ${user._id}`))
         .catch(err => logger.error(` error al agregar usuario ${err} `))
         return true;
     } catch (error) {
-        logger.error(`error: ${error}`)
-    }
-}
+        logger.error(`error: ${error}`);
+    };
+};
+
+async function  getUser( username ) {
+    try {
+      await connectToDd();
+      const userInDb = await this.schema.find({username: username});
+      return userInDb ? userInDb : null;
+    } catch {
+      logger.error(`Error: ${err}`);
+    };
+  };
+
+  const users = new Container(userSchema);
+
+  module.exports = {users};
