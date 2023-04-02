@@ -110,6 +110,8 @@ io.on('connection', async socket => {
 
 app.use('/api', prodRouter);
 
+/* cluster | server on */
+
 let mode = 'FORK';
 
 if (process.argv.length > 2) {
