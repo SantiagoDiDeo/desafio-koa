@@ -6,18 +6,16 @@ const io = require('socket.io')(httpServer, {cors: {origin: "*"}});
 const session = require('express-session');
 const process = require('process');
 const { PORT }  = require('./enviroments/enviroment');
-const prodRouter = require('./routes/prodRouter');
 const {products} = require('./class/prodClass');
 const { chats} = require('./class/chatClass');
 const connectToDb = require('./DB/config/connectToDb');
 const passport = require('passport')
-const { fork } = require('child_process');
 const cluster = require('cluster');
-const compression = require('compression');
 const logger = require('./logger/logger');
-const numCPUs = require('os').cpus().length;
-const randomNumbers = require('./routes/child/randoms');
 const benchmark = require('./autocannon/autocannon');
+const prodRouter = require('./routes/prodRouter');
+const sessRouter = require('./routes/sessionRouter');
+const infoRouter = require('./routes/infoRouter');
 
 app.use(express.json());
 app.use(express.static(__dirname + '/public'));
@@ -26,6 +24,8 @@ app.use('/public', express.static(__dirname + '/public'));
 app.use(session({connectToDb, secret: 'secreto1', resave: true, saveUninitialized: true}));
 app.use(passport.initialize());
 app.use(passport.session());
+
+
 
 httpServer.on('error', (error) => {
   logger.error('ocurrio un error: ', error);
@@ -42,40 +42,7 @@ app.engine("handlebars", engine({
 }));
 
 
-app.get('/', async (req, res) => {
-    res.render('form', {product: products, productExist: true});
-  });
 
-  app.get('/info', compression(), (req, res) => {
-    const datos = {
-      'carpeta de proyecto': process.cwd(),
-      'plataforma': process.platform,
-      'version de node': process.version,
-      'memoria reservada': process.memoryUsage().heapTotal,
-      'process id': process.pid,
-      'numero de procesadores' : numCPUs,
-  
-    }
-    res.send(JSON.stringify({datos, },null,2))
-    // logger.info(`Ruta: /info, metodo: ${req.method}`)
-  })
-
-  app.get('/api/randoms', (req, res) => {
-    const cant = req.query.cant || 100000000;
-    
-      const results = {};
-      for (let i = 0; i < cant; i++) {
-        const num = Math.floor(Math.random() * 1000) + 1;
-        results[num] = (results[num] || 0) + 1;
-      }
-      
-    
-   res.json(JSON.stringify(results, null, 2));
-    
-    logger.info(`Ruta: /api/randoms, metodo: ${req.method}, data: ${JSON.stringify(results)}`)
-    
-  });
-  
   
 //socket
 io.on('connection', async socket => {
@@ -101,14 +68,11 @@ io.on('connection', async socket => {
     io.sockets.emit('chat', await chats.getArray())
   });
   
-  
+});
 
-
-})
-
-
-
+app.use('/session', sessRouter);
 app.use('/api', prodRouter);
+app.use('/info', infoRouter);
 
 /* cluster | server on */
 
