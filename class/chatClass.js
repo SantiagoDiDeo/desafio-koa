@@ -19,6 +19,7 @@ class Container {
       logger.info(messagesInDb);
     } catch(err) {
       logger.error();(`Error: ${err}`);
+      console.log(`ERRORRRR ${err}`);
     };
   };
  
@@ -33,6 +34,7 @@ class Container {
       return
     } catch(err) {
       logger.error(`Error: ${err}`);
+      console.log(`ERRORRRR ${err}`);
     };
   };
 

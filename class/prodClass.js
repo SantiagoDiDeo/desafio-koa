@@ -19,6 +19,7 @@ class Container {
       return documentsInDb;
     } catch(err) {
       logger.error(`Error: ${err}`);
+      console.log(`ERRORRRR ${err}`);
     };
   };
  
@@ -32,6 +33,7 @@ class Container {
 
     } catch(err) {
       logger.error(`Error: ${err}`);
+      console.log(`ERRORRRR ${err}`);
     };
   };
 
@@ -44,6 +46,7 @@ class Container {
       await this.schema.deleteMany();
       return ;
     } catch(err) {
+      console.log(`ERRORRRR ${err}`);
       logger.error(`Error: ${err}`);
       return false;
     };
@@ -60,6 +63,7 @@ class Container {
       return;
     } catch(err) {
       logger.error(`Error: ${err}`);
+      console.log(`ERRORRRR ${err}`);
     };
   };
 

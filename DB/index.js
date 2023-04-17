@@ -8,6 +8,7 @@ const executeOperations = async () => {
        await createTableMaria();
     } catch (err) {
         logger.error(new Error(err));
+        console.log(`ERRORRRR ${err}`);
     } finally {
         mariaDb.destroy();
     };

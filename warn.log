@@ -15,3 +15,28 @@
   address: '::',
   port: 8080
 }
+[2023-04-15T11:33:27.592] [ERROR] default - ocurrio un error:  Error: listen EACCES: permission denied main.js
+    at Server.setupListenHandle [as _listen2] (node:net:1355:21)
+    at listenInCluster (node:net:1420:12)
+    at Server.listen (node:net:1519:5)
+    at Object.<anonymous> (C:\Users\Santi\Dropbox\Mi PC (DESKTOP-FUL7H7I)\Documents\Personal\Coder-house\backend\desafios\desafiosEntregables2\desafioEntregableDieciseis\main.js:108:14)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47 {
+  code: 'EACCES',
+  errno: -4092,
+  syscall: 'listen',
+  address: 'main.js',
+  port: -1
+}
+[2023-04-17T18:43:07.057] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T18:48:18.070] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T18:52:53.921] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T18:58:17.989] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T19:03:14.602] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T19:04:02.108] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T19:06:01.847] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T19:10:51.708] [ERROR] default - Error: Error: Cannot init client. Please provide correct options

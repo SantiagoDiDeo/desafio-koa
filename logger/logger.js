@@ -6,7 +6,7 @@ log4js.configure({
     infoFile: {type: 'file', filename: 'info.log'},
     warnFile: { type: 'file', filename: 'warn.log' },
     errorFile: { type: 'file' , filename: 'error.log' },
-    consoleLogger: { type: 'logLevelFilter', appender: 'console', level: 'info' },
+    consoleLogger: { type: 'logLevelFilter', appender: 'infoFile', level: 'info' },
     warnFileLogger: { type: 'logLevelFilter', appender: 'warnFile', level: 'warn' },
     errorFileLogger: { type: 'logLevelFilter', appender: 'errorFile', level: 'error' }
   }, 

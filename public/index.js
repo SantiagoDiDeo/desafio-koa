@@ -7,8 +7,9 @@ myButton.addEventListener('click', async () => {
   try {
     window.location.href = '/logout';
     return;
-  } catch (error) {
-    logger.error(Error('error'))
+  } catch (err) {
+    logger.error(Error('err'))
+    console.log(`ERRORRRR ${err}`);
   };
 
 });

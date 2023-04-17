@@ -1,0 +1,63 @@
+[2023-04-13T18:55:21.951] [INFO] default - running benchmarks..
+[2023-04-13T18:55:22.012] [INFO] default - Servidor en modo fork corriendo en el proceso 6760
+[2023-04-13T18:56:01.756] [INFO] default - running benchmarks..
+[2023-04-13T18:56:01.880] [INFO] default - Servidor en modo fork corriendo en el proceso 41232
+[2023-04-13T18:56:14.784] [INFO] default - running benchmarks..
+[2023-04-13T18:56:14.843] [INFO] default - Servidor en modo fork corriendo en el proceso 30944 en puerto 8081
+[2023-04-13T18:57:42.271] [INFO] default - Servidor en modo fork corriendo en el proceso 34532 en puerto 8081
+[2023-04-13T18:58:36.544] [INFO] default - Servidor en modo fork corriendo en el proceso 41428 en puerto 8081
+[2023-04-15T10:50:53.091] [INFO] default - Servidor en modo fork corriendo en el proceso 43116 en puerto 8081
+[2023-04-15T10:56:06.939] [INFO] default - Servidor en modo fork corriendo en el proceso 26856 en puerto 8081
+[2023-04-15T11:29:56.439] [INFO] default - Servidor en modo fork corriendo en el proceso 40824 en puerto 8081
+[2023-04-15T11:33:27.592] [ERROR] default - ocurrio un error:  Error: listen EACCES: permission denied main.js
+    at Server.setupListenHandle [as _listen2] (node:net:1355:21)
+    at listenInCluster (node:net:1420:12)
+    at Server.listen (node:net:1519:5)
+    at Object.<anonymous> (C:\Users\Santi\Dropbox\Mi PC (DESKTOP-FUL7H7I)\Documents\Personal\Coder-house\backend\desafios\desafiosEntregables2\desafioEntregableDieciseis\main.js:108:14)
+    at Module._compile (node:internal/modules/cjs/loader:1105:14)
+    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1159:10)
+    at Module.load (node:internal/modules/cjs/loader:981:32)
+    at Function.Module._load (node:internal/modules/cjs/loader:822:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12)
+    at node:internal/main/run_main_module:17:47 {
+  code: 'EACCES',
+  errno: -4092,
+  syscall: 'listen',
+  address: 'main.js',
+  port: -1
+}
+[2023-04-17T17:59:21.257] [INFO] default - Servidor en modo fork corriendo en el proceso 48088 en puerto 8081
+[2023-04-17T18:03:51.230] [INFO] default - Servidor en modo fork corriendo en el proceso 47184 en puerto 8081
+[2023-04-17T18:20:41.779] [INFO] default - Servidor en modo fork corriendo en el proceso 47808 en puerto 8081
+[2023-04-17T18:21:24.684] [INFO] default - Servidor en modo fork corriendo en el proceso 29612 en puerto 8081
+[2023-04-17T18:22:29.543] [INFO] default - Servidor en modo fork corriendo en el proceso 31636 en puerto 8081
+[2023-04-17T18:23:09.805] [INFO] default - Servidor en modo fork corriendo en el proceso 42664 en puerto 8081
+[2023-04-17T18:29:50.043] [INFO] default - Servidor en modo fork corriendo en el proceso 33192 en puerto 8081
+[2023-04-17T18:32:15.168] [INFO] default - Servidor en modo fork corriendo en el proceso 40912 en puerto 8080
+[2023-04-17T18:34:25.928] [INFO] default - Servidor en modo fork corriendo en el proceso 47636 en puerto 8080
+[2023-04-17T18:35:22.448] [INFO] default - Servidor en modo fork corriendo en el proceso 7900 en puerto 8080
+[2023-04-17T18:35:37.545] [INFO] default - Servidor en modo fork corriendo en el proceso 46072 en puerto 8080
+[2023-04-17T18:35:57.276] [INFO] default - Servidor en modo fork corriendo en el proceso 46068 en puerto 8080
+[2023-04-17T18:36:32.445] [INFO] default - Servidor en modo fork corriendo en el proceso 31708 en puerto 8080
+[2023-04-17T18:36:56.449] [INFO] default - Servidor en modo fork corriendo en el proceso 46516 en puerto 8080
+[2023-04-17T18:39:47.291] [INFO] default - Servidor en modo fork corriendo en el proceso 41952 en puerto 8080
+[2023-04-17T18:42:51.004] [INFO] default - Servidor en modo fork corriendo en el proceso 25656 en puerto 8080
+[2023-04-17T18:43:07.057] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T18:44:54.023] [INFO] default - Servidor en modo fork corriendo en el proceso 42872 en puerto 8080
+[2023-04-17T18:47:07.098] [INFO] default - Servidor en modo fork corriendo en el proceso 41736 en puerto 8080
+[2023-04-17T18:47:50.969] [INFO] default - Servidor en modo fork corriendo en el proceso 46344 en puerto 8080
+[2023-04-17T18:48:18.070] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T18:50:14.378] [INFO] default - Servidor en modo fork corriendo en el proceso 41544 en puerto 8080
+[2023-04-17T18:50:54.093] [INFO] default - Servidor en modo fork corriendo en el proceso 29176 en puerto 8080
+[2023-04-17T18:52:03.152] [INFO] default - Servidor en modo fork corriendo en el proceso 46652 en puerto 8080
+[2023-04-17T18:52:53.921] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T18:57:38.440] [INFO] default - Servidor en modo fork corriendo en el proceso 47340 en puerto 8080
+[2023-04-17T18:58:17.989] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T19:02:44.681] [INFO] default - Servidor en modo fork corriendo en el proceso 47696 en puerto 8080
+[2023-04-17T19:03:14.602] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T19:03:45.564] [INFO] default - Servidor en modo fork corriendo en el proceso 28028 en puerto 8080
+[2023-04-17T19:04:02.108] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T19:05:48.592] [INFO] default - Servidor en modo fork corriendo en el proceso 47988 en puerto 8080
+[2023-04-17T19:06:01.847] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T19:08:56.021] [INFO] default - Servidor en modo fork corriendo en el proceso 46452 en puerto 8080
+[2023-04-17T19:10:51.708] [ERROR] default - Error: Error: Cannot init client. Please provide correct options

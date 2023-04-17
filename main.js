@@ -28,7 +28,8 @@ app.use(passport.session());
 
 
 httpServer.on('error', (error) => {
-  logger.error('ocurrio un error: ', error);
+  logger.error('ocurrio un error: ', error)
+  console.log(`ERRORRRR ${error}`);
 });
 
 //HANDLEBARS
@@ -106,8 +107,9 @@ if (mode === 'CLUSTER') {
 } else {
 
   httpServer.listen(PORT, () => {
-    benchmark();
-    logger.info(`Servidor en modo fork corriendo en el proceso ${process.pid}`);
+    //benchmark();
+    console.log(` (${Date()}) Servidor en modo fork corriendo en el proceso ${process.pid} en puerto ${PORT}`)
+    logger.info(`Servidor en modo fork corriendo en el proceso ${process.pid} en puerto ${PORT}`);
   });
 };
 
