@@ -23,3 +23,7 @@
 [2023-04-17T19:04:02.108] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
 [2023-04-17T19:06:01.847] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
 [2023-04-17T19:10:51.708] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T20:01:13.027] [ERROR] default - Error: MongooseError: Operation `products.find()` buffering timed out after 10000ms
+[2023-04-17T20:03:59.759] [ERROR] default - Error: MongooseError: Operation `products.find()` buffering timed out after 10000ms
+[2023-04-17T20:05:11.655] [ERROR] default - Error: CastError: Cast to ObjectId failed for value "session" (type string) at path "_id" for model "Product"
+[2023-04-17T20:12:42.074] [ERROR] default - Error: CastError: Cast to ObjectId failed for value "productos-test" (type string) at path "_id" for model "Product"

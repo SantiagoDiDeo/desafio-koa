@@ -30,7 +30,7 @@ const userSchema = new Schema({
   age: { type: Number, required: true },
   address: { type: String, required: true },
   avatar: { type: String, required: true },
-  cart: { type: Array, required: true }
+  cart: {type: Array, required: true }
 });
 
 const messageSchema = new Schema({
@@ -49,7 +49,8 @@ const chatSchema = new Schema({
 const productModel = model('Product', productSchema);
 const cartModel = model('Cart', cartSchema);
 const chatModel = model('Chat', chatSchema);
+const userModel = model('User', userSchema);
 
 
 
-module.exports = { productModel, cartModel, chatModel, userSchema };
+module.exports = { productModel, cartModel, chatModel, userModel };

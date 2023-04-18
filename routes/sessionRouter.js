@@ -28,6 +28,10 @@ const upload = multer.diskStorage({
 
   /* signup y login */
 
+  sessRouter.get('/', async (req, res) => {
+    res.render('form', {user: users, productExist: true});
+  });
+
 sessRouter.post('/signup', 
 passport.authenticate('signup', {failureMessage: 'fallo el registro', failureRedirect: '/'}),
  (req, res) => {

@@ -1,4 +1,4 @@
-const express = require( 'express' );
+const express = require('express');
 const { engine } = require('express-handlebars');
 const app = express();
 const httpServer = require('http').createServer(app);

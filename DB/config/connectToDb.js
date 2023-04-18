@@ -1,12 +1,12 @@
 const express = require('express');
 const session = require('express-session');
-const  {mongoUrl}  = require('../../enviroments/enviroment');
 const app = express();
 const MongoStore = require('connect-mongo');
+const  { mongoUrl }  = require('../../enviroments/enviroment');
 const logger = require('../../logger/logger');
 
 
-let isConnected;
+let isConnected = undefined;
 
 const connectToDb = async () => {
   if(!isConnected) {
@@ -18,9 +18,10 @@ const connectToDb = async () => {
         resave: true,
         collection: 'sessions',
         saveUninitialized: true,
+        
       }));
     
-          isConected = true;
+          isConnected = true;
           logger.info('MongoAtlasDB Connected');
            
     return;

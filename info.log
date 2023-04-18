@@ -61,3 +61,17 @@
 [2023-04-17T19:06:01.847] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
 [2023-04-17T19:08:56.021] [INFO] default - Servidor en modo fork corriendo en el proceso 46452 en puerto 8080
 [2023-04-17T19:10:51.708] [ERROR] default - Error: Error: Cannot init client. Please provide correct options
+[2023-04-17T19:59:55.799] [INFO] default - Servidor en modo fork corriendo en el proceso 10168 en puerto 8080
+[2023-04-17T20:01:03.010] [INFO] default - MongoAtlasDB Connected
+[2023-04-17T20:01:13.027] [ERROR] default - Error: MongooseError: Operation `products.find()` buffering timed out after 10000ms
+[2023-04-17T20:02:50.941] [INFO] default - Servidor en modo fork corriendo en el proceso 45352 en puerto 8080
+[2023-04-17T20:03:49.738] [INFO] default - MongoAtlasDB Connected
+[2023-04-17T20:03:59.759] [ERROR] default - Error: MongooseError: Operation `products.find()` buffering timed out after 10000ms
+[2023-04-17T20:04:59.974] [INFO] default - Servidor en modo fork corriendo en el proceso 44264 en puerto 8080
+[2023-04-17T20:05:11.640] [INFO] default - MongoAtlasDB Connected
+[2023-04-17T20:05:11.655] [ERROR] default - Error: CastError: Cast to ObjectId failed for value "session" (type string) at path "_id" for model "Product"
+[2023-04-17T20:12:42.027] [INFO] default - MongoAtlasDB Connected
+[2023-04-17T20:12:42.074] [ERROR] default - Error: CastError: Cast to ObjectId failed for value "productos-test" (type string) at path "_id" for model "Product"
+[2023-04-17T20:14:56.540] [INFO] default - Servidor en modo fork corriendo en el proceso 46184 en puerto 8080
+[2023-04-17T20:16:47.958] [INFO] default - Servidor en modo fork corriendo en el proceso 23952 en puerto 8080
+[2023-04-17T20:17:23.631] [INFO] default - MongoAtlasDB Connected

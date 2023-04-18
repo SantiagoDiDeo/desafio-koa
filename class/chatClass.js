@@ -15,15 +15,15 @@ class Container {
       await connectToDb();
       const messagesInDb = await this.schema.findOne ( { chatid: 'chat1'},
         { projection: { messages: 1, _id: 0 }} );
-      return normalizedData( messagesInDb );
       logger.info(messagesInDb);
+      return normalizedData( messagesInDb );
     } catch(err) {
-      logger.error();(`Error: ${err}`);
-      console.log(`ERRORRRR ${err}`);
+        logger.error();(`Error: ${err}`);
+        console.log(`ERRORRRR ${err}`);
     };
   };
  
-
+s
   async add( message ) {
     try{
       await connectToDb();
