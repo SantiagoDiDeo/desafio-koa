@@ -1,5 +1,6 @@
 # **Backend Coderhouse** #
 
+<<<<<<< HEAD
 
 Estructura del proyecto:
 
@@ -553,3 +554,5 @@ Hacer que Usuario cuente con los siguientes métodos:
 - getBookNames(): String[]. Retorna un array con sólo los nombres del array de libros del usuario.
 
 Crear un objeto llamado usuario con valores arbitrarios e invocar todos sus métodos.
+=======
+>>>>>>> 5549b2e73f0054aa7ca91a559dc80b48aa5ab8a5
