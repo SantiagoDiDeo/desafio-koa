@@ -23,7 +23,7 @@ class Container {
     };
   };
  
-s
+
   async add( message ) {
     try{
       await connectToDb();
