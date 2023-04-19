@@ -22,8 +22,8 @@ class Container {
     return true;
   };
 
-  async getUser(username) {
-    const userInDb = this.users.find(user => user.username === username);
+  async getUser(username, password) {
+    const userInDb = this.users.find(user => user.username === username && user.password === password);
     if (userInDb) {
       return userInDb;
     } else {

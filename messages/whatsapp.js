@@ -1,5 +1,6 @@
+const { sidAccount, authToken } = require('../enviroments/enviroment');
 const logger = require('../logger/logger');
-const client = require('twilio')(process.env.SID_ACCOUNT, process.env.AUTH_ACCOUNT);
+ const client = require('twilio')(sidAccount, authToken);
 
 
 const sendWhatsapp = async ( whatsappMsg ) => {

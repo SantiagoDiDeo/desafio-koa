@@ -1,5 +1,5 @@
 const express = require( 'express' );
-const {products} = require('../class/prodClass');
+const {addProductController, getProductsController, getProductByIdController, deleteProductController } = require('../controllers/productController');
 const { faker } = require('@faker-js/faker');
 const { mockProducts } = require('../class/mockClass');
 faker.locate = 'es';
@@ -16,14 +16,14 @@ prodRouter.use(passport.session());
 
 //get all products
 prodRouter.get('/', async ( req, res ) => {
-    const allProducts = await products.getArray();
+    const allProducts = await getProductsController();
     res.json(allProducts);
 });
 
 //get products by id
 prodRouter.get('/:id', async ( req, res ) => {
     let id = req.params.id;
-    const product = await products.getById(id);
+    const product = await getProductByIdController(id);
     product ? res.json( product )
     : res.status(404).send({ error: 'producto no encontrado'})  ;
 
@@ -32,7 +32,7 @@ prodRouter.get('/:id', async ( req, res ) => {
 //post product
 prodRouter.post('/productos', async (req, res) => {
     const productToAdd = await req.body;
-    await products.add(productToAdd);
+    await addProductController(productToAdd);
     res.redirect('/');
   });
 
@@ -43,7 +43,7 @@ prodRouter.put('/:id', async ( req, res ) => {
 
     const index = id - 1;
 
-    if(await products.adjustById( id, productToModify )){
+    if(await addProductController( id )){
         res.send({ message: 'producto modificado'});
       } else {
         res.status(404).send({ error: 'producto no encontrado'});
@@ -55,7 +55,7 @@ prodRouter.put('/:id', async ( req, res ) => {
 prodRouter.delete('/:id', async ( req, res ) => {
     const { id } = req.params;
 
-    if (await products.delById(id)) {
+    if (await deleteProductController(id)) {
         res.send({ message: 'producto borrado'});
       } else {
         res.status(404).send({ error: 'producto no encontrado'});

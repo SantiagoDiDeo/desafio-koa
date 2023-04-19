@@ -4,10 +4,8 @@ const app = express();
 const httpServer = require('http').createServer(app);
 const io = require('socket.io')(httpServer, {cors: {origin: "*"}});
 const session = require('express-session');
-const process = require('process');
+
 const { PORT }  = require('./enviroments/enviroment');
-const {products} = require('./class/prodClass');
-const { chats} = require('./class/chatClass');
 const connectToDb = require('./DB/config/connectToDb');
 const passport = require('passport')
 const cluster = require('cluster');
@@ -16,6 +14,9 @@ const benchmark = require('./autocannon/autocannon');
 const prodRouter = require('./routes/prodRouter');
 const sessRouter = require('./routes/sessionRouter');
 const infoRouter = require('./routes/infoRouter');
+const {getProductsController, addProductController} = require('./controllers/productController');
+const { getChatsController, addChatsController } = require('./controllers/chatController');
+require('dotenv').config();
 
 app.use(express.json());
 app.use(express.static(__dirname + '/public'));
@@ -50,23 +51,23 @@ io.on('connection', async socket => {
   logger.info(`New connection id: ${socket.id}`);
 
 //tabla productos
-  socket.emit('products', await products.getArray())
+  socket.emit('products', await getProductsController())
   
 
 // nuevo producto
   socket.on('newProduct', async (product) => {
-    products.add(product);
-    await io.sockets.emit('products', products)
+    addProductController(product);
+    await io.sockets.emit('products', product)
 
   });
 
   //tabla chat
-  socket.emit('chat', await chats.getArray())
+  socket.emit('chat', await getChatsController())
   
   //nuevo chat
   socket.on('newMessage', async (msg) => {
-    chats.add(msg)
-    io.sockets.emit('chat', await chats.getArray())
+    addChatsController(msg)
+    io.sockets.emit('chat', await getChatsController())
   });
   
 });

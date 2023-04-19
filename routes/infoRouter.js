@@ -1,5 +1,5 @@
 const express = require('express');
-const {products} = require('../class/prodClass');
+const {getProductController} = require('../controllers/productController');
 const {Router} = express;
 const infoRouter = Router()
 const numCPUs = require('os').cpus().length;
@@ -10,7 +10,7 @@ const compression = require('compression');
 
 
 infoRouter.get('/', async (req, res) => {
-    res.render('form', {product: products, productExist: true});
+    res.render('form', {product: getProductController, productExist: true});
   });
 
   infoRouter.get('/info', compression(), (req, res) => {
@@ -24,7 +24,7 @@ infoRouter.get('/', async (req, res) => {
   
     }
     res.send(JSON.stringify({datos, },null,2))
-    // logger.info(`Ruta: /info, metodo: ${req.method}`)
+    
   })
 
   infoRouter.get('/api/randoms', (req, res) => {

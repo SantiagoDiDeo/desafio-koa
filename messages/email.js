@@ -1,10 +1,11 @@
 const nodemailer = require('nodemailer');
+const { emailService, emailPort, emailUser } = require('../enviroments/enviroment');
 
 const transporter = nodemailer.createTransport({
-    service: process.env.EMAIL_SERVICE,
-    port: Number(process.env.EMAIL_PORT),
+    service: emailService,
+    port: Number(emailPort),
     auth: {
-        user: process.env.EMAIL_USER
+        user: emailUser,
     },
     tls: {
         rejectUnauthorized: false

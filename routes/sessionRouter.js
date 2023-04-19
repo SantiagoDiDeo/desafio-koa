@@ -5,11 +5,12 @@ require('../DB/config/auth');
 
 const { Router } = express;
 const sessRouter = Router();
-const users = require('../class/userClass');
+const {getUserController, createUserController} = require('../controllers/userController');
 const logger = require('../logger/logger');
 const { sendEmail } = require('../messages/email');
 const { sendWhatsapp } = require('../messages/whatsapp');
 const { sendSMS } = require('../messages/message');
+const { getProductsController } = require('../controllers/productController');
 
 sessRouter.use(passport.initialize());
 sessRouter.use(passport.session());
@@ -37,21 +38,20 @@ passport.authenticate('signup', {failureMessage: 'fallo el registro', failureRed
  (req, res) => {
   const {username, password, email, address, age, phoneNumber, avatar} = req.body;
 
-    const existentUser = users.getUser(user => user.username);
+    const existentUser = getUserController(username);
     if (existentUser) {
         res.status(403).send('el usuario ya existe');
         return;
-    } else {
+    } 
 
-      users.push(... users,  {username, password, email, address, age, phoneNumber, avatar});
+      createUserController(username, password, email, address, age, phoneNumber, avatar);
       
       req.session.username = username;
 
       res.send(`hola ${req.session.username}! bienvenido!! `);
       
-      //res.redirect(`./menu/${users.username}`)
 
-    };
+    
 });
 
 sessRouter.post('/login',
@@ -63,27 +63,24 @@ async (req, res) => {
 
    req.session.counter = (req.session.counter ?? 0) + 1;
 
-   const existentUser = users.find(user => user.username);
+   const existentUser = getUserController(username);
 
 if(!existentUser) {
 
   res.status(403).send('el usuario no existe');
   return;
-} else {
-  //res.redirect(`./menu/${existentUser}`)
+} 
   res.send(`hola ${req.session.username}! bienvenido!! has entrado ${req.session.counter} veces`);
-  
-};
 
 });
 
 sessRouter.get(`./menu/:username`, async (req,res) => {
   const username = req.params.username;
-    const userData = await users.getUser( username );
-    const productList = [];
+    const userData = await getUserController( username );
+    const productList = getProductsController(); 
 
     for ( const element of userData[0].cart ) {
-      const item = await products.getById( element.id )
+      const item = await userData( id )
       productList.push({ 
         title: item[0].title,
         code: item[0].code,
@@ -100,7 +97,7 @@ sessRouter.get(`./menu/:username`, async (req,res) => {
     })
 
     sendWhatsapp({
-      body: `Nuevo pedido de ${username}`,
+      body: `Nuevo pedido de ${usernme}`,
       to: userData[0].phoneNumber
     })
 
@@ -114,8 +111,6 @@ sessRouter.get(`./menu/:username`, async (req,res) => {
   );
 
  sessRouter.get('/logout', async (req,res) => {
-
-
     req.session.destroy(  () => {
       res.send(`Hasta luego ${req.session.username}`);
    });

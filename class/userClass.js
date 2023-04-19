@@ -34,10 +34,10 @@ class Container {
 
 
 
-  async getUser(username) {
+  async getUser(username, password) {
     try {
       await connectToDb();
-      const userInDb = await this.schema.find({ username: username });
+      const userInDb = await this.schema.find({ username: username, password: password });
       return userInDb ? userInDb : null;
     } catch (err) {
       logger.error(`Error: ${err}`);
