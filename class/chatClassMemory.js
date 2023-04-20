@@ -34,6 +34,6 @@ class Container {
 
 };
 
-const chatsMemory = new Container ( chatModel );
+const ChatsMemory = new Container ( chatModel );
 
-module.exports = {chatsMemory};
+module.exports = {ChatsMemory};

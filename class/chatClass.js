@@ -41,7 +41,7 @@ class Container {
 };
 
 
-const chats = new Container ( chatModel );
+const Chats = new Container ( chatModel );
 
 
-module.exports = {chats};
+module.exports = {Chats};

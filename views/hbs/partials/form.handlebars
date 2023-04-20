@@ -61,7 +61,7 @@
 			<input class='form-control' type='text' name='thumbnail' id="thumbnail" />
 		</div>
 		<div class='mb-3'>
-			<input class='btn btn-primary' type='submit' value='Guardar' />
+			<input class='btn btn-primary' id="submit" type='submit' onclick="formAddE(document.getElementById('submit'))" value='Guardar' />
 		</div>
 	</form>
 	
@@ -103,5 +103,5 @@
       </div>
 
     <input type="text" name="mensaje" id="userMensaje" placeholder="Ingrese su mensaje">
-    <button type="button" onclick="addMessage(messageForm)" id="button">Add</button>
+    <button type="button" onclick="addMessage(document.getElementById('messageForm'))" id="button">Add</button>
 </form>

@@ -46,6 +46,6 @@ class Container {
   }
 }
 
-const users = new Container;
+const Users = new Container(userModel);
 
-module.exports = { users };
+module.exports = { Users };

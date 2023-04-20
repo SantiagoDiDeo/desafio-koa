@@ -17,7 +17,8 @@ prodRouter.use(passport.session());
 //get all products
 prodRouter.get('/', async ( req, res ) => {
     const allProducts = await getProductsController();
-    res.json(allProducts);
+    res.render('form', {product: allProducts, productExist: true});
+
 });
 
 //get products by id

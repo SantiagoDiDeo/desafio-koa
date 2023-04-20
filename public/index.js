@@ -3,6 +3,14 @@ const io = require('socket.io');
 
 const socket = io.connect();
 
+const userEmail = document.getElementById('userEmail');
+const userName = document.getElementById('userName');
+const userSurname = document.getElementById('userSurname');
+const userAge = document.getElementById('userAge');
+const userNickname = document.getElementById('userNickname');
+const userAvatar = document.getElementById('userAvatar');
+const userMensaje = document.getElementById('userMensaje');
+
 const myButton = document.getElementById('logout');
 myButton.addEventListener('click',  () => {
   try {
@@ -20,7 +28,7 @@ socket.on('connect', () => {
 });
 
 //agregar nuevo producto
-const formulario = document.getElementById('form');
+let formulario = document.getElementById('form');
 
 const formAddE = async () => {
 
@@ -31,7 +39,7 @@ const formAddE = async () => {
             "price": price.value,
             "thumbnail": thumbnail.value
         };
-         socket.emit('newProduct', formAddE);
+         socket.emit('newProduct', product);
         
         });
 
@@ -91,16 +99,15 @@ socket.on('chat', async (data) => {
     });
     
 
-function validateEmail(email) {
-    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    if(email.match(mailformat)) {
-      return true;
-    } else {
-      alert("You have entered an invalid email address!");
-      return false;
+    const validateEmail = (mail) => {
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+      if (regex.test(mail)) {
+        return true; 
+      } else {
+        alert("El mail ingresado no es válido."); 
+        return false;
+      };
     };
-  };
-  
   
   const addMessage = async () => {
  
@@ -108,7 +115,7 @@ function validateEmail(email) {
       author: {
         id: userEmail.value,
         name: userName.value,
-        surname: userSurname.value,
+        usersurname: userSurname.value,
         age: userAge.value,
         nickname: userNickname.value,
         avatar: userAvatar.value
@@ -119,8 +126,8 @@ function validateEmail(email) {
     userMensaje.value = '';
 
 
-if(validateEmail(email.value)) {
+if(validateEmail(messageToAdd.author.id)) {
 
-   await socket.emit('newMessage', addMessage);
+   await socket.emit('newMessage', messageToAdd);
   };
 };

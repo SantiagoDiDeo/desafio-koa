@@ -33,6 +33,6 @@ class Container {
 
 };
 
-const usersMemory = new Container;
+const UsersMemory = new Container;
 
-module.exports = { usersMemory };
+module.exports = { UsersMemory };

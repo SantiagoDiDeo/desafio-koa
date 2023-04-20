@@ -34,6 +34,6 @@ class Container {
 
 };
 
-const productsMemory = new Container( productModel );
+const ProductsMemory = new Container( productModel );
 
-module.exports = {productsMemory}; 
+module.exports = {ProductsMemory}; 

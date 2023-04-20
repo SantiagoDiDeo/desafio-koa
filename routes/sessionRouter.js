@@ -30,7 +30,7 @@ const upload = multer.diskStorage({
   /* signup y login */
 
   sessRouter.get('/',  (req, res) => {
-    res.render('form', {user: getUserController, productExist: true});
+    res.render('form', {user: getUserController, userExist: true});
   });
 
 sessRouter.post('/signup', 
