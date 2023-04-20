@@ -2,15 +2,22 @@
 const { getUserDto, createUserDto} = require('../dto/usersDto');
 
 
-const validateEmail = (email) => {
-    const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    if(email.match(mailformat)) {
-      return true;
-    } else {
-      alert("You have entered an invalid email address!");
-      return false;
-    };
+const validateEmail = (mail) => {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+  if (regex.test(mail)) {
+    return true; 
+  } else {
+    alert("El mail electrónico ingresado no es válido."); 
+    return false;
   };
+};
+
+
+
+
+
+
+
 
 const getUserController = async( username, password ) => {
   const getUser = await getUserDto( username, password );

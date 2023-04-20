@@ -74,7 +74,7 @@ if(!existentUser) {
 
 });
 
-sessRouter.get(`./menu/:username`, async (req,res) => {
+sessRouter.get('./menu/:username', async (req,res) => {
   const username = req.params.username;
     const userData = await getUserController( username );
     const productList = getProductsController(); 
