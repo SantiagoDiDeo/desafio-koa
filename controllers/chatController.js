@@ -8,7 +8,7 @@ const getChatsController = async() => {
 
 
 const addChatsController = async ( msg ) => {
-  addChatDto( msg )
+  await addChatDto( msg )
   return; 
 };
 

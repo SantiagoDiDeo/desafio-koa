@@ -4,7 +4,7 @@ const logger = require('../logger/logger');
 
 
 const sendWhatsapp = async ( whatsappMsg ) => {
-  client.messages.create({
+  await client.messages.create({
         body: whatsappMsg.body,
         from: process.env.WPP_NUMBER,
         to: `whatsapp:${whatsappMsg.to}`

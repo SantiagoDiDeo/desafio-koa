@@ -4,12 +4,12 @@ const io = require('socket.io');
 const socket = io.connect();
 
 const myButton = document.getElementById('logout');
-myButton.addEventListener('click', async () => {
+myButton.addEventListener('click',  () => {
   try {
     window.location.href = '/logout';
     return;
   } catch (err) {
-    logger.error(Error('err'))
+    logger.error(Error('err'));
     console.log(`ERRORRRR ${err}`);
   };
 
@@ -24,14 +24,14 @@ const formulario = document.getElementById('form');
 
 const formAddE = async () => {
 
-    let formulario = await formulario.addEventListener('submit',  e => {
+    formulario = await formulario.addEventListener('submit',  e => {
         e.preventDefault();
         const product = {
             "title": title.value,
             "price": price.value,
             "thumbnail": thumbnail.value
         };
-         socket.emit('newProduct', product);
+         socket.emit('newProduct', formAddE);
         
         });
 
@@ -102,7 +102,7 @@ function validateEmail(email) {
   };
   
   
-  const addMessage = async (addMessage) => {
+  const addMessage = async () => {
  
     let messageToAdd =  {
       author: {
@@ -121,6 +121,6 @@ function validateEmail(email) {
 
 if(validateEmail(email.value)) {
 
-   await socket.emit('newMessage', messageToAdd);
+   await socket.emit('newMessage', addMessage);
   };
 };

@@ -1,6 +1,6 @@
 const passport = require('passport');
 const {Strategy: LocalStrategy} = require('passport-local');
-const { hashSync, compareSync} = require('bcrypt');
+const { hashSync} = require('bcrypt');
 const { getUserController, createUserController } = require('../../controllers/userController');
 const logger = require('../../logger/logger');
 
@@ -31,7 +31,7 @@ passport.use('login', new LocalStrategy( async (username, password, done) => {
 }));
 
 passport.use('signup',new LocalStrategy( (username,password, done)=> {
-    const existentUser = createUserController(user => user.username === username, password => password);
+    const existentUser = createUserController(username, password);
     if(existentUser) {
         done(new Error('user already exists'));
         return;

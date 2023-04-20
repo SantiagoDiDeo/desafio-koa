@@ -14,7 +14,7 @@ class Container {
  
 
   async add( message ) {
-    this.schema.chat.push({
+    await this.schema.chat.push({
         user: { 
           email: message.author.id,
           name: message.author.name,

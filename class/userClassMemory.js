@@ -8,7 +8,7 @@ class Container {
 
   async createUser(obj) {
     const encriptedPass = bcrypt.hashSync(obj.password, 10)
-    const newUser = new userModel({
+    const newUser = await new userModel({
       username: obj.username,
       password: encriptedPass,
       email: obj.email,
@@ -23,7 +23,7 @@ class Container {
   };
 
   async getUser(username, password) {
-    const userInDb = this.schema.findOne(user => user.username === username && user.password === password);
+    const userInDb = await this.schema.findOne(user => user.username === username && user.password === password);
     if (userInDb) {
       return userInDb;
     } else {

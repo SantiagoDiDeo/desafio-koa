@@ -29,22 +29,22 @@ const upload = multer.diskStorage({
 
   /* signup y login */
 
-  sessRouter.get('/', async (req, res) => {
+  sessRouter.get('/',  (req, res) => {
     res.render('form', {user: getUserController, productExist: true});
   });
 
 sessRouter.post('/signup', 
 passport.authenticate('signup', {failureMessage: 'fallo el registro', failureRedirect: '/'}),
- (req, res) => {
+ async (req, res) => {
   const {username, password, email, address, age, phoneNumber, avatar} = req.body;
 
-    const existentUser = getUserController(username);
+    const existentUser = await getUserController(username);
     if (existentUser) {
         res.status(403).send('el usuario ya existe');
         return;
     } 
 
-      createUserController(username, password, email, address, age, phoneNumber, avatar);
+      await createUserController(username, password, email, address, age, phoneNumber, avatar);
       
       req.session.username = username;
 
@@ -57,13 +57,13 @@ passport.authenticate('signup', {failureMessage: 'fallo el registro', failureRed
 sessRouter.post('/login',
 passport.authenticate('login', {failureMessage: 'failure authentication', failureRedirect: '/'}),
 async (req, res) => {
-  const {username, password} = req.body;
+  const {username, password} = await req.body;
 
    req.session.username = username;
 
    req.session.counter = (req.session.counter ?? 0) + 1;
 
-   const existentUser = getUserController(username);
+   const existentUser = await getUserController(username);
 
 if(!existentUser) {
 
@@ -110,8 +110,8 @@ sessRouter.get('./menu/:username', async (req,res) => {
   }
   );
 
- sessRouter.get('/logout', async (req,res) => {
-    req.session.destroy(  () => {
+ sessRouter.get('/logout',  (req,res) => {
+     req.session.destroy(  () => {
       res.send(`Hasta luego ${req.session.username}`);
    });
    res.redirect('/');

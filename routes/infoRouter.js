@@ -9,7 +9,7 @@ const compression = require('compression');
 
 
 
-infoRouter.get('/', async (req, res) => {
+infoRouter.get('/',  (req, res) => {
     res.render('form', {product: getProductController, productExist: true});
   });
 

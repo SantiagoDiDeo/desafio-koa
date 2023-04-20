@@ -48,7 +48,6 @@ class Container {
     } catch(err) {
       console.log(`ERRORRRR ${err}`);
       logger.error(`Error: ${err}`);
-      return false;
     };
   };
 
