@@ -83,3 +83,81 @@
 [2023-04-18T23:13:40.835] [INFO] default - Servidor en modo fork corriendo en el proceso 1816 en puerto 8080
 [2023-04-18T23:14:01.916] [INFO] default - Servidor en modo fork corriendo en el proceso 5124 en puerto 8080
 [2023-04-18T23:38:49.045] [INFO] default - Servidor en modo fork corriendo en el proceso 15552 en puerto 8080
+[2023-04-19T19:11:38.170] [INFO] default - Servidor en modo fork corriendo en el proceso 18012 en puerto 8080
+[2023-04-19T19:13:04.297] [INFO] default - Servidor en modo fork corriendo en el proceso 15912 en puerto 8080
+[2023-04-19T19:15:48.214] [INFO] default - Servidor en modo fork corriendo en el proceso 18048 en puerto 8080
+[2023-04-19T19:16:45.502] [INFO] default - Servidor en modo fork corriendo en el proceso 14472 en puerto 8080
+[2023-04-19T19:17:40.162] [INFO] default - Servidor en modo fork corriendo en el proceso 11324 en puerto 8080
+[2023-04-19T19:18:20.955] [INFO] default - Servidor en modo fork corriendo en el proceso 15084 en puerto 8080
+[2023-04-19T19:18:51.950] [INFO] default - Servidor en modo fork corriendo en el proceso 9048 en puerto 8080
+[2023-04-19T19:19:28.229] [INFO] default - Servidor en modo fork corriendo en el proceso 4696 en puerto 8080
+[2023-04-19T19:21:08.492] [INFO] default - Servidor en modo fork corriendo en el proceso 14648 en puerto 8080
+[2023-04-19T19:24:04.562] [INFO] default - Servidor en modo fork corriendo en el proceso 14664 en puerto 8080
+[2023-04-19T19:25:34.028] [INFO] default - Servidor en modo fork corriendo en el proceso 16340 en puerto 8080
+[2023-04-19T19:25:38.705] [INFO] default - MongoAtlasDB Connected
+[2023-04-19T19:26:48.491] [INFO] default - Servidor en modo fork corriendo en el proceso 1936 en puerto 8080
+[2023-04-19T19:27:17.936] [INFO] default - Servidor en modo fork corriendo en el proceso 15860 en puerto 8080
+[2023-04-19T19:27:33.475] [INFO] default - Servidor en modo fork corriendo en el proceso 4456 en puerto 8080
+[2023-04-19T19:29:02.904] [INFO] default - Servidor en modo fork corriendo en el proceso 16480 en puerto 8080
+[2023-04-19T19:31:08.080] [INFO] default - Servidor en modo fork corriendo en el proceso 17644 en puerto 8080
+[2023-04-19T19:31:49.554] [INFO] default - Servidor en modo fork corriendo en el proceso 12680 en puerto 8080
+[2023-04-19T19:32:18.305] [INFO] default - Servidor en modo fork corriendo en el proceso 9768 en puerto 8080
+[2023-04-19T19:32:32.250] [INFO] default - Servidor en modo fork corriendo en el proceso 18348 en puerto 8080
+[2023-04-19T19:33:08.168] [INFO] default - Servidor en modo fork corriendo en el proceso 1448 en puerto 8080
+[2023-04-19T19:33:59.568] [INFO] default - Servidor en modo fork corriendo en el proceso 4532 en puerto 8080
+[2023-04-19T19:35:52.421] [INFO] default - Servidor en modo fork corriendo en el proceso 16900 en puerto 8080
+[2023-04-19T19:36:51.893] [INFO] default - Servidor en modo fork corriendo en el proceso 5424 en puerto 8080
+[2023-04-19T19:37:27.386] [INFO] default - Servidor en modo fork corriendo en el proceso 4068 en puerto 8080
+[2023-04-19T19:38:37.511] [INFO] default - Servidor en modo fork corriendo en el proceso 7936 en puerto 8080
+[2023-04-19T19:39:24.719] [INFO] default - Servidor en modo fork corriendo en el proceso 1560 en puerto 8080
+[2023-04-19T19:39:38.398] [INFO] default - Servidor en modo fork corriendo en el proceso 16132 en puerto 8080
+[2023-04-19T19:48:11.813] [INFO] default - Servidor en modo fork corriendo en el proceso 16048 en puerto 8080
+[2023-04-19T19:50:52.180] [INFO] default - Servidor en modo fork corriendo en el proceso 9240 en puerto 8080
+[2023-04-19T19:51:34.385] [INFO] default - Servidor en modo fork corriendo en el proceso 13020 en puerto 8080
+[2023-04-19T19:52:08.435] [INFO] default - MongoAtlasDB Connected
+[2023-04-19T19:52:18.454] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-19T19:52:18.458] [INFO] default - (User authentication failed for santiago)
+[2023-04-19T19:55:39.279] [INFO] default - Servidor en modo fork corriendo en el proceso 18036 en puerto 8080
+[2023-04-19T19:55:56.431] [INFO] default - Servidor en modo fork corriendo en el proceso 6504 en puerto 8080
+[2023-04-19T19:56:14.530] [INFO] default - Servidor en modo fork corriendo en el proceso 8876 en puerto 8080
+[2023-04-19T19:56:28.890] [INFO] default - MongoAtlasDB Connected
+[2023-04-19T19:56:28.893] [ERROR] default - Error: TypeError: Cannot read properties of undefined (reading 'getUser')
+[2023-04-19T19:56:28.895] [INFO] default - (User authentication failed for santiago)
+[2023-04-19T19:57:16.563] [INFO] default - Servidor en modo fork corriendo en el proceso 17072 en puerto 8080
+[2023-04-19T19:57:30.555] [INFO] default - MongoAtlasDB Connected
+[2023-04-19T19:57:30.555] [ERROR] default - Error: TypeError: Cannot read properties of undefined (reading 'getArray')
+[2023-04-19T19:57:30.556] [INFO] default - (User authentication failed for santiago)
+[2023-04-19T19:58:03.020] [INFO] default - Servidor en modo fork corriendo en el proceso 12604 en puerto 8080
+[2023-04-19T19:58:36.643] [INFO] default - MongoAtlasDB Connected
+[2023-04-19T19:58:36.644] [ERROR] default - Error: TypeError: Cannot read properties of undefined (reading 'findOne')
+[2023-04-19T19:58:36.646] [INFO] default - (User authentication failed for santiago)
+[2023-04-19T19:58:54.617] [INFO] default - Servidor en modo fork corriendo en el proceso 16388 en puerto 8080
+[2023-04-19T19:59:14.435] [INFO] default - MongoAtlasDB Connected
+[2023-04-19T19:59:14.436] [ERROR] default - Error: TypeError: Cannot read properties of undefined (reading 'map')
+[2023-04-19T19:59:14.437] [INFO] default - (User authentication failed for santiago)
+[2023-04-19T19:59:56.547] [INFO] default - Servidor en modo fork corriendo en el proceso 15736 en puerto 8080
+[2023-04-19T20:00:20.213] [INFO] default - MongoAtlasDB Connected
+[2023-04-19T20:00:30.221] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-19T20:00:30.226] [INFO] default - (User authentication failed for santiago)
+[2023-04-19T20:01:11.665] [INFO] default - Servidor en modo fork corriendo en el proceso 14032 en puerto 8080
+[2023-04-19T20:01:32.992] [INFO] default - MongoAtlasDB Connected
+[2023-04-19T20:01:43.001] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-19T20:01:43.004] [INFO] default - (User authentication failed for santiago)
+[2023-04-19T20:02:27.143] [INFO] default - Servidor en modo fork corriendo en el proceso 4460 en puerto 8080
+[2023-04-19T20:02:34.943] [INFO] default - MongoAtlasDB Connected
+[2023-04-19T20:02:34.951] [ERROR] default - Error: ObjectParameterError: Parameter "filter" to find() must be an object, got santiago
+[2023-04-19T20:02:34.953] [INFO] default - (User authentication failed for santiago)
+[2023-04-19T20:04:15.268] [INFO] default - Servidor en modo fork corriendo en el proceso 17072 en puerto 8080
+[2023-04-19T20:04:27.764] [INFO] default - MongoAtlasDB Connected
+[2023-04-19T20:04:37.771] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-19T20:04:37.773] [INFO] default - (User authentication failed for santiago)
+[2023-04-19T20:06:39.785] [INFO] default - Servidor en modo fork corriendo en el proceso 17112 en puerto 8080
+[2023-04-19T20:06:53.384] [INFO] default - MongoAtlasDB Connected
+[2023-04-19T20:07:03.395] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-19T20:07:03.403] [INFO] default - (User authentication failed for santiago)
+[2023-04-19T20:58:29.951] [INFO] default - Servidor en modo fork corriendo en el proceso 7304 en puerto 8080
+[2023-04-19T21:00:20.604] [INFO] default - Servidor en modo fork corriendo en el proceso 5744 en puerto 8080
+[2023-04-19T21:00:59.630] [INFO] default - Servidor en modo fork corriendo en el proceso 16684 en puerto 8080
+[2023-04-19T21:01:24.929] [INFO] default - Servidor en modo fork corriendo en el proceso 17728 en puerto 8080
+[2023-04-19T21:02:08.562] [INFO] default - Servidor en modo fork corriendo en el proceso 4292 en puerto 8080
+[2023-04-19T21:03:06.221] [INFO] default - Servidor en modo fork corriendo en el proceso 17480 en puerto 8080

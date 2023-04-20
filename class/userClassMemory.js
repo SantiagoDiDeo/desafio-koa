@@ -2,8 +2,8 @@ const { cartModel, userModel } = require('../DB/model/modelMongo');
 const bcrypt = require('bcrypt');
 
 class Container {
-  constructor() {
-    this.users = [];
+  constructor(schema) {
+    this.schema = schema;
   }
 
   async createUser(obj) {
@@ -18,12 +18,12 @@ class Container {
       avatar: obj.avatar,
       cart: cartModel
     });
-    this.users.push(newUser);
+    this.schema.push(newUser);
     return true;
   };
 
   async getUser(username, password) {
-    const userInDb = this.users.find(user => user.username === username && user.password === password);
+    const userInDb = this.schema.findOne(user => user.username === username && user.password === password);
     if (userInDb) {
       return userInDb;
     } else {
@@ -33,6 +33,6 @@ class Container {
 
 };
 
-const usersMemory = new Container(userModel);
+const usersMemory = new Container;
 
 module.exports = { usersMemory };

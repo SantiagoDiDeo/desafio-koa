@@ -27,7 +27,7 @@ class Container {
 
 
   add( prod ) {
-    item.id = uuidv4();
+    prod.id = uuidv4();
     this.schema.push( prod );
     return;
   };

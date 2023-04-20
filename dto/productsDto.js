@@ -2,11 +2,13 @@ const {getDao} = require('../class/factoryClasses');
 
 const getProductsDto = async() => {
     const products = await getDao().products;
+    console.log(products)
     const allProducts = await products.getArray();
+    console.log(allProducts)
     return allProducts;
 };
 
-const getProductsByIdDto = async() => {
+const getProductsByIdDto = async(id) => {
     const products = await getDao().products;
     const allProducts = await products.getById(id);
     return allProducts;

@@ -34,10 +34,10 @@ class Container {
 
 
 
-  async getUser(username, password) {
+  async getUser(username) {
     try {
       await connectToDb();
-      const userInDb = await this.schema.find({ username: username, password: password });
+      const userInDb = await userModel.find( {username});
       return userInDb ? userInDb : null;
     } catch (err) {
       logger.error(`Error: ${err}`);
@@ -46,6 +46,6 @@ class Container {
   }
 }
 
-const users = new Container(userModel);
+const users = new Container;
 
 module.exports = { users };

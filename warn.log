@@ -44,3 +44,13 @@
 [2023-04-17T20:03:59.759] [ERROR] default - Error: MongooseError: Operation `products.find()` buffering timed out after 10000ms
 [2023-04-17T20:05:11.655] [ERROR] default - Error: CastError: Cast to ObjectId failed for value "session" (type string) at path "_id" for model "Product"
 [2023-04-17T20:12:42.074] [ERROR] default - Error: CastError: Cast to ObjectId failed for value "productos-test" (type string) at path "_id" for model "Product"
+[2023-04-19T19:52:18.454] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-19T19:56:28.893] [ERROR] default - Error: TypeError: Cannot read properties of undefined (reading 'getUser')
+[2023-04-19T19:57:30.555] [ERROR] default - Error: TypeError: Cannot read properties of undefined (reading 'getArray')
+[2023-04-19T19:58:36.644] [ERROR] default - Error: TypeError: Cannot read properties of undefined (reading 'findOne')
+[2023-04-19T19:59:14.436] [ERROR] default - Error: TypeError: Cannot read properties of undefined (reading 'map')
+[2023-04-19T20:00:30.221] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-19T20:01:43.001] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-19T20:02:34.951] [ERROR] default - Error: ObjectParameterError: Parameter "filter" to find() must be an object, got santiago
+[2023-04-19T20:04:37.771] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-19T20:07:03.395] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms

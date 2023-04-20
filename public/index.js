@@ -1,8 +1,9 @@
 const logger = require("../logger/logger");
+const io = require('socket.io')(httpServer, {cors: {origin: "*"}});
 
 const socket = io.connect();
 
-const myButton = document.getElementById('myButton');
+const myButton = document.getElementById('logout');
 myButton.addEventListener('click', async () => {
   try {
     window.location.href = '/logout';
@@ -41,7 +42,7 @@ const formAddE = async () => {
 
 //lista productos
 socket.on('products',  (data) => {
-    products = data;
+    
     let htmlToRender = `
   <table class="table container">
     <thead>
@@ -54,7 +55,7 @@ socket.on('products',  (data) => {
     </thead>
     </tbody>`;
    
-    products.forEach(( element) => {
+    data.forEach(( element) => {
         htmlToRender = htmlToRender + `
         <tr>
           <th scope="row">${element.id}</th>

@@ -18,7 +18,7 @@ class Container {
       logger.info(messagesInDb);
       return normalizedData( messagesInDb );
     } catch(err) {
-        logger.error();(`Error: ${err}`);
+        logger.error(`Error: ${err}`);
         console.log(`ERRORRRR ${err}`);
     };
   };

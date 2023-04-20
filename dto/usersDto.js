@@ -1,4 +1,4 @@
-const getDao = require('../class/factoryClasses');
+const {getDao} = require('../class/factoryClasses');
 
 
 const getUserDto = async( username, password) => {

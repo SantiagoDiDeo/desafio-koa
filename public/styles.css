@@ -14,3 +14,7 @@
     color: green;
     font-style: italic;
   }
+
+  #logout {
+    display: flex
+  }

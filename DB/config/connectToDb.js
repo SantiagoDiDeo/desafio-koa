@@ -18,6 +18,7 @@ const connectToDb = async () => {
         resave: true,
         collection: 'sessions',
         saveUninitialized: true,
+        serverSelectionTimeoutMS: 30000,
         
       }));
     

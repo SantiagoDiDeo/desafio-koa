@@ -17,9 +17,9 @@ const getDao = async() => {
       usersDao = new usersMemory([]);
       chatsDao = new chatsMemory({ chat: [] });
     } else {
-      productsDao = await new products();
-      usersDao = await new users();
-      chatsDao = await new chats();
+      productsDao = await  products;
+      usersDao = await  users;
+      chatsDao = await  chats;
     };
   };
   return {
@@ -30,4 +30,5 @@ const getDao = async() => {
 };
 
 
-module.exports = getDao;
+
+module.exports = {getDao};

@@ -25,10 +25,10 @@ class Container {
  
 
 
-  async getById( ObjectId) {
+  async getById( id) {
     try {
       await connectToDb();
-      const documentInDb = await this.schema.find({[this.ID_FIELD] : ObjectId});
+      const documentInDb = await this.schema.find({[this.ID_FIELD] : id});
       return documentInDb ? documentInDb : null;
 
     } catch(err) {
@@ -58,7 +58,7 @@ class Container {
       await connectToDb();
       const newProduct = new productModel( item );
       await newProduct.save()
-        .then(product => console.log(`Se ha agregado a la base de datos elemento con id: ${{[this.ID_FIELD] : ObjectId}}`))
+        .then(product => console.log(`Se ha agregado a la base de datos elemento con id: ${{[this.ID_FIELD] : item}}`))
         .catch(err => console.log(err));
       return;
     } catch(err) {
