@@ -1,5 +1,5 @@
 const logger = require("../logger/logger");
-const io = require('socket.io')(httpServer, {cors: {origin: "*"}});
+const io = require('socket.io');
 
 const socket = io.connect();
 
