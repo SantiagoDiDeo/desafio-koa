@@ -6,7 +6,7 @@ const  { mongoUrl }  = require('../../enviroments/enviroment');
 const logger = require('../../logger/logger');
 
 
-let isConnected = undefined;
+let isConnected;
 
 const connectToDb = async () => {
   if(!isConnected) {

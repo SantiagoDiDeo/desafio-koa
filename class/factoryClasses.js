@@ -5,7 +5,6 @@ const {Chats} = require('./chatClass');
 const {ChatsMemory} = require('./chatClassMemory');
 const {ProductsMemory} = require('./prodClassMemory');
 const {UsersMemory} = require('./userClassMemory');
-const { productModel } = require('../DB/model/modelMongo');
 
 
 

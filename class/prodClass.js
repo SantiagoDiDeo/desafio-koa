@@ -57,8 +57,8 @@ class Container {
       await connectToDb();
       const newProduct = new productModel( item );
       await newProduct.save()
-        .then(item => console.log(`Se ha agregado a la base de datos elemento con id: ${{[this.ID_FIELD] : item}}`))
-        .catch(err => console.log(err));
+        .then(item => logger.info(`Se ha agregado a la base de datos elemento con id: ${{[this.ID_FIELD] : item}}`))
+        .catch(err => logger.error(err));
       return;
     } catch(err) {
       logger.error(`Error: ${err}`);

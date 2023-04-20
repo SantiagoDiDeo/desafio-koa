@@ -23,7 +23,7 @@ prodRouter.get('/', async ( req, res ) => {
 
 //get products by id
 prodRouter.get('/:id', async ( req, res ) => {
-    let id = req.params.id;
+    const id = req.params.id;
     const product = await getProductByIdController(id);
     product ? res.json( product )
     : res.status(404).send({ error: 'producto no encontrado'})  ;
@@ -42,10 +42,8 @@ prodRouter.put('/:id', async ( req, res ) => {
     const id = req.params.id;
     const  replace  = req.body;
 
-    const index = id - 1;
-
     if(await addProductController( id )){
-        res.send({ message: 'producto modificado'});
+        res.send({ message: 'producto modificado', product: replace});
       } else {
         res.status(404).send({ error: 'producto no encontrado'});
       };

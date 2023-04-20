@@ -19,9 +19,9 @@ const { getChatsController, addChatsController } = require('./controllers/chatCo
 require('dotenv').config();
 
 app.use(express.json());
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(`${__dirname} /public`));
 app.use(express.urlencoded({ extended: true }));
-app.use('/public', express.static(__dirname + '/public'));
+app.use('/public', express.static(`${__dirname} /public`));
 app.use(session({connectToDb, secret: 'secreto1', resave: true, saveUninitialized: true}));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -39,8 +39,8 @@ app.set("view engine", "handlebars");
 app.engine("handlebars", engine({
   extname: '.hbs',
   defaultLayout: 'main.handlebars',
-  layoutsDir: __dirname + '/views/hbs/layouts',
-  partialsDir: __dirname + '/views/hbs/partials'
+  layoutsDir: `${__dirname} /views/hbs/layouts`,
+  partialsDir: `${__dirname} /views/hbs/partials`
 }));
 
 
@@ -95,7 +95,7 @@ if (mode === 'CLUSTER') {
     for (let i = 0; i < numCPUs; i++) {
       cluster.fork();
     }
-    cluster.on('exit', (worker, code, signal) => {
+    cluster.on('exit', (worker) => {
       logger.info(`Process ${worker.process.pid} died`);
       cluster.fork();
     });

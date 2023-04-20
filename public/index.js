@@ -111,7 +111,7 @@ socket.on('chat', async (data) => {
   
   const addMessage = async () => {
  
-    let messageToAdd =  {
+    const messageToAdd =  {
       author: {
         id: userEmail.value,
         name: userName.value,

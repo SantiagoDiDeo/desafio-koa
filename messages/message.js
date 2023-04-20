@@ -8,7 +8,7 @@ const sendSMS = async ( sms ) => {
     from: process.env.SMS_PHONE,
     to: sms.number
   });
-  return;
+  return message;
 };
 
 module.exports = { sendSMS };

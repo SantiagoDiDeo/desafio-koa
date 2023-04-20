@@ -18,7 +18,7 @@ sessRouter.use(passport.session());
 const upload = multer.diskStorage({
     destination: '../public/uploads',
     filename: (req,file,cb) => {
-      cb( null, req.params.id + '.' + file.originalname.split('.').pop());
+      cb( null, `${req.params.id}.${file.originalname.split('.').pop()}`)
     }
   });
   
@@ -60,14 +60,14 @@ async (req, res) => {
   const {username, password} = await req.body;
 
    req.session.username = username;
-
+    req.session.password = password;
    req.session.counter = (req.session.counter ?? 0) + 1;
 
-   const existentUser = await getUserController(username);
+   const existentUser = await getUserController(username, password);
 
 if(!existentUser) {
 
-  res.status(403).send('el usuario no existe');
+  res.status(403).send('el usuario no existe o es incorrecto');
   return;
 } 
   res.send(`hola ${req.session.username}! bienvenido!! has entrado ${req.session.counter} veces`);
@@ -80,7 +80,7 @@ sessRouter.get('./menu/:username', async (req,res) => {
     const productList = getProductsController(); 
 
     for ( const element of userData[0].cart ) {
-      const item = await userData( id )
+      const item = await userData( username )
       productList.push({ 
         title: item[0].title,
         code: item[0].code,
@@ -97,7 +97,7 @@ sessRouter.get('./menu/:username', async (req,res) => {
     })
 
     sendWhatsapp({
-      body: `Nuevo pedido de ${usernme}`,
+      body: `Nuevo pedido de ${username}`,
       to: userData[0].phoneNumber
     })
 

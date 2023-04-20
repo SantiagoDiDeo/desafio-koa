@@ -14,9 +14,9 @@ class Container {
     const price = await faker.commerce.price(100, 3000, 0);
     const thumbnail = await faker.image.imageUrl() ;
     return {
-      title: title,
-      price: price,
-      thumbnail: thumbnail 
+      "title": title,
+      "price": price,
+      "thumbnail": thumbnail 
     };
   };
 

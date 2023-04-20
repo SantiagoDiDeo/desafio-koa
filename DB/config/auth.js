@@ -5,11 +5,11 @@ const { getUserController, createUserController } = require('../../controllers/u
 const logger = require('../../logger/logger');
 
 
-passport.serializeUser(function(user, done) {
+passport.serializeUser((user, done) => {
     done(null, user.username);
 });
 
-passport.deserializeUser(function(username, done) {
+passport.deserializeUser((username, done) => {
     const existentUser = getUserController(username);
 
     if (!existentUser) {
