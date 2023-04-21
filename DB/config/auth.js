@@ -30,8 +30,8 @@ passport.use('login', new LocalStrategy( async (username, password, done) => {
     };
 }));
 
-passport.use('signup',new LocalStrategy( (username,password, done)=> {
-    const existentUser = createUserController(username, password);
+passport.use('signup',  new LocalStrategy( async (username, password, done)=> {
+    const existentUser = await getUserController(username, password);
     if(existentUser) {
         done(new Error('user already exists'));
         return;

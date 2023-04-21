@@ -204,3 +204,65 @@
 [2023-04-20T12:19:04.176] [INFO] default - Servidor en modo fork corriendo en el proceso 15648 en puerto 8080
 [2023-04-20T12:21:01.979] [INFO] default - Servidor en modo fork corriendo en el proceso 19824 en puerto 8080
 [2023-04-20T12:23:12.636] [INFO] default - Servidor en modo fork corriendo en el proceso 19572 en puerto 8080
+[2023-04-20T17:55:08.580] [INFO] default - Servidor en modo fork corriendo en el proceso 19880 en puerto 8080
+[2023-04-20T17:55:40.954] [INFO] default - Servidor en modo fork corriendo en el proceso 18592 en puerto 8080
+[2023-04-20T18:02:35.395] [INFO] default - Servidor en modo fork corriendo en el proceso 19880 en puerto 8080
+[2023-04-20T18:03:23.750] [INFO] default - Servidor en modo fork corriendo en el proceso 3312 en puerto 8080
+[2023-04-20T18:05:06.542] [INFO] default - Servidor en modo fork corriendo en el proceso 18404 en puerto 8080
+[2023-04-20T18:06:30.360] [INFO] default - Servidor en modo fork corriendo en el proceso 18224 en puerto 8080
+[2023-04-20T18:06:47.184] [INFO] default - Servidor en modo fork corriendo en el proceso 7428 en puerto 8080
+[2023-04-20T18:09:26.834] [INFO] default - Servidor en modo fork corriendo en el proceso 21068 en puerto 8080
+[2023-04-20T18:09:42.788] [INFO] default - MongoAtlasDB Connected
+[2023-04-20T18:09:42.789] [ERROR] default - error al agregar usuario: Error: data and salt arguments required
+[2023-04-20T18:11:26.640] [INFO] default - Servidor en modo fork corriendo en el proceso 21052 en puerto 8080
+[2023-04-20T18:12:48.574] [INFO] default - Servidor en modo fork corriendo en el proceso 21464 en puerto 8080
+[2023-04-20T18:17:49.695] [INFO] default - Servidor en modo fork corriendo en el proceso 7160 en puerto 8080
+[2023-04-20T18:18:53.408] [INFO] default - Servidor en modo fork corriendo en el proceso 19876 en puerto 8080
+[2023-04-20T18:19:13.642] [INFO] default - Servidor en modo fork corriendo en el proceso 21132 en puerto 8080
+[2023-04-20T18:19:27.600] [INFO] default - Servidor en modo fork corriendo en el proceso 2908 en puerto 8080
+[2023-04-20T18:20:13.403] [INFO] default - Servidor en modo fork corriendo en el proceso 17352 en puerto 8080
+[2023-04-20T18:20:36.731] [INFO] default - MongoAtlasDB Connected
+[2023-04-20T18:20:46.878] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:22:30.897] [INFO] default - Servidor en modo fork corriendo en el proceso 10188 en puerto 8080
+[2023-04-20T18:23:14.091] [INFO] default - MongoAtlasDB Connected
+[2023-04-20T18:23:24.103] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:23:50.327] [INFO] default - Servidor en modo fork corriendo en el proceso 19556 en puerto 8080
+[2023-04-20T18:24:20.671] [INFO] default - MongoAtlasDB Connected
+[2023-04-20T18:24:30.690] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:24:50.511] [INFO] default - Servidor en modo fork corriendo en el proceso 9360 en puerto 8080
+[2023-04-20T18:25:20.292] [INFO] default - Servidor en modo fork corriendo en el proceso 17644 en puerto 8080
+[2023-04-20T18:25:48.542] [INFO] default - MongoAtlasDB Connected
+[2023-04-20T18:25:58.554] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:26:51.757] [INFO] default - Servidor en modo fork corriendo en el proceso 18076 en puerto 8080
+[2023-04-20T18:27:53.830] [INFO] default - MongoAtlasDB Connected
+[2023-04-20T18:28:03.845] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:28:53.413] [INFO] default - Servidor en modo fork corriendo en el proceso 15564 en puerto 8080
+[2023-04-20T18:29:23.408] [INFO] default - MongoAtlasDB Connected
+[2023-04-20T18:29:33.422] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:29:33.538] [INFO] default - Conexion existente
+[2023-04-20T18:29:43.544] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:45:53.403] [INFO] default - Servidor en modo fork corriendo en el proceso 6632 en puerto 8080
+[2023-04-20T18:46:33.684] [INFO] default - MongoAtlasDB Connected
+[2023-04-20T18:46:43.694] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:46:43.834] [INFO] default - Conexion existente
+[2023-04-20T18:46:53.837] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-21T09:25:07.000] [INFO] default - Servidor en modo fork corriendo en el proceso 10896 en puerto 8080
+[2023-04-21T09:31:09.354] [INFO] default - Servidor en modo fork corriendo en el proceso 3404 en puerto 8080
+[2023-04-21T09:31:43.045] [INFO] default - MongoAtlasDB Connected
+[2023-04-21T09:31:53.058] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-21T09:31:53.175] [INFO] default - Conexion existente
+[2023-04-21T09:32:03.177] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-21T09:32:41.143] [INFO] default - Servidor en modo fork corriendo en el proceso 20504 en puerto 8080
+[2023-04-21T09:34:33.824] [INFO] default - MongoAtlasDB Connected
+[2023-04-21T09:34:43.831] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-21T09:34:43.833] [INFO] default - (User authentication failed for santiago)
+[2023-04-21T09:43:15.294] [INFO] default - Servidor en modo fork corriendo en el proceso 10400 en puerto 8080
+[2023-04-21T09:44:26.703] [INFO] default - MongoAtlasDB Connected
+[2023-04-21T09:44:36.753] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-21T09:44:36.963] [INFO] default - Conexion existente
+[2023-04-21T09:44:46.966] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-21T09:45:43.915] [INFO] default - Servidor en modo fork corriendo en el proceso 3364 en puerto 8080
+[2023-04-21T10:03:39.999] [INFO] default - MongoAtlasDB Connected
+[2023-04-21T10:03:50.045] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-21T10:03:50.223] [INFO] default - Conexion existente
+[2023-04-21T10:04:00.227] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms

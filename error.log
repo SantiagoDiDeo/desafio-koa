@@ -37,3 +37,20 @@
 [2023-04-19T20:02:34.951] [ERROR] default - Error: ObjectParameterError: Parameter "filter" to find() must be an object, got santiago
 [2023-04-19T20:04:37.771] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
 [2023-04-19T20:07:03.395] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:09:42.789] [ERROR] default - error al agregar usuario: Error: data and salt arguments required
+[2023-04-20T18:20:46.878] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:23:24.103] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:24:30.690] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:25:58.554] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:28:03.845] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:29:33.422] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:29:43.544] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:46:43.694] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-20T18:46:53.837] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-21T09:31:53.058] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-21T09:32:03.177] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-21T09:34:43.831] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-21T09:44:36.753] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-21T09:44:46.966] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-21T10:03:50.045] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-21T10:04:00.227] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms

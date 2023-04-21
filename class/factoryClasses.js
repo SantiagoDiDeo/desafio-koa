@@ -18,9 +18,10 @@ const getDao = async() => {
       usersDao = new UsersMemory([]);
       chatsDao = new ChatsMemory({ chat: [] });
     } else {
-      productsDao = await new Products();
-      usersDao = await new Users();
-      chatsDao = await new Chats();
+      
+      productsDao = Products;
+      usersDao = Users;
+      chatsDao = Chats;
     };
   };
   return  {

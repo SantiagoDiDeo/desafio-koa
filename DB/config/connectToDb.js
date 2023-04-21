@@ -16,7 +16,7 @@ const connectToDb = async () => {
         secret: 'secreto1',
         cookie: {maxAge: 60000},  
         resave: true,
-        collection: 'sessions',
+        collection: 'test.sessions',
         saveUninitialized: true,
         serverSelectionTimeoutMS: 30000,
         

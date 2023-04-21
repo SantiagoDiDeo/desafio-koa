@@ -48,7 +48,8 @@ passport.authenticate('signup', {failureMessage: 'fallo el registro', failureRed
       
       req.session.username = username;
 
-      res.send(`hola ${req.session.username}! bienvenido!! `);
+      res.render('form', {user: getUserController, userExist: true})
+      res.send(`hola ${req.session.username}! bienvenid@!! `);
       
 
     
