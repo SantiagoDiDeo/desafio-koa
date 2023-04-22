@@ -1,4 +1,4 @@
-const  { normalize, schema } = require('normalizr');
+import  { normalize, schema } from 'normalizr';
 
 
 const user = new schema.Entity('users');
@@ -14,4 +14,4 @@ const normalizedData = (data) => {
   return normalize( data, chat);
 };
 
-module.export = normalizedData;
+export default normalizedData;

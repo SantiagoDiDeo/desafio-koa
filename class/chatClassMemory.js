@@ -1,5 +1,5 @@
-const { chatModel } = require('../DB/model/modelMongo');
-const { normalizedData } = require('../normalizr/normalizr');
+import { chatModel } from '../DB/model/modelMongo.js';
+import  normalizedData  from '../normalizr/normalizr.js';
 
 
 class Container { 
@@ -36,4 +36,4 @@ class Container {
 
 const ChatsMemory = new Container ( chatModel );
 
-module.exports = {ChatsMemory};
+export default ChatsMemory;

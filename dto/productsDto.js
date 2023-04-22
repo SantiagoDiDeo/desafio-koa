@@ -1,4 +1,4 @@
-const {getDao} = require('../class/factoryClasses');
+import getDao from '../class/factoryClasses.js';
 
 const getProductsDto = async() => {
     const products = await getDao().products;
@@ -26,4 +26,4 @@ const addProductDto = async(product) => {
     return;
 };
 
-module.exports = {getProductsDto, getProductsByIdDto , deleteAllProductsDto, addProductDto};
+export  {getProductsDto, getProductsByIdDto , deleteAllProductsDto, addProductDto};

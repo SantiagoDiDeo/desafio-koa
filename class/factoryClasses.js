@@ -1,10 +1,10 @@
-const { persistence } = require('../enviroments/enviroment');
-const {Products} = require('./prodClass');
-const {Users} = require('./userClass');
-const {Chats} = require('./chatClass');
-const {ChatsMemory} = require('./chatClassMemory');
-const {ProductsMemory} = require('./prodClassMemory');
-const {UsersMemory} = require('./userClassMemory');
+import  {persistence}  from '../enviroments/enviroment.js';
+import Products from './prodClass.js';
+import Users from './userClass.js';
+import Chats from './chatClass.js';
+import ChatsMemory from './chatClassMemory.js';
+import ProductsMemory from './prodClassMemory.js';
+import UsersMemory from './userClassMemory.js';
 
 
 
@@ -33,4 +33,4 @@ const getDao = async() => {
 
 
 
-module.exports = {getDao};
+export default getDao;

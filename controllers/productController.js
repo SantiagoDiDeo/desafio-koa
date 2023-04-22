@@ -1,4 +1,4 @@
-const { getProductsDto, getProductsByIdDto, deleteAllProductsDto, addProductDto } = require('../dto/productsDto');
+import { getProductsDto, getProductsByIdDto, deleteAllProductsDto, addProductDto } from '../dto/productsDto.js';
 
 
 const validateObject = ( objeto ) => { 
@@ -36,4 +36,4 @@ const deleteProductController = async( id ) => {
 };
 
 
-module.exports = { addProductController, getProductsController, getProductByIdController, deleteProductController };
+export  { addProductController, getProductsController, getProductByIdController, deleteProductController };

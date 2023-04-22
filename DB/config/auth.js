@@ -1,8 +1,8 @@
-const passport = require('passport');
-const {Strategy: LocalStrategy} = require('passport-local');
-const { hashSync} = require('bcrypt');
-const { getUserController, createUserController } = require('../../controllers/userController');
-const logger = require('../../logger/logger');
+import passport from 'passport';
+import {Strategy as LocalStrategy} from 'passport-local';
+import { hashSync} from 'bcrypt';
+import { getUserController, createUserController } from '../../controllers/userController.js';
+import logger from '../../logger/logger.js';
 
 
 passport.serializeUser((user, done) => {

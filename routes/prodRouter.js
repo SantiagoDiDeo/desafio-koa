@@ -1,14 +1,14 @@
-const express = require( 'express' );
-const {addProductController, getProductsController, getProductByIdController, deleteProductController } = require('../controllers/productController');
-const { faker } = require('@faker-js/faker');
-const { mockProducts } = require('../class/mockClass');
+import express from  'express';
+import {addProductController, getProductsController, getProductByIdController, deleteProductController } from '../controllers/productController.js';
+import { faker } from '@faker-js/faker';
+import  mockProducts  from '../class/mockClass.js';
 faker.locate = 'es';
 const { Router } = express;
-const passport = require('passport');
-require('../DB/config/auth');
+import passport from 'passport';
+import '../DB/config/auth.js';
 const prodRouter = Router();
-const { fork } = require('child_process');
-const logger = require('../logger/logger');
+import { fork } from 'child_process';
+import logger from '../logger/logger.js';
 
 prodRouter.use(passport.initialize());
 prodRouter.use(passport.session());
@@ -79,4 +79,4 @@ prodRouter.get('/api/randoms', (req, res) => {
 });
 
 
-module.exports = prodRouter;
+export default prodRouter;

@@ -1,6 +1,6 @@
-const connectToDb = require('../DB/config/connectToDb');
-const { productModel } = require('../DB/model/modelMongo');
-const logger = require('../logger/logger');
+import connectToDb from '../DB/config/connectToDb.js';
+import { productModel } from '../DB/model/modelMongo.js';
+import logger from '../logger/logger.js';
 
 
 
@@ -71,4 +71,4 @@ class Container {
 const Products = new Container( productModel );
 
 
-module.exports = { Products } ;
+export default Products;

@@ -1,5 +1,5 @@
-const { v4: uuidv4 } = require('uuid');
-const { productModel } = require('../DB/model/modelMongo');
+import  { v4 as uuidv4 }  from 'uuid';
+import { productModel } from '../DB/model/modelMongo.js';
 
 class Container { 
 
@@ -36,4 +36,4 @@ class Container {
 
 const ProductsMemory = new Container( productModel );
 
-module.exports = {ProductsMemory}; 
+export default ProductsMemory;

@@ -1,7 +1,7 @@
-const connectToDb = require('../DB/config/connectToDb');
-const { chatModel } = require('../DB/model/modelMongo');
-const normalizedData = require('../normalizr/normalizr');
-const logger = require('../logger/logger');
+import connectToDb from '../DB/config/connectToDb.js';
+import { chatModel } from '../DB/model/modelMongo.js';
+import normalizedData from '../normalizr/normalizr.js';
+import logger from '../logger/logger.js';
 
 class Container {
 
@@ -44,4 +44,4 @@ class Container {
 const Chats = new Container ( chatModel );
 
 
-module.exports = {Chats};
+export default Chats;

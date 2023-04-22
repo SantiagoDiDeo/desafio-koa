@@ -1,5 +1,5 @@
-const logger = require("../logger/logger");
-const io = require('socket.io');
+import logger from "../logger/logger";
+import io from 'socket.io';
 
 const socket = io.connect();
 

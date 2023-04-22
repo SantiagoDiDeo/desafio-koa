@@ -1,5 +1,5 @@
-const nodemailer = require('nodemailer');
-const { emailService, emailPort, emailUser } = require('../enviroments/enviroment');
+import nodemailer  from'nodemailer';
+import { emailService, emailPort, emailUser }  from'../enviroments/enviroment.js';
 
 const transporter = nodemailer.createTransport({
     service: emailService,
@@ -23,4 +23,4 @@ const sendEmail = async (email) => {
     return infoEmail;
 };
 
-module.exports = {sendEmail};
+export default sendEmail;

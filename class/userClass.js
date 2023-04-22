@@ -1,7 +1,7 @@
-const connectToDb = require('../DB/config/connectToDb');
-const { cartModel, userModel } = require('../DB/model/modelMongo');
-const bcrypt = require('bcrypt');
-const logger = require('../logger/logger');
+import connectToDb from '../DB/config/connectToDb.js';
+import { cartModel, userModel } from '../DB/model/modelMongo.js';
+import bcrypt from 'bcrypt';
+import logger from '../logger/logger.js';
 
 class Container {
   constructor(schema) {
@@ -48,4 +48,4 @@ class Container {
 
 const Users = new Container(userModel);
 
-module.exports = { Users };
+export default Users ;

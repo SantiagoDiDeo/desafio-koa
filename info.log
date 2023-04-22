@@ -266,3 +266,6 @@
 [2023-04-21T10:03:50.045] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
 [2023-04-21T10:03:50.223] [INFO] default - Conexion existente
 [2023-04-21T10:04:00.227] [ERROR] default - Error: MongooseError: Operation `users.find()` buffering timed out after 10000ms
+[2023-04-21T10:19:53.068] [INFO] default - Servidor en modo fork corriendo en el proceso 8768 en puerto 8080
+[2023-04-21T17:24:41.623] [INFO] default - Servidor en modo fork corriendo en el proceso 20904 en puerto 8080
+[2023-04-22T16:46:13.535] [INFO] default - Servidor en modo fork corriendo en el proceso 23204 en puerto 8080

@@ -1,4 +1,4 @@
-const getDao = require('../class/factoryClasses');
+import getDao from '../class/factoryClasses.js';
 
 
 const getChatsDto = async() => {
@@ -15,4 +15,4 @@ const addChatDto = async( message ) => {
 
 
 
-module.exports = { getChatsDto, addChatDto }
+export  { getChatsDto, addChatDto };

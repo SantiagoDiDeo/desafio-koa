@@ -1,11 +1,10 @@
-const express = require('express');
-const session = require('express-session');
+import express from 'express';
+import session from 'express-session';
+import MongoStore from 'connect-mongo';
+import   {mongoUrl}  from '../../enviroments/enviroment.js';
+import logger from '../../logger/logger.js';
+
 const app = express();
-const MongoStore = require('connect-mongo');
-const  { mongoUrl }  = require('../../enviroments/enviroment');
-const logger = require('../../logger/logger');
-
-
 let isConnected;
 
 const connectToDb = async () => {
@@ -16,7 +15,7 @@ const connectToDb = async () => {
         secret: 'secreto1',
         cookie: {maxAge: 60000},  
         resave: true,
-        collection: 'test.sessions',
+        collection: 'test',
         saveUninitialized: true,
         serverSelectionTimeoutMS: 30000,
         
@@ -34,4 +33,4 @@ const connectToDb = async () => {
 };
 
 
-module.exports = connectToDb; 
+export default connectToDb; 

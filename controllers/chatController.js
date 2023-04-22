@@ -1,4 +1,4 @@
-const { getChatsDto, addChatDto } = require('../dto/chatsDto');
+import { getChatsDto, addChatDto } from '../dto/chatsDto.js';
 
 
 const getChatsController = async() => {
@@ -12,4 +12,4 @@ const addChatsController = async ( msg ) => {
   return; 
 };
 
-module.exports = { getChatsController, addChatsController };
+export  { getChatsController, addChatsController };

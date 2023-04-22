@@ -1,22 +1,11 @@
 
-const { default: swal } = require('sweetalert');
-const { getUserDto, createUserDto} = require('../dto/usersDto');
+import { getUserDto, createUserDto} from '../dto/usersDto.js';
 
 
-/* const validateEmail = (mail) => {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
-  if (regex.test(mail)) {
-    return true; 
-  } else {
-    return false;
-  };
-}; */
 
 const validateEmail = (email) => {
-  // Expresión regular para validar la sintaxis de una dirección de correo electrónico según los estándares RFC 5322 y RFC 6530.
   const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,})$/;
 
-  // Validar la dirección de correo electrónico.
   return regex.test(String(email).toLowerCase());
 };
 
@@ -37,6 +26,6 @@ const createUserController = async ( username, password ) => {
   return false  ;
 };
 
-module.exports = { createUserController, getUserController };
+export  { createUserController, getUserController };
 
 

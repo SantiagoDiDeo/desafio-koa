@@ -1,6 +1,9 @@
-const { sidAccount, authToken } = require('../enviroments/enviroment');
-const logger = require('../logger/logger');
- const client = require('twilio')(sidAccount, authToken);
+import { sidAccount, authToken } from '../enviroments/enviroment.js';
+import logger from '../logger/logger.js';
+import twilio from 'twilio';
+
+const client = twilio(sidAccount, authToken);
+
 
 
 const sendWhatsapp = async ( whatsappMsg ) => {
@@ -13,4 +16,4 @@ const sendWhatsapp = async ( whatsappMsg ) => {
 };
 
     
-module.exports = { sendWhatsapp };
+export default sendWhatsapp;

@@ -1,6 +1,6 @@
-const { faker } = require('@faker-js/faker');
+import { faker } from '@faker-js/faker';
 faker.locate = 'es';
-const logger = require('../logger/logger');
+import logger from '../logger/logger.js';
 
 
 class Container {
@@ -39,4 +39,4 @@ class Container {
 
 const mockProducts = new Container( 5 );
 
-module.exports = { mockProducts };
+export default mockProducts ;

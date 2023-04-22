@@ -1,22 +1,33 @@
-const express = require('express');
-const { engine } = require('express-handlebars');
-const app = express();
-const httpServer = require('http').createServer(app);
-const io = require('socket.io')(httpServer, {cors: {origin: "*"}});
-const session = require('express-session');
+import express from 'express';
+import { engine } from 'express-handlebars';
+import http from 'http';
+import { Server } from 'socket.io';
 
-const { PORT }  = require('./enviroments/enviroment');
-const connectToDb = require('./DB/config/connectToDb');
-const passport = require('passport')
-const cluster = require('cluster');
-const logger = require('./logger/logger');
-const benchmark = require('./autocannon/autocannon');
-const prodRouter = require('./routes/prodRouter');
-const sessRouter = require('./routes/sessionRouter');
-const infoRouter = require('./routes/infoRouter');
-const {getProductsController, addProductController} = require('./controllers/productController');
-const { getChatsController, addChatsController } = require('./controllers/chatController');
-require('dotenv').config();
+import session from 'express-session';
+import passport from 'passport';
+import cluster from 'cluster';
+import logger from './logger/logger.js';
+import benchmark from './autocannon/autocannon.js';
+import prodRouter from './routes/prodRouter.js';
+import sessRouter from './routes/sessionRouter.js';
+import infoRouter from './routes/infoRouter.js';
+import { getProductsController, addProductController } from './controllers/productController.js';
+import { getChatsController, addChatsController } from './controllers/chatController.js';
+import dotenv from 'dotenv';
+import path from 'path';
+
+import { PORT } from './enviroments/enviroment.js';
+import connectToDb from './DB/config/connectToDb.js';
+
+dotenv.config();
+
+const __filename = new URL(import.meta.url).pathname;
+const __dirname = path.dirname(__filename);
+
+const app = express();
+const httpServer = http.createServer(app);
+const io = new Server(httpServer, {cors: {origin: "*"}});
+
 
 app.use(express.json());
 app.use(express.static(`${__dirname}/public`));

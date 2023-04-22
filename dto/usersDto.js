@@ -1,4 +1,4 @@
-const {getDao} = require('../class/factoryClasses');
+import getDao from '../class/factoryClasses.js';
 
 
 const getUserDto = async( username, password) => {
@@ -15,4 +15,4 @@ const createUserDto = async( obj ) => {
 
 
 
-module.exports = { getUserDto, createUserDto };
+export  { getUserDto, createUserDto };

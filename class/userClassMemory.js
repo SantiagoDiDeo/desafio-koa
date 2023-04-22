@@ -1,5 +1,5 @@
-const { cartModel, userModel } = require('../DB/model/modelMongo');
-const bcrypt = require('bcrypt');
+import { cartModel, userModel } from '../DB/model/modelMongo.js';
+import bcrypt from 'bcrypt';
 
 class Container {
   constructor(schema) {
@@ -35,4 +35,4 @@ class Container {
 
 const UsersMemory = new Container;
 
-module.exports = { UsersMemory };
+export default UsersMemory ;

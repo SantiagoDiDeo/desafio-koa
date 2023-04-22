@@ -1,4 +1,4 @@
-const twilio = require('twilio');
+import twilio from 'twilio';
 
 
 const sendSMS = async ( sms ) => {
@@ -11,4 +11,4 @@ const sendSMS = async ( sms ) => {
   return message;
 };
 
-module.exports = { sendSMS };
+export default sendSMS ;

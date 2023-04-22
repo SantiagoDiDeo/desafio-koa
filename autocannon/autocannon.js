@@ -1,6 +1,6 @@
-const autocannon = require('autocannon');
-const {PassThrough} = require('stream');
-const logger = require('../logger/logger');
+import autocannon from 'autocannon';
+import {PassThrough} from 'stream';
+import logger from '../logger/logger.js';
 
 const benchmark = () => {
 
@@ -29,6 +29,6 @@ const benchmark = () => {
 
 };
 
-module.exports = benchmark;
+export default benchmark;
 
 

@@ -1,16 +1,16 @@
-const express = require( 'express' );
-const passport = require('passport');
-const multer = require('multer');
-require('../DB/config/auth');
+import express from  'express';
+import passport from 'passport';
+import multer from 'multer';
+import '../DB/config/auth.js';
 
 const { Router } = express;
 const sessRouter = Router();
-const {getUserController, createUserController} = require('../controllers/userController');
-const logger = require('../logger/logger');
-const { sendEmail } = require('../messages/email');
-const { sendWhatsapp } = require('../messages/whatsapp');
-const { sendSMS } = require('../messages/message');
-const { getProductsController } = require('../controllers/productController');
+import {getUserController, createUserController} from '../controllers/userController.js';
+import logger from '../logger/logger.js';
+import  sendEmail  from '../messages/email.js';
+import  sendWhatsapp  from '../messages/whatsapp.js';
+import  sendSMS  from '../messages/message.js';
+import  {getProductsController}  from '../controllers/productController.js';
 
 sessRouter.use(passport.initialize());
 sessRouter.use(passport.session());
@@ -118,4 +118,4 @@ sessRouter.get('./menu/:username', async (req,res) => {
 });
 
 
-module.exports = sessRouter;
+export default sessRouter;

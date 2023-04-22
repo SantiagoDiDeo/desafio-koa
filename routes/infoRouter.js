@@ -1,10 +1,12 @@
-const express = require('express');
-const {getProductController} = require('../controllers/productController');
+import express from 'express';
+import { getProductsController } from '../controllers/productController.js';
 const {Router} = express;
 const infoRouter = Router()
-const numCPUs = require('os').cpus().length;
-const logger = require('../logger/logger');
-const compression = require('compression');
+import os from 'os';
+const numCPUs = os.cpus().length;
+
+import logger from '../logger/logger.js';
+import compression from 'compression';
 
 
 
@@ -43,4 +45,4 @@ infoRouter.get('/',  (req, res) => {
     
   });
 
-  module.exports = infoRouter;
+  export default infoRouter;
