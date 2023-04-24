@@ -2,9 +2,7 @@ import getDao from '../class/factoryClasses.js';
 
 const getProductsDto = async() => {
     const products = await getDao().products;
-    console.log(products)
     const allProducts = await products.getArray();
-    console.log(allProducts)
     return allProducts;
 };
 
@@ -20,10 +18,25 @@ const deleteAllProductsDto = async() => {
     return;
 };
 
-const addProductDto = async(product) => {
+/* const addProductDto = async() => {
     const products = await getDao().products;
+    console.log(products)
     await products.add(product);
     return;
-};
+}; */
+const addProductDto = async (product) => {
+    const dao = await getDao();
+    if (!dao) {
+      throw new Error('DAO not available');
+    }
+  
+    const products = await dao.products;
+    if (!products) {
+      throw new Error('Products not available');
+    }
+  
+    await products.add(product);
+  };
+  
 
 export  {getProductsDto, getProductsByIdDto , deleteAllProductsDto, addProductDto};

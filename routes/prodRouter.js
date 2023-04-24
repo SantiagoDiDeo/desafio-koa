@@ -34,7 +34,8 @@ prodRouter.get('/:id', async ( req, res ) => {
 prodRouter.post('/productos', async (req, res) => {
     const productToAdd = await req.body;
     await addProductController(productToAdd);
-    res.redirect('/');
+    res.send({ message: 'producto agregado', product: productToAdd});
+
   });
 
 //update product

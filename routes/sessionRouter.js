@@ -39,7 +39,7 @@ passport.authenticate('signup', {failureMessage: 'fallo el registro', failureRed
   const {username, password, email, address, age, phoneNumber, avatar} = req.body;
 
     const existentUser = await getUserController(username);
-    if (existentUser) {
+    if (existentUser.length > 0 || existentUser.find((u) => u.username === username)) {
         res.status(403).send('el usuario ya existe');
         return;
     } 
@@ -71,6 +71,7 @@ if(!existentUser) {
   return;
 } 
   res.send(`hola ${req.session.username}! bienvenido!! has entrado ${req.session.counter} veces`);
+  res.render('form', {user: getUserController, userExist: true})
 
 });
 

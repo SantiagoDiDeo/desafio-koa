@@ -12,7 +12,6 @@ import UsersMemory from './userClassMemory.js';
 const getDao = async() => {
   let productsDao, usersDao, chatsDao;
   
-  if( !productsDao || !usersDao || !chatsDao ) {
     if ( persistence === 'MEMORY' ) {
       productsDao = new ProductsMemory([]);
       usersDao = new UsersMemory([]);
@@ -23,7 +22,7 @@ const getDao = async() => {
       usersDao = Users;
       chatsDao = Chats;
     };
-  };
+  
   return  {
     products: productsDao,
     users: usersDao,

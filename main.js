@@ -15,14 +15,16 @@ import { getProductsController, addProductController } from './controllers/produ
 import { getChatsController, addChatsController } from './controllers/chatController.js';
 import dotenv from 'dotenv';
 import path from 'path';
-
+import * as url from 'url';
 import { PORT } from './enviroments/enviroment.js';
 import connectToDb from './DB/config/connectToDb.js';
 
 dotenv.config();
 
-const __filename = new URL(import.meta.url).pathname;
-const __dirname = path.dirname(__filename);
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+
+
 
 const app = express();
 const httpServer = http.createServer(app);
@@ -32,7 +34,8 @@ const io = new Server(httpServer, {cors: {origin: "*"}});
 app.use(express.json());
 app.use(express.static(`${__dirname}/public`));
 app.use(express.urlencoded({ extended: true }));
-app.use('/public', express.static(`${__dirname}/public`));
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(session({connectToDb, secret: 'secreto1', resave: true, saveUninitialized: true}));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -44,15 +47,30 @@ httpServer.on('error', (error) => {
   console.log(`ERRORRRR ${error}`);
 });
 
+
 //HANDLEBARS
-app.set('views', './views/hbs/partials');
+/* app.set('views', './views/hbs/partials');
 app.set("view engine", "handlebars");
 app.engine("handlebars", engine({
   extname: '.hbs',
   defaultLayout: 'main.handlebars',
-  layoutsDir: `${__dirname}/views/hbs/layouts`,
+  layoutsDir: path.join(__dirname, 'views', 'hbs', 'layouts'),
   partialsDir: `${__dirname}/views/hbs/partials`
 }));
+ */
+app.set('views', path.join(__dirname, 'views', 'hbs', 'partials'));
+app.set('view engine', 'handlebars');
+app.engine('handlebars', engine({
+  extname: '.hbs',
+  defaultLayout: 'main.handlebars',
+  layoutsDir: path.join(__dirname, 'views', 'hbs', 'layouts'),
+  partialsDir: path.join(__dirname, 'views', 'hbs', 'partials')
+}));
+
+
+
+
+
 
 
 
