@@ -4,7 +4,7 @@ import logger from '../logger/logger.js';
 
 
 
-class Container {
+ class Container {
 
   constructor( schema ) {
       this.schema = schema;
@@ -68,7 +68,7 @@ class Container {
 
 };
 
-const Products = new Container( productModel );
+const Products = new Container(productModel);
 
 
 export default Products;

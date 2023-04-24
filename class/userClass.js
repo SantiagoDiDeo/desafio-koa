@@ -3,7 +3,7 @@ import { cartModel, userModel } from '../DB/model/modelMongo.js';
 import bcrypt from 'bcrypt';
 import logger from '../logger/logger.js';
 
-class Container {
+export class Container {
   constructor(schema) {
     this.schema = schema;
   };

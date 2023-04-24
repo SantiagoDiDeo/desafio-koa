@@ -3,7 +3,7 @@ import { chatModel } from '../DB/model/modelMongo.js';
 import normalizedData from '../normalizr/normalizr.js';
 import logger from '../logger/logger.js';
 
-class Container {
+export class Container {
 
   constructor( schema ) {
       this.schema = schema;

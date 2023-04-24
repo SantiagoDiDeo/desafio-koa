@@ -14,13 +14,17 @@ const validateEmail = (email) => {
 
 const getUserController = async( username, password ) => {
   const getUser = await getUserDto( username, password );
+  if (!getUser.length) {
+    return [];
+  }
   return getUser;
 };
 
 
-const createUserController = async ( username, password ) => {
-  if ( validateEmail( username, password) ) {
-    await createUserDto ( username, password );
+
+const createUserController = async ( username, password, email ) => {
+  if ( validateEmail( email) && password) {
+    await createUserDto ( {username, password });
     return true;
   };
   return false  ;

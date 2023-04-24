@@ -1,7 +1,6 @@
 import  { v4 as uuidv4 }  from 'uuid';
 import { productModel } from '../DB/model/modelMongo.js';
-
-class Container { 
+export class Container { 
 
   constructor( schema ) {
       this.schema = schema;
@@ -34,6 +33,6 @@ class Container {
 
 };
 
-const ProductsMemory = new Container( productModel );
+const ProductsMemory = new Container(productModel);
 
 export default ProductsMemory;

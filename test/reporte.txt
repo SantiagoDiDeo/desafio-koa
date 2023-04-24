@@ -1,0 +1,8 @@
+  User controller
+DB connected
+    ✔ should return empty array if no user is added (796ms)
+
+
+  1 passing (840ms)
+------------------------------------------------------------
+

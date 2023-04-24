@@ -2,7 +2,7 @@ import { chatModel } from '../DB/model/modelMongo.js';
 import  normalizedData  from '../normalizr/normalizr.js';
 
 
-class Container { 
+export class Container { 
 
     constructor( schema ) {
         this.schema = schema;
@@ -34,6 +34,6 @@ class Container {
 
 };
 
-const ChatsMemory = new Container ( chatModel );
+const ChatsMemory = new Container (chatModel);
 
 export default ChatsMemory;

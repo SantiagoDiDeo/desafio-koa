@@ -9,18 +9,21 @@ import UsersMemory from './userClassMemory.js';
 
 
 
+
 const getDao = async() => {
   let productsDao, usersDao, chatsDao;
   
-    if ( persistence === 'MEMORY' ) {
-      productsDao = new ProductsMemory([]);
-      usersDao = new UsersMemory([]);
-      chatsDao = new ChatsMemory({ chat: [] });
+    if ( persistence === 'MEMORY') {
+      productsDao = new ProductsMemory();
+      usersDao = new UsersMemory();
+      chatsDao = new ChatsMemory();
+
     } else {
       
-      productsDao = Products;
-      usersDao = Users;
-      chatsDao = Chats;
+      productsDao = await Products;
+      usersDao =  Users;
+      chatsDao =  Chats;
+
     };
   
   return  {
@@ -30,6 +33,6 @@ const getDao = async() => {
   };
 };
 
-
+console.log('getDao', getDao());
 
 export default getDao;
