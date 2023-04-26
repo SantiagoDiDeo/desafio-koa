@@ -12,7 +12,7 @@ export class Container {
     try {
         await connectToDb();
         const hashedPassword = await bcrypt.hash(obj.password, 10);
-        const newUser = await new userModel({
+        const newUser =  new this.schema({
             username: obj.username,
             password: hashedPassword,
             email: obj.email,
@@ -24,10 +24,10 @@ export class Container {
         });
         const savedUser = await newUser.save();
         logger.info(`usuario agregado. ${savedUser._id}`);
-        return true;
+        return savedUser;
     } catch (err) {
         logger.error(`error al agregar usuario: ${err}`);
-        return false;
+        
     }
 }
 
@@ -37,7 +37,7 @@ export class Container {
   async getUser(username) {
     try {
       await connectToDb();
-      const userInDb = await userModel.find( {username});
+      const userInDb = await this.schema.find( {username});
       return userInDb ? userInDb : null;
     } catch (err) {
       logger.error(`Error: ${err}`);

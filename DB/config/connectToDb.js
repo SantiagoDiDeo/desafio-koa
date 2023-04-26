@@ -15,7 +15,7 @@ const connectMongo = async () => {
           user: "santiagodideo", // PONE UN USUARIO ROOT PARA TRABAJAR DE MONGO ATLAS
           pass: "santiago", // OBVIAMENTE EL PASSWORD
       });
-      console.log("DB connected");
+      console.log("MongoDB connected succesfully");
   } catch (error) {
       console.log({ error });
   }
@@ -38,12 +38,12 @@ const connectToDb = async () => {
       }));
     
           isConnected = true;
-          logger.info('MongoAtlasDB Connected');
+          logger.info('MongoAtlasDB Connected succesfully');
            
     return;
   } else {
     
-    logger.info("Conexion existente");
+    logger.info("Connection with DB already exists");
     return;
   };
 };

@@ -437,3 +437,262 @@
 [2023-04-24T20:16:52.398] [INFO] default - Servidor en modo fork corriendo en el proceso 27088 en puerto 8080
 [2023-04-24T20:17:31.632] [INFO] default - Servidor en modo fork corriendo en el proceso 26136 en puerto 8080
 [2023-04-24T20:18:01.728] [INFO] default - Servidor en modo fork corriendo en el proceso 2972 en puerto 8080
+[2023-04-25T09:42:15.002] [INFO] default - Servidor en modo fork corriendo en el proceso 24532 en puerto 8080
+[2023-04-25T09:42:54.194] [INFO] default - Servidor en modo fork corriendo en el proceso 9252 en puerto 8080
+[2023-04-25T09:43:34.331] [INFO] default - Servidor en modo fork corriendo en el proceso 1316 en puerto 8080
+[2023-04-25T09:43:52.076] [INFO] default - Servidor en modo fork corriendo en el proceso 15056 en puerto 8080
+[2023-04-25T09:44:38.418] [INFO] default - Servidor en modo fork corriendo en el proceso 23808 en puerto 8080
+[2023-04-25T09:45:13.048] [INFO] default - Servidor en modo fork corriendo en el proceso 25192 en puerto 8080
+[2023-04-25T09:45:43.406] [INFO] default - Servidor en modo fork corriendo en el proceso 21744 en puerto 8080
+[2023-04-25T09:46:46.035] [INFO] default - Servidor en modo fork corriendo en el proceso 24356 en puerto 8080
+[2023-04-25T09:47:29.592] [INFO] default - MongoAtlasDB Connected
+[2023-04-25T09:47:29.770] [INFO] default - Conexion existente
+[2023-04-25T09:48:54.340] [INFO] default - Servidor en modo fork corriendo en el proceso 20584 en puerto 8080
+[2023-04-25T09:49:14.735] [INFO] default - Servidor en modo fork corriendo en el proceso 7600 en puerto 8080
+[2023-04-25T09:50:27.304] [INFO] default - Servidor en modo fork corriendo en el proceso 16116 en puerto 8080
+[2023-04-25T09:50:40.025] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T09:50:40.243] [INFO] default - Connection with DB already exists
+[2023-04-25T09:52:32.924] [INFO] default - Servidor en modo fork corriendo en el proceso 2324 en puerto 8080
+[2023-04-25T09:52:40.511] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T09:52:40.706] [INFO] default - Connection with DB already exists
+[2023-04-25T09:54:26.768] [INFO] default - Servidor en modo fork corriendo en el proceso 24088 en puerto 8080
+[2023-04-25T10:07:30.703] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:07:30.882] [INFO] default - Connection with DB already exists
+[2023-04-25T10:08:58.846] [INFO] default - Servidor en modo fork corriendo en el proceso 22000 en puerto 8080
+[2023-04-25T10:09:04.829] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:09:05.157] [INFO] default - Connection with DB already exists
+[2023-04-25T10:10:15.308] [INFO] default - Servidor en modo fork corriendo en el proceso 16048 en puerto 8080
+[2023-04-25T10:10:24.790] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:10:24.972] [INFO] default - Connection with DB already exists
+[2023-04-25T10:11:34.373] [INFO] default - Servidor en modo fork corriendo en el proceso 26700 en puerto 8080
+[2023-04-25T10:11:43.679] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:11:43.861] [INFO] default - Connection with DB already exists
+[2023-04-25T10:12:37.370] [INFO] default - Servidor en modo fork corriendo en el proceso 24676 en puerto 8080
+[2023-04-25T10:12:46.286] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:12:46.470] [INFO] default - Connection with DB already exists
+[2023-04-25T10:13:17.881] [INFO] default - Servidor en modo fork corriendo en el proceso 13720 en puerto 8080
+[2023-04-25T10:16:54.853] [INFO] default - Servidor en modo fork corriendo en el proceso 26152 en puerto 8080
+[2023-04-25T10:17:03.574] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:17:03.786] [INFO] default - Connection with DB already exists
+[2023-04-25T10:21:49.764] [INFO] default - Servidor en modo fork corriendo en el proceso 10300 en puerto 8080
+[2023-04-25T10:21:56.856] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:22:49.870] [INFO] default - Servidor en modo fork corriendo en el proceso 23360 en puerto 8080
+[2023-04-25T10:23:04.323] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:23:23.510] [INFO] default - Servidor en modo fork corriendo en el proceso 22988 en puerto 8080
+[2023-04-25T10:23:29.393] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:23:29.659] [INFO] default - Connection with DB already exists
+[2023-04-25T10:24:03.913] [INFO] default - Servidor en modo fork corriendo en el proceso 23544 en puerto 8080
+[2023-04-25T10:29:45.689] [INFO] default - Servidor en modo fork corriendo en el proceso 23692 en puerto 8080
+[2023-04-25T10:30:05.046] [INFO] default - Servidor en modo fork corriendo en el proceso 14072 en puerto 8080
+[2023-04-25T10:30:22.240] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:30:22.422] [INFO] default - Connection with DB already exists
+[2023-04-25T10:34:11.034] [INFO] default - Servidor en modo fork corriendo en el proceso 25768 en puerto 8080
+[2023-04-25T10:34:37.800] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:34:38.017] [INFO] default - Connection with DB already exists
+[2023-04-25T10:35:40.691] [INFO] default - Servidor en modo fork corriendo en el proceso 19996 en puerto 8080
+[2023-04-25T10:35:51.222] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:35:51.369] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T10:35:51.373] [INFO] default - Connection with DB already exists
+[2023-04-25T10:35:51.460] [INFO] default - Connection with DB already exists
+[2023-04-25T10:39:54.724] [INFO] default - Servidor en modo fork corriendo en el proceso 24676 en puerto 8080
+[2023-04-25T10:40:01.598] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:40:01.885] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T10:40:01.888] [INFO] default - Connection with DB already exists
+[2023-04-25T10:40:01.970] [INFO] default - Connection with DB already exists
+[2023-04-25T10:40:58.572] [INFO] default - Servidor en modo fork corriendo en el proceso 18164 en puerto 8080
+[2023-04-25T10:42:08.145] [INFO] default - Servidor en modo fork corriendo en el proceso 25272 en puerto 8080
+[2023-04-25T10:42:37.619] [INFO] default - Servidor en modo fork corriendo en el proceso 15340 en puerto 8080
+[2023-04-25T10:43:12.901] [INFO] default - Servidor en modo fork corriendo en el proceso 14184 en puerto 8080
+[2023-04-25T10:43:58.488] [INFO] default - Servidor en modo fork corriendo en el proceso 10708 en puerto 8080
+[2023-04-25T10:44:12.659] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:44:12.853] [INFO] default - Connection with DB already exists
+[2023-04-25T10:44:42.320] [INFO] default - Servidor en modo fork corriendo en el proceso 15820 en puerto 8080
+[2023-04-25T10:44:51.151] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:44:51.346] [INFO] default - Connection with DB already exists
+[2023-04-25T10:45:22.020] [INFO] default - Servidor en modo fork corriendo en el proceso 27416 en puerto 8080
+[2023-04-25T10:45:29.420] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:45:29.686] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T10:45:29.689] [INFO] default - Connection with DB already exists
+[2023-04-25T10:45:29.758] [INFO] default - Connection with DB already exists
+[2023-04-25T10:46:38.558] [INFO] default - Servidor en modo fork corriendo en el proceso 22508 en puerto 8080
+[2023-04-25T10:50:43.217] [INFO] default - Servidor en modo fork corriendo en el proceso 18620 en puerto 8080
+[2023-04-25T10:50:58.649] [INFO] default - Servidor en modo fork corriendo en el proceso 18376 en puerto 8080
+[2023-04-25T10:51:18.688] [INFO] default - Servidor en modo fork corriendo en el proceso 2608 en puerto 8080
+[2023-04-25T10:51:31.995] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T10:51:32.186] [INFO] default - Connection with DB already exists
+[2023-04-25T10:58:37.130] [INFO] default - Servidor en modo fork corriendo en el proceso 19804 en puerto 8080
+[2023-04-25T11:11:55.108] [INFO] default - Servidor en modo fork corriendo en el proceso 19280 en puerto 8080
+[2023-04-25T11:12:01.693] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T11:12:01.890] [INFO] default - Connection with DB already exists
+[2023-04-25T11:14:11.994] [INFO] default - Servidor en modo fork corriendo en el proceso 16704 en puerto 8080
+[2023-04-25T11:14:18.651] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T11:14:18.868] [INFO] default - Connection with DB already exists
+[2023-04-25T11:14:50.212] [INFO] default - Servidor en modo fork corriendo en el proceso 25884 en puerto 8080
+[2023-04-25T11:14:58.392] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T11:14:58.575] [INFO] default - Connection with DB already exists
+[2023-04-25T11:15:44.779] [INFO] default - Servidor en modo fork corriendo en el proceso 7688 en puerto 8080
+[2023-04-25T11:15:52.323] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T11:15:52.334] [ERROR] default - error al agregar usuario: Error: data and salt arguments required
+[2023-04-25T11:15:52.341] [INFO] default - Connection with DB already exists
+[2023-04-25T11:15:52.514] [INFO] default - Connection with DB already exists
+[2023-04-25T11:16:28.198] [INFO] default - Servidor en modo fork corriendo en el proceso 14592 en puerto 8080
+[2023-04-25T11:17:09.998] [INFO] default - Servidor en modo fork corriendo en el proceso 26588 en puerto 8080
+[2023-04-25T11:17:20.123] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T11:17:20.139] [ERROR] default - error al agregar usuario: Error: data and salt arguments required
+[2023-04-25T11:17:20.146] [INFO] default - Connection with DB already exists
+[2023-04-25T11:17:20.319] [INFO] default - Connection with DB already exists
+[2023-04-25T11:21:47.191] [INFO] default - Servidor en modo fork corriendo en el proceso 27376 en puerto 8080
+[2023-04-25T11:25:50.875] [INFO] default - Servidor en modo fork corriendo en el proceso 23780 en puerto 8080
+[2023-04-25T11:26:20.251] [INFO] default - Servidor en modo fork corriendo en el proceso 18488 en puerto 8080
+[2023-04-25T11:26:48.915] [INFO] default - Servidor en modo fork corriendo en el proceso 21404 en puerto 8080
+[2023-04-25T11:27:21.212] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T11:27:21.413] [INFO] default - Connection with DB already exists
+[2023-04-25T11:36:58.485] [INFO] default - Servidor en modo fork corriendo en el proceso 23956 en puerto 8080
+[2023-04-25T11:37:07.718] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T11:37:07.921] [INFO] default - Connection with DB already exists
+[2023-04-25T11:37:29.167] [INFO] default - Servidor en modo fork corriendo en el proceso 16508 en puerto 8080
+[2023-04-25T11:37:40.701] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T11:37:40.877] [INFO] default - Connection with DB already exists
+[2023-04-25T11:37:40.936] [INFO] default - Connection with DB already exists
+[2023-04-25T11:46:07.094] [INFO] default - Servidor en modo fork corriendo en el proceso 9976 en puerto 8080
+[2023-04-25T11:47:09.893] [INFO] default - Servidor en modo fork corriendo en el proceso 26076 en puerto 8080
+[2023-04-25T11:47:20.970] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T11:47:21.162] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T11:47:21.165] [INFO] default - Connection with DB already exists
+[2023-04-25T11:47:21.264] [INFO] default - Connection with DB already exists
+[2023-04-25T11:47:21.340] [INFO] default - Connection with DB already exists
+[2023-04-25T11:48:17.924] [INFO] default - Servidor en modo fork corriendo en el proceso 27468 en puerto 8080
+[2023-04-25T11:48:36.869] [INFO] default - Servidor en modo fork corriendo en el proceso 24936 en puerto 8080
+[2023-04-25T11:48:42.794] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T11:48:43.089] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T11:48:43.100] [INFO] default - Connection with DB already exists
+[2023-04-25T11:48:43.174] [INFO] default - Connection with DB already exists
+[2023-04-25T11:48:43.227] [INFO] default - Connection with DB already exists
+[2023-04-25T11:50:20.061] [INFO] default - Servidor en modo fork corriendo en el proceso 18172 en puerto 8080
+[2023-04-25T11:51:33.473] [INFO] default - Servidor en modo fork corriendo en el proceso 19336 en puerto 8080
+[2023-04-25T11:51:40.570] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T11:51:40.817] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T11:51:40.819] [INFO] default - Connection with DB already exists
+[2023-04-25T11:51:40.901] [INFO] default - Connection with DB already exists
+[2023-04-25T11:51:40.958] [INFO] default - Connection with DB already exists
+[2023-04-25T11:53:13.229] [INFO] default - Servidor en modo fork corriendo en el proceso 22752 en puerto 8080
+[2023-04-25T11:53:20.000] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T11:53:20.246] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T11:53:20.249] [INFO] default - Connection with DB already exists
+[2023-04-25T11:53:20.321] [INFO] default - Connection with DB already exists
+[2023-04-25T11:53:20.369] [INFO] default - Connection with DB already exists
+[2023-04-25T11:53:20.375] [ERROR] default - Error: CastError: Cast to string failed for value "{ username: 'hola', password: 'password' }" (type Object) at path "username" for model "User"
+[2023-04-25T11:54:28.840] [INFO] default - Servidor en modo fork corriendo en el proceso 22028 en puerto 8080
+[2023-04-25T11:54:34.932] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T11:54:35.088] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T11:54:35.091] [INFO] default - Connection with DB already exists
+[2023-04-25T11:54:35.161] [INFO] default - Connection with DB already exists
+[2023-04-25T11:54:35.211] [INFO] default - Connection with DB already exists
+[2023-04-25T11:54:35.218] [ERROR] default - Error: CastError: Cast to string failed for value "{ username: 'hola', password: 'password' }" (type Object) at path "username" for model "User"
+[2023-04-25T11:56:14.610] [INFO] default - Servidor en modo fork corriendo en el proceso 964 en puerto 8080
+[2023-04-25T11:56:33.387] [INFO] default - Servidor en modo fork corriendo en el proceso 25520 en puerto 8080
+[2023-04-25T12:00:05.578] [INFO] default - Servidor en modo fork corriendo en el proceso 25792 en puerto 8080
+[2023-04-25T12:00:13.443] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T12:00:13.673] [INFO] default - Connection with DB already exists
+[2023-04-25T12:00:49.108] [INFO] default - Servidor en modo fork corriendo en el proceso 21108 en puerto 8080
+[2023-04-25T12:01:34.379] [INFO] default - Servidor en modo fork corriendo en el proceso 24920 en puerto 8080
+[2023-04-25T12:01:40.706] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T12:01:41.036] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T12:01:41.042] [INFO] default - Connection with DB already exists
+[2023-04-25T12:01:41.123] [INFO] default - Connection with DB already exists
+[2023-04-25T12:03:53.182] [INFO] default - Servidor en modo fork corriendo en el proceso 13848 en puerto 8080
+[2023-04-25T12:03:59.964] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T12:04:00.253] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T12:04:00.256] [INFO] default - Connection with DB already exists
+[2023-04-25T12:04:00.353] [INFO] default - Connection with DB already exists
+[2023-04-25T12:04:42.849] [INFO] default - Servidor en modo fork corriendo en el proceso 9256 en puerto 8080
+[2023-04-25T12:04:54.830] [INFO] default - Servidor en modo fork corriendo en el proceso 19780 en puerto 8080
+[2023-04-25T12:05:01.499] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T12:05:01.658] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T12:05:01.661] [INFO] default - Connection with DB already exists
+[2023-04-25T12:05:01.730] [INFO] default - Connection with DB already exists
+[2023-04-25T12:09:16.500] [INFO] default - Servidor en modo fork corriendo en el proceso 23284 en puerto 8080
+[2023-04-25T12:23:02.808] [INFO] default - Servidor en modo fork corriendo en el proceso 26412 en puerto 8080
+[2023-04-25T12:23:53.686] [INFO] default - Servidor en modo fork corriendo en el proceso 19004 en puerto 8080
+[2023-04-25T12:24:02.532] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T12:24:02.701] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T12:24:02.704] [INFO] default - Connection with DB already exists
+[2023-04-25T12:24:02.799] [INFO] default - Connection with DB already exists
+[2023-04-25T16:17:16.549] [INFO] default - Servidor en modo fork corriendo en el proceso 28616 en puerto 8080
+[2023-04-25T16:17:23.540] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:17:23.700] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T16:17:23.704] [INFO] default - Connection with DB already exists
+[2023-04-25T16:17:23.808] [INFO] default - Connection with DB already exists
+[2023-04-25T16:18:09.657] [INFO] default - Servidor en modo fork corriendo en el proceso 23524 en puerto 8080
+[2023-04-25T16:20:10.465] [INFO] default - Servidor en modo fork corriendo en el proceso 10768 en puerto 8080
+[2023-04-25T16:20:16.512] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:20:16.677] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T16:20:16.684] [INFO] default - Connection with DB already exists
+[2023-04-25T16:20:16.805] [INFO] default - Connection with DB already exists
+[2023-04-25T16:22:33.014] [INFO] default - Servidor en modo fork corriendo en el proceso 16048 en puerto 8080
+[2023-04-25T16:22:46.710] [INFO] default - Servidor en modo fork corriendo en el proceso 23720 en puerto 8080
+[2023-04-25T16:22:51.856] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:23:13.372] [INFO] default - Servidor en modo fork corriendo en el proceso 14668 en puerto 8080
+[2023-04-25T16:23:19.762] [INFO] default - Servidor en modo fork corriendo en el proceso 27856 en puerto 8080
+[2023-04-25T16:23:25.495] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:24:36.854] [INFO] default - Servidor en modo fork corriendo en el proceso 24372 en puerto 8080
+[2023-04-25T16:24:42.020] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:24:42.183] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T16:24:42.185] [INFO] default - Connection with DB already exists
+[2023-04-25T16:24:42.263] [INFO] default - Connection with DB already exists
+[2023-04-25T16:26:12.607] [INFO] default - Servidor en modo fork corriendo en el proceso 22360 en puerto 8080
+[2023-04-25T16:26:20.678] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:26:33.998] [INFO] default - Servidor en modo fork corriendo en el proceso 8564 en puerto 8080
+[2023-04-25T16:26:38.966] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:26:39.119] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T16:26:39.122] [INFO] default - Connection with DB already exists
+[2023-04-25T16:26:39.209] [INFO] default - Connection with DB already exists
+[2023-04-25T16:28:25.291] [INFO] default - Servidor en modo fork corriendo en el proceso 7600 en puerto 8080
+[2023-04-25T16:29:00.562] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:29:00.739] [INFO] default - Connection with DB already exists
+[2023-04-25T16:30:03.803] [INFO] default - Servidor en modo fork corriendo en el proceso 17108 en puerto 8080
+[2023-04-25T16:30:12.610] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:30:12.744] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T16:30:12.746] [INFO] default - Connection with DB already exists
+[2023-04-25T16:30:12.807] [INFO] default - Connection with DB already exists
+[2023-04-25T16:31:37.316] [INFO] default - Servidor en modo fork corriendo en el proceso 24948 en puerto 8080
+[2023-04-25T16:31:43.646] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:31:43.671] [ERROR] default - Error: CastError: Cast to string failed for value "Container { schema: Model { User } }" (type Container) at path "username" for model "User"
+[2023-04-25T16:31:43.682] [INFO] default - Connection with DB already exists
+[2023-04-25T16:34:51.948] [INFO] default - Servidor en modo fork corriendo en el proceso 18920 en puerto 8080
+[2023-04-25T16:34:59.894] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:34:59.906] [ERROR] default - Error: CastError: Cast to string failed for value "Container { schema: Model { User } }" (type Container) at path "username" for model "User"
+[2023-04-25T16:34:59.917] [INFO] default - Connection with DB already exists
+[2023-04-25T16:37:15.673] [INFO] default - Servidor en modo fork corriendo en el proceso 26612 en puerto 8080
+[2023-04-25T16:37:21.153] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:37:21.175] [ERROR] default - Error: CastError: Cast to string failed for value "Container { schema: Model { User } }" (type Container) at path "username" for model "User"
+[2023-04-25T16:37:21.183] [INFO] default - Connection with DB already exists
+[2023-04-25T16:38:18.796] [INFO] default - Servidor en modo fork corriendo en el proceso 28148 en puerto 8080
+[2023-04-25T16:38:24.469] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:38:24.494] [ERROR] default - Error: CastError: Cast to string failed for value "Container { schema: Model { User } }" (type Container) at path "username" for model "User"
+[2023-04-25T16:38:24.505] [INFO] default - Connection with DB already exists
+[2023-04-25T16:40:26.481] [INFO] default - Servidor en modo fork corriendo en el proceso 17212 en puerto 8080
+[2023-04-25T16:41:26.377] [INFO] default - Servidor en modo fork corriendo en el proceso 27392 en puerto 8080
+[2023-04-25T16:41:43.400] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:42:06.437] [INFO] default - Servidor en modo fork corriendo en el proceso 740 en puerto 8080
+[2023-04-25T16:42:12.192] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:42:12.354] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T16:42:12.357] [INFO] default - Connection with DB already exists
+[2023-04-25T16:42:12.368] [ERROR] default - Error: CastError: Cast to string failed for value "{ schema: Model { User }, newUser: undefined }" (type Object) at path "username" for model "User"
+[2023-04-25T16:42:12.391] [INFO] default - Connection with DB already exists
+[2023-04-25T16:49:51.862] [INFO] default - Servidor en modo fork corriendo en el proceso 23892 en puerto 8080
+[2023-04-25T16:50:19.882] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:50:19.903] [ERROR] default - Error: CastError: Cast to string failed for value "{ username: 'test', password: '123456', email: 'test123456@mail.com' }" (type Object) at path "username" for model "User"
+[2023-04-25T16:50:19.906] [INFO] default - Connection with DB already exists
+[2023-04-25T16:50:19.906] [ERROR] default - error al agregar usuario: Error: data and salt arguments required
+[2023-04-25T16:50:19.908] [INFO] default - Connection with DB already exists
+[2023-04-25T16:50:20.063] [INFO] default - Connection with DB already exists
+[2023-04-25T16:52:14.043] [INFO] default - Servidor en modo fork corriendo en el proceso 21856 en puerto 8080
+[2023-04-25T16:52:19.625] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T16:52:19.796] [INFO] default - Connection with DB already exists
+[2023-04-25T17:00:50.271] [INFO] default - Servidor en modo fork corriendo en el proceso 27868 en puerto 8080
+[2023-04-25T17:01:10.152] [INFO] default - Servidor en modo fork corriendo en el proceso 7292 en puerto 8080
+[2023-04-25T17:01:23.273] [INFO] default - Servidor en modo fork corriendo en el proceso 22164 en puerto 8080
+[2023-04-25T18:47:15.792] [INFO] default - Servidor en modo fork corriendo en el proceso 26580 en puerto 8080
+[2023-04-25T22:45:22.591] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-25T22:45:22.801] [INFO] default - Connection with DB already exists

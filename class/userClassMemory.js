@@ -2,6 +2,8 @@ import { use } from 'chai';
 import { cartModel, userModel } from '../DB/model/modelMongo.js';
 import bcrypt from 'bcrypt';
 
+let userMemory = [];
+
 export class Container {
   constructor(schema) {
     this.schema = schema;
@@ -24,7 +26,7 @@ export class Container {
   };
 
   // async getUser(username, password) {
-  //   const userInDb = await this.schema.find(user => user.username === username && user.password === password);
+  //   const userInDb = await this.schema.find({username});
   //   console.log(userInDb);
   //   if (userInDb) {
   //     return userInDb;
@@ -34,7 +36,7 @@ export class Container {
   // };
 
   async getUser(username, password) {
-    const userInDb = this.schema.find(user => user.username === username);
+    const userInDb = await this.schema.findOne({username, password});
     console.log('userInDb:', userInDb); // imprime el usuario encontrado en la base de datos
   
     if (!userInDb) {

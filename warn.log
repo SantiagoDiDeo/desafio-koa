@@ -86,3 +86,32 @@
 [2023-04-22T19:31:41.428] [WARN] default - No hay usuario logeado
 [2023-04-22T19:32:09.304] [WARN] default - No hay usuario logeado
 [2023-04-22T19:32:33.884] [WARN] default - No hay usuario logeado
+[2023-04-25T10:35:51.369] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T10:40:01.885] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T10:45:29.686] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T11:15:52.334] [ERROR] default - error al agregar usuario: Error: data and salt arguments required
+[2023-04-25T11:17:20.139] [ERROR] default - error al agregar usuario: Error: data and salt arguments required
+[2023-04-25T11:47:21.162] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T11:48:43.089] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T11:51:40.817] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T11:53:20.246] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T11:53:20.375] [ERROR] default - Error: CastError: Cast to string failed for value "{ username: 'hola', password: 'password' }" (type Object) at path "username" for model "User"
+[2023-04-25T11:54:35.088] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., email: Path `email` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T11:54:35.218] [ERROR] default - Error: CastError: Cast to string failed for value "{ username: 'hola', password: 'password' }" (type Object) at path "username" for model "User"
+[2023-04-25T12:01:41.036] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T12:04:00.253] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T12:05:01.658] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T12:24:02.701] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T16:17:23.700] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T16:20:16.677] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T16:24:42.183] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T16:26:39.119] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T16:30:12.744] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T16:31:43.671] [ERROR] default - Error: CastError: Cast to string failed for value "Container { schema: Model { User } }" (type Container) at path "username" for model "User"
+[2023-04-25T16:34:59.906] [ERROR] default - Error: CastError: Cast to string failed for value "Container { schema: Model { User } }" (type Container) at path "username" for model "User"
+[2023-04-25T16:37:21.175] [ERROR] default - Error: CastError: Cast to string failed for value "Container { schema: Model { User } }" (type Container) at path "username" for model "User"
+[2023-04-25T16:38:24.494] [ERROR] default - Error: CastError: Cast to string failed for value "Container { schema: Model { User } }" (type Container) at path "username" for model "User"
+[2023-04-25T16:42:12.354] [ERROR] default - error al agregar usuario: ValidationError: name: Path `name` is required., age: Path `age` is required., address: Path `address` is required., avatar: Path `avatar` is required.
+[2023-04-25T16:42:12.368] [ERROR] default - Error: CastError: Cast to string failed for value "{ schema: Model { User }, newUser: undefined }" (type Object) at path "username" for model "User"
+[2023-04-25T16:50:19.903] [ERROR] default - Error: CastError: Cast to string failed for value "{ username: 'test', password: '123456', email: 'test123456@mail.com' }" (type Object) at path "username" for model "User"
+[2023-04-25T16:50:19.906] [ERROR] default - error al agregar usuario: Error: data and salt arguments required

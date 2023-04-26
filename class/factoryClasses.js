@@ -14,13 +14,13 @@ const getDao = async() => {
   let productsDao, usersDao, chatsDao;
   
     if ( persistence === 'MEMORY') {
-      productsDao = new ProductsMemory();
-      usersDao = new UsersMemory();
-      chatsDao = new ChatsMemory();
+      productsDao =  ProductsMemory;
+      usersDao =  UsersMemory;
+      chatsDao =  ChatsMemory;
 
     } else {
       
-      productsDao = await Products;
+      productsDao = Products;
       usersDao =  Users;
       chatsDao =  Chats;
 
@@ -33,6 +33,5 @@ const getDao = async() => {
   };
 };
 
-console.log('getDao', getDao());
 
 export default getDao;

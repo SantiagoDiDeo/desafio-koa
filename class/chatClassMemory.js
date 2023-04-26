@@ -1,6 +1,7 @@
 import { chatModel } from '../DB/model/modelMongo.js';
 import  normalizedData  from '../normalizr/normalizr.js';
 
+let chat = [];
 
 export class Container { 
 
