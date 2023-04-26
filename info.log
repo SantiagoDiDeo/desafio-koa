@@ -696,3 +696,22 @@
 [2023-04-25T18:47:15.792] [INFO] default - Servidor en modo fork corriendo en el proceso 26580 en puerto 8080
 [2023-04-25T22:45:22.591] [INFO] default - MongoAtlasDB Connected succesfully
 [2023-04-25T22:45:22.801] [INFO] default - Connection with DB already exists
+[2023-04-26T09:11:36.885] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-26T09:11:37.054] [INFO] default - Connection with DB already exists
+[2023-04-26T09:14:18.949] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-26T09:14:19.105] [INFO] default - Connection with DB already exists
+[2023-04-26T09:15:26.376] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-26T09:15:26.544] [INFO] default - Connection with DB already exists
+[2023-04-26T09:17:01.136] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-26T09:17:01.302] [INFO] default - Connection with DB already exists
+[2023-04-26T09:17:37.780] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-26T09:17:38.007] [INFO] default - Connection with DB already exists
+[2023-04-26T17:10:10.905] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-26T17:10:49.525] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-26T17:10:49.693] [INFO] default - Connection with DB already exists
+[2023-04-26T17:11:32.738] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-26T17:11:32.923] [INFO] default - Connection with DB already exists
+[2023-04-26T17:11:32.995] [INFO] default - Connection with DB already exists
+[2023-04-26T17:12:35.771] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-04-26T17:12:35.936] [INFO] default - Connection with DB already exists
+[2023-04-26T17:12:35.987] [INFO] default - Connection with DB already exists

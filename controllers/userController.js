@@ -1,40 +1,27 @@
-
-import { getUserDto, createUserDto} from '../dto/usersDto.js';
-
-
+import { getUserDto, createUserDto, deleteUserDto} from '../dto/usersDto.js';
 
 const validateEmail = (email) => {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return regex.test(email);
 };
 
-
-
-const getUserController = async( username, password ) => {
-  const getUser = await getUserDto( username, password );
-  if (!getUser.length) {
+const getUserController = async() => {
+  const getUser = await getUserDto( {} );
+  if (getUser.length === 0) {
     return [];
   };
   return getUser;
 };
 
-
-
 const createUserController = async ( username, password, email ) => {
-  if ( validateEmail( email)) {
-    const newUser = await createUserDto ( {username, password });
+ 
+    const newUser = await createUserDto ( username, password, email );
     return newUser;
-  } else {
-    let errorMsg = "No se pudo crear el usuario. ";
-    if (!password) {
-      errorMsg += "La contraseña no puede estar vacía.";
-    } else if (!validateEmail(email)) {
-      errorMsg += "El correo electrónico proporcionado no es válido. ";
-    }
-    return errorMsg;
-  }
 };
 
-export  { createUserController, getUserController };
+const deleteUserController = async (username, password) => {
+  const deleteUser = await deleteUserDto(username, password);
+  return deleteUser;
+};
 
-
+export  { createUserController, getUserController, deleteUserController };

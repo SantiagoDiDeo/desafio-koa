@@ -1,35 +1,35 @@
-import getDao from '../class/factoryClasses.js';
+import {getDao}from '../class/factoryClasses.js';
 
 
-const getUserDto = async( username, password) => {
-  const { users } =   await getDao();
-  const returnedUser = await users.getUser( username, password);
+const getUserDto = async() => {
+  const  dao =   await getDao();
+  const returnedUser = await dao.users.getUsers({});
+  console.log(returnedUser)
   return returnedUser;
 };
 
 
 const createUserDto = async (username, password, email) => {
-  try {
-    const { users } = await getDao();
-    const existingUser = await users.getUser(username);
+  
+    const dao = await getDao();
+    const existingUser = await dao.users.getUserByUsername(username);
     
     if (existingUser) {
       throw new Error(`El usuario ${username} ya existe`);
     }
-    
-    const newUser = await users.createUser({
+    const newUser = await dao.users.saveUser({
       username,
       password,
       email
     });
-    
     return newUser;
-  } catch (error) {
-    console.error(error);
-    throw new Error('No se pudo crear el usuario');
-  }
+};
+
+const deleteUserDto = async (username, password) => {
+  const dao = await getDao();
+  const deletedUser = await dao.users.deleteUser(username, password);
+  return deletedUser;
 };
 
 
-
-export  { getUserDto, createUserDto };
+export  { getUserDto, createUserDto, deleteUserDto };

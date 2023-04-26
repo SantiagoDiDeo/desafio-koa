@@ -25,13 +25,13 @@ const cartSchema = new Schema({
 
 const userSchema = new Schema({
   email: { type: String, required: true },
-  name: { type: String, required: true },
+  name: { type: String, required: false },
   username: { type: String, required: true },
   password: { type: String, required: true },
-  age: { type: Number, required: true },
-  address: { type: String, required: true },
-  avatar: { type: String, required: true },
-  cart: {type: Array, required: true }
+  age: { type: Number, required: false },
+  address: { type: String, required: false },
+  avatar: { type: String, required: false },
+  cart: {type: Array, required: false }
 });
 
 const messageSchema = new Schema({

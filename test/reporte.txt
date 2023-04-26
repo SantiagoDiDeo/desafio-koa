@@ -1,28 +1,53 @@
   User controller
-DB connected
-    ✔ should return empty array if no user is added (796ms)
-
-
-  1 passing (840ms)
-------------------------------------------------------------
-
-1) should return array of users
-    ✔ should return empty array if no user is added (48ms)
+MongoDB connected succesfully
+[]
+    ✔ should return empty array if no user is added (1075ms)
 
 
   1 passing (1s)
-  1 failing
 
-  1) User controller
-       should return array of users:
+------------------------------------------------------------
 
-      AssertionError: expected +0 to equal 1
-      + expected - actual
+ User controller
+MongoDB connected succesfully
+user: {
+  email: 'test123456@mail.com',
+  username: 'test',
+  password: '123456',
+  cart: [],
+  _id: new ObjectId("64498574cc9f6aee24d66b0d"),
+  __v: 0
+}
+[
+  {
+    _id: new ObjectId("64498574cc9f6aee24d66b0d"),
+    email: 'test123456@mail.com',
+    username: 'test',
+    password: '123456',
+    cart: [],
+    __v: 0
+  }
+]
+    ✔ should return array of users (1142ms)
 
-      -0
-      +1
 
-      at Context.<anonymous> (file:///C:/Users/Santi/Dropbox/Mi%20PC%20(DESKTOP-FUL7H7I)/Documents/Personal/Coder-house/backend/desafios/desafiosEntregables2/proyecto-desafio/test/controller.user.test.js:18:20)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  1 passing (1s)
 
     ------------------------------------------------------------
+
+    MongoDB connected succesfully
+[
+  {
+    _id: new ObjectId("64498574cc9f6aee24d66b0d"),
+    email: 'test123456@mail.com',
+    username: 'test',
+    password: '123456',
+    cart: [],
+    __v: 0
+  }
+]
+[]
+    ✔ should delete user by id (1019ms)
+
+
+  1 passing (1s)
