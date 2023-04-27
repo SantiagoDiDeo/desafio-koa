@@ -1,3 +1,5 @@
+                    ---- USER ----
+
   User controller
 MongoDB connected succesfully
 []
@@ -51,3 +53,39 @@ user: {
 
 
   1 passing (1s)
+
+    ------------------------------------------------------------
+
+
+
+
+                            ---- PRODUCTS ----
+
+
+  product controller
+MongoDB connected succesfully
+    ✔ should return empty array if no product is added (1008ms)
+
+
+  1 passing (1s)
+
+    ------------------------------------------------------------
+
+    product controller
+MongoDB connected succesfully
+    ✔ should return empty array if no product is added (988ms)
+    ✔ should return a product added (138ms)
+
+
+  2 passing (1s)
+
+  --------------------------------------------------------------
+
+  product controller
+MongoDB connected succesfully
+    ✔ should return a product by id (1085ms)
+
+
+  1 passing (1s)
+
+--------------------------------------------------------------

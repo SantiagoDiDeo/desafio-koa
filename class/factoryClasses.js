@@ -1,5 +1,5 @@
 import  {persistence}  from '../enviroments/enviroment.js';
-import Products from './prodClass.js';
+import { prodMongoDao } from './prodClass.js';
 import {userMongoDao} from './userClass.js';
 import Chats from './chatClass.js';
 import ChatsMemory from './chatClassMemory.js';
@@ -20,7 +20,7 @@ export const getDao = async() => {
 
     } else {
       
-      productsDao = Products;
+      productsDao = new prodMongoDao();
       usersDao =  new userMongoDao();
       chatsDao =  Chats;
 

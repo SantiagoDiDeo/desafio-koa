@@ -1,8 +1,8 @@
-import { getProductsDto, getProductsByIdDto, deleteAllProductsDto, addProductDto } from '../dto/productsDto.js';
+import { getProductsDto, getProductsByIdDto, deleteAllProductsDto, addProductDto, deleteProductByIdDto } from '../dto/productsDto.js';
+import mongoose from 'mongoose';
 
-
-const validateObject = ( objeto ) => { 
-  return Object.values(objeto).includes('')
+const validateObject = ( object ) => { 
+  return Object.values(object).includes('')
 }
 
 
@@ -12,28 +12,39 @@ const imageUrl = ( url ) => {
 }
 
 
-const addProductController = async ( product ) => {
-  if ( !validateObject( product ) & imageUrl ( product.thumbnail )) {
-    await addProductDto ( product);
-    return true;
-  };
-  return false  ;
+const addProductController = async ( productToAdd ) => {
+    const newProduct = await addProductDto( productToAdd);
+     
+    return newProduct;
+
 };
 
 const getProductsController = async() => {
-  const products = await getProductsDto();
-  return products;
+  const getProducts = await getProductsDto();
+  if (getProducts.length === 0) {
+    return [];
+  };
+  return getProducts;
 };
 
 const getProductByIdController = async( id ) => {
-  const product = await getProductsByIdDto( id )
-  return product
+  if (typeof id !== 'Object') {
+    id = new mongoose.Types.ObjectId(id);
+    const productById = await getProductsByIdDto( id )
+    return productById;
+  } 
 }
 
-const deleteProductController = async( id ) => {
-  await deleteAllProductsDto( id );
-  return;
+const deleteProductByIdController = async (id) => {
+  const deleteProduct = await deleteProductByIdDto(id);
+  return deleteProduct;
 };
 
+// comentado por seguridad.
+// const deleteProductController = async() => {
+//   await deleteAllProductsDto();
+//   return;
+// };
 
-export  { addProductController, getProductsController, getProductByIdController, deleteProductController };
+
+export  { addProductController, getProductsController, getProductByIdController, deleteProductController, deleteProductByIdController };

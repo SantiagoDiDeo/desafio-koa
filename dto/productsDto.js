@@ -1,42 +1,39 @@
-import getDao from '../class/factoryClasses.js';
+import mongoose from 'mongoose';
+import {getDao} from '../class/factoryClasses.js';
 
 const getProductsDto = async() => {
-    const products = await getDao().products;
-    const allProducts = await products.getArray();
+    const dao = await getDao();
+    const allProducts = await dao.products.getAllProducts();
     return allProducts;
-};
+  };
+  
+  const addProductDto = async (productToAdd) => {
+      const dao = await getDao();
+      const newProduct = await dao.products.saveProduct(productToAdd);
+      return newProduct;
+    };
+
 
 const getProductsByIdDto = async(id) => {
-    const products = await getDao().products;
-    const allProducts = await products.getById(id);
-    return allProducts;
+    const dao = await getDao();
+    const getProductById = await dao.products.getProductById(id);
+   
+    return getProductById;
+};
+
+const deleteProductByIdDto = async (id) => {
+    const dao = await getDao();
+    const deleteProduct = await dao.products.deleteProduct(id);
+    return deleteProduct;
 };
 
 const deleteAllProductsDto = async() => {
-    const products = await getDao().products;
-    await products.deleteAll();
+    const dao = await getDao();
+    await dao.products.deleteAllProducts();
     return;
 };
 
-/* const addProductDto = async() => {
-    const products = await getDao().products;
-    console.log(products)
-    await products.add(product);
-    return;
-}; */
-const addProductDto = async (product) => {
-    const dao = await getDao();
-    if (!dao) {
-      throw new Error('DAO not available');
-    }
-  
-    const products = await dao.products;
-    if (!products) {
-      throw new Error('Products not available');
-    }
-  
-    await products.add(product);
-  };
+
   
 
-export  {getProductsDto, getProductsByIdDto , deleteAllProductsDto, addProductDto};
+export  {getProductsDto, getProductsByIdDto , deleteProductByIdDto ,deleteAllProductsDto, addProductDto};

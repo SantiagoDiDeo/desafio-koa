@@ -1,74 +1,43 @@
 import connectToDb from '../DB/config/connectToDb.js';
 import { productModel } from '../DB/model/modelMongo.js';
-import logger from '../logger/logger.js';
+ export class prodMongoDao {
 
+      ID_FIELD = '_id';
 
-
- class Container {
-
-  constructor( schema ) {
-      this.schema = schema;
-  };
-  
-  ID_FIELD = '_id';
-
-  async getArray() {
-    try{
-      await connectToDb();
-      const documentsInDb = await this.schema.find();
-      return documentsInDb;
-    } catch(err) {
-      logger.error(`Error: ${err}`);
-      console.log(`ERRORRRR ${err}`);
+      saveProduct = async (productToAdd) => {
+        const product = new productModel(productToAdd);
+        const addedProduct = await product.save();
+        return addedProduct;
+        
     };
-  };
- 
 
-
-  async getById( id) {
-    try {
-      await connectToDb();
-      const documentInDb = await this.schema.find({[this.ID_FIELD] : id});
-      return documentInDb ? documentInDb : null;
-
-    } catch(err) {
-      logger.error(`Error: ${err}`);
-      console.log(`ERRORRRR ${err}`);
+    getAllProducts = async () => {
+      await connectToDb()
+      const allProducts = await productModel.find({})
+      return allProducts;
     };
-  };
 
-
-
-
-  async deleteAll() {
-    try {
+    getProductById = async (id) => {
+      
       await connectToDb();
-      await this.schema.deleteMany();
-      return ;
-    } catch(err) {
-      console.log(`ERRORRRR ${err}`);
-      logger.error(`Error: ${err}`);
+      const productById = await productModel.findOne({ _id: id })
+      return productById;
     };
-  };
 
-
-  async add( item ) {
-    try{
+    deleteProduct = async (id) => {
       await connectToDb();
-      const newProduct = new productModel( item );
-      await newProduct.save()
-        .then(item => logger.info(`Se ha agregado a la base de datos elemento con id: ${{[this.ID_FIELD] : item}}`))
-        .catch(err => logger.error(err));
-      return;
-    } catch(err) {
-      logger.error(`Error: ${err}`);
-      console.log(`ERRORRRR ${err}`);
+      const productToDelete = await productModel.deleteOne({ _id: id })
+      return productToDelete; 
+      
     };
-  };
+
+    deleteAllProducts = async ()=> {return await productModel.deleteMany()};
+
+    updateProduct = async (id, productToUpdate) => {
+        return await productModel.updateOne(
+            { _id: id },
+            { $set: { ...productToUpdate } }
+        );
+    };
 
 };
-
-const Products = new Container(productModel);
-
-
-export default Products;
