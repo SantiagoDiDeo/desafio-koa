@@ -35,11 +35,11 @@ import mongoose from 'mongoose';
 // });
 
      describe('product controller', () => {
-    //     it('should return empty array if no product is added', async () => {
-    //        const result = await getProductsController();
-    //        expect(result).to.be.an('array').that.is.empty;
+        it('should return empty array if no product is added', async () => {
+           const result = await getProductsController();
+           expect(result).to.be.an('array').that.is.empty;
 
-    //     });
+        });
     
     // it('should return a product added', async () => {
     //     const productToAdd = {

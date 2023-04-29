@@ -5,7 +5,7 @@ import '../DB/config/auth.js';
 
 const { Router } = express;
 const sessRouter = Router();
-import {getUserController, createUserController} from '../controllers/userController.js';
+import {getUserController, createUserController, getUserControllerByUsername} from '../controllers/userController.js';
 import logger from '../logger/logger.js';
 import  sendEmail  from '../messages/email.js';
 import  sendWhatsapp  from '../messages/whatsapp.js';
@@ -29,8 +29,8 @@ const upload = multer.diskStorage({
 
   /* signup y login */
 
-  sessRouter.get('/',  (req, res) => {
-    res.render('form', {user: getUserController, userExist: true});
+  sessRouter.get('/signup',  (req, res) => {
+    res.render('form', {users: getUserController(), userExist: true});
   });
 
 sessRouter.post('/signup', 
@@ -38,20 +38,16 @@ passport.authenticate('signup', {failureMessage: 'fallo el registro', failureRed
  async (req, res) => {
   const {username, password, email, address, age, phoneNumber, avatar} = req.body;
 
-    const existentUser = await getUserController(username);
-    if (existentUser.length > 0 || existentUser.find((u) => u.username === username)) {
+    const existentUser = await getUserControllerByUsername(username);
+    if (existentUser) {
         res.status(403).send('el usuario ya existe');
         return;
-    } 
-
-      await createUserController(username, password, email, address, age, phoneNumber, avatar);
+    }; 
+    await createUserController(username, password, email, address, age, phoneNumber, avatar);
       
-      req.session.username = username;
+    req.session.username = username;
 
-      res.render('form', {user: getUserController, userExist: true})
-      
-
-    
+    res.render('products', {products: getProductsController(), userExist: true})
 });
 
 sessRouter.post('/login',
@@ -71,11 +67,11 @@ if(!existentUser) {
   return;
 } 
   res.send(`hola ${req.session.username}! bienvenido!! has entrado ${req.session.counter} veces`);
-  res.render('form', {user: getUserController, userExist: true})
+  res.render('form', {user: getProductsController(), userExist: true})
 
 });
 
-sessRouter.get('./menu/:username', async (req,res) => {
+sessRouter.get('/:username', async (req,res) => {
   const username = req.params.username;
     const userData = await getUserController( username );
     const productList = getProductsController(); 

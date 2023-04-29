@@ -30,7 +30,7 @@ class Container {
       return items;
     } catch(err) {
       logger.error(`Error: ${err}`);
-      console.log(`ERRORRRR ${err}`);
+      //console.log(`ERRORRRR ${err}`);
     };
   };
 

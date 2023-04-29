@@ -1,4 +1,3 @@
-import mongoose from 'mongoose';
 import {getDao} from '../class/factoryClasses.js';
 
 const getProductsDto = async() => {
@@ -17,7 +16,6 @@ const getProductsDto = async() => {
 const getProductsByIdDto = async(id) => {
     const dao = await getDao();
     const getProductById = await dao.products.getProductById(id);
-   
     return getProductById;
 };
 

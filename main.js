@@ -21,6 +21,9 @@ import connectToDb from './DB/config/connectToDb.js';
 
 dotenv.config();
 
+const horaActual = new Date().toLocaleTimeString();
+
+
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
@@ -44,7 +47,7 @@ app.use(passport.session());
 
 httpServer.on('error', (error) => {
   logger.error('ocurrio un error: ', error)
-  console.log(`ERRORRRR ${error}`);
+  //console.log(`ERRORRRR ${error}`);
 });
 
 
@@ -69,41 +72,38 @@ app.engine('handlebars', engine({
 
 
 
-
-
-
-
-
   
 //socket
 io.on('connection', async socket => {
   logger.info(`New connection id: ${socket.id}`);
 
 //tabla productos
-  socket.emit('products', await getProductsController())
+  socket.on('getProduct', async (product) => {
+    const products = await getProductsController(product);
+    io.sockets.emit('newProduct', products);
+  });
   
 
 // nuevo producto
   socket.on('newProduct', async (product) => {
-    addProductController(product);
-    await io.sockets.emit('products', product)
-
+    const productToAdd = await addProductController(product);
+    io.sockets.emit('newProduct', productToAdd);
   });
 
   //tabla chat
-  socket.emit('chat', await getChatsController())
-  
-  //nuevo chat
-  socket.on('newMessage', async (msg) => {
-    addChatsController(msg)
-    io.sockets.emit('chat', await getChatsController())
+  socket.on('newChat', async (msg) => {
+   await getChatsController()
+   const chatToAdd =  await addChatsController(msg)
+   io.sockets.emit('newChat', chatToAdd);
   });
   
 });
 
-app.use('/session', sessRouter);
+app.use('/', sessRouter);
 app.use('/api', prodRouter);
 app.use('/info', infoRouter);
+
+
 
 /* cluster | server on */
 
@@ -138,7 +138,7 @@ if (mode === 'CLUSTER') {
 
   httpServer.listen(PORT, () => {
     //benchmark();
-    console.log(` (${Date()}) Servidor en modo fork corriendo en el proceso ${process.pid} en puerto ${PORT}`)
+    console.log(` (${horaActual}) Servidor en modo fork corriendo en el proceso ${process.pid} en puerto ${PORT}`)
     logger.info(`Servidor en modo fork corriendo en el proceso ${process.pid} en puerto ${PORT}`);
   });
 };

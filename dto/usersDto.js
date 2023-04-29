@@ -4,9 +4,14 @@ import {getDao}from '../class/factoryClasses.js';
 const getUserDto = async() => {
   const  dao =   await getDao();
   const returnedUser = await dao.users.getUsers({});
-  console.log(returnedUser)
   return returnedUser;
 };
+
+const getUserByUsernameDto = async(username) => {
+  const  dao =   await getDao();
+  const returnedUser = await dao.users.getUserByUsername(username);
+  return returnedUser;
+}
 
 
 const createUserDto = async (username, password, email) => {
@@ -32,4 +37,4 @@ const deleteUserDto = async (username, password) => {
 };
 
 
-export  { getUserDto, createUserDto, deleteUserDto };
+export  { getUserDto, createUserDto, deleteUserDto, getUserByUsernameDto };

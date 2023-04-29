@@ -25,26 +25,15 @@ export class Container {
     return true;
   };
 
-  // async getUser(username, password) {
-  //   const userInDb = await this.schema.find({username});
-  //   console.log(userInDb);
-  //   if (userInDb) {
-  //     return userInDb;
-  //   } else {
-  //     throw new Error(`No existe el usuario ${username}`);
-  //   }
-  // };
 
   async getUser(username, password) {
     const userInDb = await this.schema.findOne({username, password});
-    console.log('userInDb:', userInDb); // imprime el usuario encontrado en la base de datos
-  
+    
     if (!userInDb) {
       throw new Error(`No existe el usuario ${username}`);
     }
   
     if (bcrypt.compareSync(password, userInDb.password)) {
-      console.log('password correcto'); // imprime si el password es correcto
       return userInDb;
     } else {
       throw new Error(`Contraseña incorrecta para el usuario ${username}`);

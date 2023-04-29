@@ -9,7 +9,7 @@ export  class userMongoDao {
         if (user) {
           return await user.save();    
         }
-        throw new Error(`Ya existe el usuario ${username}`);
+      throw new Error(`Ya existe el usuario ${username}`);
     };
 
     getUsers = async () => {

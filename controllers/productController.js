@@ -40,11 +40,11 @@ const deleteProductByIdController = async (id) => {
   return deleteProduct;
 };
 
-// comentado por seguridad.
-// const deleteProductController = async() => {
+ const deleteProductController = async() => {
+  // comentado por seguridad.
 //   await deleteAllProductsDto();
 //   return;
-// };
+};
 
 
 export  { addProductController, getProductsController, getProductByIdController, deleteProductController, deleteProductByIdController };

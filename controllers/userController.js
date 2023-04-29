@@ -1,4 +1,4 @@
-import { getUserDto, createUserDto, deleteUserDto} from '../dto/usersDto.js';
+import { getUserDto, createUserDto, deleteUserDto, getUserByUsernameDto} from '../dto/usersDto.js';
 
 const validateEmail = (email) => {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -13,6 +13,14 @@ const getUserController = async() => {
   return getUser;
 };
 
+const getUserControllerByUsername = async (username) => {
+  const getUser = await getUserByUsernameDto( username );
+  if (getUser.length === 0) {
+    return [];
+  };
+  return getUser;
+}
+
 const createUserController = async ( username, password, email ) => {
  
     const newUser = await createUserDto ( username, password, email );
@@ -24,4 +32,4 @@ const deleteUserController = async (username, password) => {
   return deleteUser;
 };
 
-export  { createUserController, getUserController, deleteUserController };
+export  { createUserController, getUserController, deleteUserController, getUserControllerByUsername };

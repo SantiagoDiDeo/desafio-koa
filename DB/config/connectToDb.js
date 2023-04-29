@@ -16,8 +16,9 @@ const connectMongo = async () => {
           pass: "santiago", // OBVIAMENTE EL PASSWORD
       });
       console.log("MongoDB connected succesfully");
+      logger.info("MongoDB connected succesfully");
   } catch (error) {
-      console.log({ error });
+      logger.error({ error });
   }
 };
 

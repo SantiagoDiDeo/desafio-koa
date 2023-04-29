@@ -19,7 +19,7 @@ export class Container {
       return normalizedData( messagesInDb );
     } catch(err) {
         logger.error(`Error: ${err}`);
-        console.log(`ERRORRRR ${err}`);
+        //console.log(`ERRORRRR ${err}`);
     };
   };
  
@@ -34,7 +34,7 @@ export class Container {
       return
     } catch(err) {
       logger.error(`Error: ${err}`);
-      console.log(`ERRORRRR ${err}`);
+      //console.log(`ERRORRRR ${err}`);
     };
   };
 

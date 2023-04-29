@@ -32,7 +32,6 @@ passport.use('login', new LocalStrategy( async (username, password, done) => {
 
 passport.use('signup',  new LocalStrategy( async (username, password, done)=> {
     const existentUser = await getUserController(username, password);
-    console.log(existentUser)
     if(existentUser.length > 0 || existentUser.find((u) => u.username === username)) {
         done(new Error(`user already exists`));
         return;

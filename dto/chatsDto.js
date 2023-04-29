@@ -1,16 +1,17 @@
-import getDao from '../class/factoryClasses.js';
+import {getDao} from '../class/factoryClasses.js';
 
 
 const getChatsDto = async() => {
-  const chats = await ( await getDao()).chats;
-  const allChats = await chats.getArray();
+  const dao = await getDao();
+  const allChats = await dao.chats.getArray();
   return allChats;
 };
 
 const addChatDto = async( message ) => {
-  const chats = await ( await getDao()).chats;
-  await chats.add( message );
-  return ;
+  const dao = await getDao();
+
+  const addChat = await dao.chats.add( message );
+  return addChat;
 };
 
 

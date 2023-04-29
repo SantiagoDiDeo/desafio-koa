@@ -18,7 +18,7 @@ myButton.addEventListener('click',  () => {
     return;
   } catch (err) {
     logger.error(Error('err'));
-    console.log(`ERRORRRR ${err}`);
+    //console.log(`ERRORRRR ${err}`);
   };
 
 });

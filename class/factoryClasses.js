@@ -3,7 +3,7 @@ import { prodMongoDao } from './prodClass.js';
 import {userMongoDao} from './userClass.js';
 import Chats from './chatClass.js';
 import ChatsMemory from './chatClassMemory.js';
-import ProductsMemory from './prodClassMemory.js';
+import {ProdMemory} from './prodClassMemory.js';
 import UsersMemory from './userClassMemory.js';
 
 
@@ -14,7 +14,7 @@ export const getDao = async() => {
   let productsDao, usersDao, chatsDao;
   
     if ( persistence === 'MEMORY') {
-      productsDao =  ProductsMemory;
+      productsDao = new ProdMemory();
       usersDao =  UsersMemory;
       chatsDao =  ChatsMemory;
 

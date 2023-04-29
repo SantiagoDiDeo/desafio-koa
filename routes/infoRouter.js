@@ -12,7 +12,7 @@ import compression from 'compression';
 
 
 infoRouter.get('/',  (req, res) => {
-    res.render('form', {product: getProductController, productExist: true});
+    res.render('form', {product: getProductsController(), productExist: true});
   });
 
   infoRouter.get('/info', compression(), (req, res) => {
