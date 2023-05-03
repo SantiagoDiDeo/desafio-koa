@@ -1,25 +1,38 @@
 import  { v4 as uuidv4 }  from 'uuid';
 import { productModel } from '../DB/model/modelMongo.js';
 
+const products = [];
+
+const mapProduct = (product) => product
+  ? ({
+    _id: product._id,
+  title: product.title,
+  description:product.description,
+  code: product.code,
+  price: product.price,
+  stock: product.stock,
+  thumbnail: product.thumbnail
+  }) : null;
 export class ProdMemory {
+
   constructor() {
-    this.products = [];
+    this.products = products;
   }
+  
 
   async saveProduct(product) {
-    const newProduct = new ProductModel(product);
-    await newProduct.save();
-    this.products.push(newProduct);
-    return newProduct;
+    const newProduct = {_id: uuidv4(), ...product};
+    products.push(...products, newProduct);
+    return mapProduct(product);
   };
+ 
 
-  async getProductById(id) {
-    const product = await productModel.findById(id);
+  getProductById(id) {
+    const product =  products.find((product) => product.id === id);
     return product;
   };
 
-  async getAllProducts() {
-    const products = await productModel.find();
+  getAllProducts() {
     return products;
   };
 

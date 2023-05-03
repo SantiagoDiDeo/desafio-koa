@@ -32,8 +32,8 @@ const getProductByIdController = async( id ) => {
     id = new mongoose.Types.ObjectId(id);
     const productById = await getProductsByIdDto( id )
     return productById;
-  } 
-}
+  }; 
+};
 
 const deleteProductByIdController = async (id) => {
   const deleteProduct = await deleteProductByIdDto(id);

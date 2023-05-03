@@ -1,10 +1,10 @@
-import { use } from 'chai';
+
 import { cartModel, userModel } from '../DB/model/modelMongo.js';
 import bcrypt from 'bcrypt';
 
 let userMemory = [];
 
-export class Container {
+export class UserMemoryDao {
   constructor(schema) {
     this.schema = schema;
   }
@@ -41,6 +41,3 @@ export class Container {
   }
 
 }
-const UsersMemory = new Container(userModel);
-
-export default UsersMemory ;

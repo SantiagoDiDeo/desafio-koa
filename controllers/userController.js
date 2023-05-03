@@ -1,12 +1,8 @@
-import { getUserDto, createUserDto, deleteUserDto, getUserByUsernameDto} from '../dto/usersDto.js';
+import { getUsersDto, createUserDto, deleteUserDto, getUserByUsernameDto} from '../dto/usersDto.js';
+import logger from '../logger/logger.js';
 
-const validateEmail = (email) => {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regex.test(email);
-};
-
-const getUserController = async() => {
-  const getUser = await getUserDto( {} );
+const getAllUsersController = async() => {
+  const getUser = await getUsersDto( {} );
   if (getUser.length === 0) {
     return [];
   };
@@ -14,22 +10,31 @@ const getUserController = async() => {
 };
 
 const getUserControllerByUsername = async (username) => {
-  const getUser = await getUserByUsernameDto( username );
-  if (getUser.length === 0) {
-    return [];
-  };
-  return getUser;
+  const existentUser = await getUserByUsernameDto( username );
+  
+  if(existentUser) {
+    throw new Error(`User ${username} already exists`);
+  }
+  return existentUser;
 }
 
-const createUserController = async ( username, password, email ) => {
- 
-    const newUser = await createUserDto ( username, password, email );
-    return newUser;
-};
+const createUserController = async (user) => {
+  try {
+    if(user.username && user.password && user.email) {
+      const newUser = await createUserDto ( user );
+      console.log(newUser);
+      return newUser;
+    };
+    throw new Error('invalid user or missing data');
+  } catch (err) {
+    throw new Error(err);
+  }
+  };
 
-const deleteUserController = async (username, password) => {
-  const deleteUser = await deleteUserDto(username, password);
+const deleteUserController = async (id) => {
+  const deleteUser = await deleteUserDto(id);
   return deleteUser;
+
 };
 
-export  { createUserController, getUserController, deleteUserController, getUserControllerByUsername };
+export  { createUserController, getAllUsersController, deleteUserController, getUserControllerByUsername };

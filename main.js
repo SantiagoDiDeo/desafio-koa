@@ -19,6 +19,10 @@ import * as url from 'url';
 import { PORT } from './enviroments/enviroment.js';
 import connectToDb from './DB/config/connectToDb.js';
 
+import {expressMiddleware} from '@apollo/server/express4';
+import { server } from './graphql/server.js';
+
+
 dotenv.config();
 
 const horaActual = new Date().toLocaleTimeString();
@@ -52,16 +56,8 @@ httpServer.on('error', (error) => {
 
 
 //HANDLEBARS
-/* app.set('views', './views/hbs/partials');
-app.set("view engine", "handlebars");
-app.engine("handlebars", engine({
-  extname: '.hbs',
-  defaultLayout: 'main.handlebars',
-  layoutsDir: path.join(__dirname, 'views', 'hbs', 'layouts'),
-  partialsDir: `${__dirname}/views/hbs/partials`
-}));
- */
-app.set('views', path.join(__dirname, 'views', 'hbs', 'partials'));
+
+ app.set('views', path.join(__dirname, 'views', 'hbs', 'partials'));
 app.set('view engine', 'handlebars');
 app.engine('handlebars', engine({
   extname: '.hbs',
@@ -100,7 +96,7 @@ io.on('connection', async socket => {
 });
 
 app.use('/', sessRouter);
-app.use('/api', prodRouter);
+app.use('/products', prodRouter);
 app.use('/info', infoRouter);
 
 
@@ -136,11 +132,15 @@ if (mode === 'CLUSTER') {
   }
 } else {
 
-  httpServer.listen(PORT, () => {
-    //benchmark();
-    console.log(` (${horaActual}) Servidor en modo fork corriendo en el proceso ${process.pid} en puerto ${PORT}`)
-    logger.info(`Servidor en modo fork corriendo en el proceso ${process.pid} en puerto ${PORT}`);
-  });
+  server.start()
+      .then(() => {
+        app.use('/graphql', expressMiddleware(server));
+        httpServer.listen(PORT, () => {
+          //benchmark();
+          console.log(` (${horaActual}) Servidor en modo fork corriendo en el proceso ${process.pid} en puerto ${PORT}`)
+          logger.info(`Servidor en modo fork corriendo en el proceso ${process.pid} en puerto ${PORT}`);
+        });
+      });
 };
 
 

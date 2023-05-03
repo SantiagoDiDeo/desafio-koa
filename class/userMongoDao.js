@@ -3,16 +3,14 @@ import { userModel } from '../DB/model/modelMongo.js';
 
 export  class userMongoDao {
   
-    saveUser = async (username, password,email) => {
+    saveUser = async (user) => {
         await connectToDb();
-        const user = new userModel(username, password,email);
-        if (user) {
-          return await user.save();    
-        }
-      throw new Error(`Ya existe el usuario ${username}`);
+        const newUser = new userModel(user);
+        await newUser.save(); 
+        return newUser;      
     };
 
-    getUsers = async () => {
+    getAllUsers = async () => {
       await connectToDb();
       const allUsers =  await userModel.find({})
       return allUsers;
@@ -20,12 +18,13 @@ export  class userMongoDao {
 
     getUserByUsername = async (username) => {
       await connectToDb();
-      await userModel.findOne({ username: username})
-    };
+       const user =  await userModel.findOne({ username: username})
+       return user;
+      };
 
-    deleteUser = async (username, password) => {
+    deleteUser = async (id) => {
       await connectToDb();
-      const deletedUser =  await userModel.deleteOne(username, password );
+      const deletedUser =  await userModel.deleteOne(id);
       return deletedUser;
     };
 

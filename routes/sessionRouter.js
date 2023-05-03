@@ -5,7 +5,7 @@ import '../DB/config/auth.js';
 
 const { Router } = express;
 const sessRouter = Router();
-import {getUserController, createUserController, getUserControllerByUsername} from '../controllers/userController.js';
+import {getAllUsersController, createUserController, getUserControllerByUsername} from '../controllers/userController.js';
 import logger from '../logger/logger.js';
 import  sendEmail  from '../messages/email.js';
 import  sendWhatsapp  from '../messages/whatsapp.js';
@@ -29,83 +29,47 @@ const upload = multer.diskStorage({
 
   /* signup y login */
 
-  sessRouter.get('/signup',  (req, res) => {
-    res.render('form', {users: getUserController(), userExist: true});
+  sessRouter.get('/', async (req, res) => {
+    const users = await getAllUsersController()
+    res.render('form.handlebars', {users: users});
   });
 
-sessRouter.post('/signup', 
-passport.authenticate('signup', {failureMessage: 'fallo el registro', failureRedirect: '/'}),
- async (req, res) => {
-  const {username, password, email, address, age, phoneNumber, avatar} = req.body;
+ 
 
-    const existentUser = await getUserControllerByUsername(username);
+sessRouter.post('/signup', 
+passport.authenticate('signup'),
+ async (req, res) => {
+
+    const existentUser = await getUserControllerByUsername(req.body.username);
     if (existentUser) {
         res.status(403).send('el usuario ya existe');
         return;
     }; 
-    await createUserController(username, password, email, address, age, phoneNumber, avatar);
+    const user = req.body;
+    await createUserController(user);
       
-    req.session.username = username;
+    req.session.username = req.body.username;
 
-    res.render('products', {products: getProductsController(), userExist: true})
+    res.redirect('/products');
 });
 
 sessRouter.post('/login',
-passport.authenticate('login', {failureMessage: 'failure authentication', failureRedirect: '/'}),
-async (req, res) => {
-  const {username, password} = await req.body;
+  passport.authenticate('login'),
+  async (req, res) => {
+    const { username, password } = req.body;
 
-   req.session.username = username;
-    req.session.password = password;
-   req.session.counter = (req.session.counter ?? 0) + 1;
+    const existentUser = await getUserControllerByUsername(username);
 
-   const existentUser = await getUserController(username, password);
-
-if(!existentUser) {
-
-  res.status(403).send('el usuario no existe o es incorrecto');
-  return;
-} 
-  res.send(`hola ${req.session.username}! bienvenido!! has entrado ${req.session.counter} veces`);
-  res.render('form', {user: getProductsController(), userExist: true})
-
-});
-
-sessRouter.get('/:username', async (req,res) => {
-  const username = req.params.username;
-    const userData = await getUserController( username );
-    const productList = getProductsController(); 
-
-    for ( const element of userData[0].cart ) {
-      const item = await userData( username )
-      productList.push({ 
-        title: item[0].title,
-        code: item[0].code,
-        cant: element.cant
-       })
+    if (!existentUser || !compareSync(password, existentUser.password)) {
+      res.status(403).send('el usuario no existe o es incorrecto');
+      return;
     }
 
-    sendEmail({
-      from: 'Administrador',
-      to: process.env.EMAIL_ADMIN,
-      subject: `Nuevo pedido de ${username}`,
-      text: '',
-      html: ( productList )
-    })
-
-    sendWhatsapp({
-      body: `Nuevo pedido de ${username}`,
-      to: userData[0].phoneNumber
-    })
-
-    sendSMS({
-      body: 'Pedido recibido',
-      number: userData[0].phoneNumber
-    })
-    
-    res.status(200).send({ cart: userData })
+    req.session.username = existentUser.username;
+    res.redirect('/products');
   }
-  );
+);
+
 
  sessRouter.get('/logout',  (req,res) => {
      req.session.destroy(  () => {

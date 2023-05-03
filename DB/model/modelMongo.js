@@ -25,11 +25,10 @@ const cartSchema = new Schema({
 
 const userSchema = new Schema({
   email: { type: String, required: true },
-  name: { type: String, required: false },
   username: { type: String, required: true },
   password: { type: String, required: true },
-  age: { type: Number, required: false },
   address: { type: String, required: false },
+  age: { type: Number, required: false },
   avatar: { type: String, required: false },
   cart: {type: Array, required: false }
 });

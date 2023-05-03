@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/SantiagoDiDeo/desafios-backend#readme",
   "dependencies": {
+    "@apollo/server": "^4.7.0",
     "@faker-js/faker": "^7.6.0",
     "autocannon": "^7.10.0",
     "bcrypt": "^5.1.0",
