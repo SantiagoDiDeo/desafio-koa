@@ -11,7 +11,7 @@ import benchmark from './autocannon/autocannon.js';
 import prodRouter from './routes/prodRouter.js';
 import sessRouter from './routes/sessionRouter.js';
 import infoRouter from './routes/infoRouter.js';
-import { getProductsController, addProductController } from './controllers/productController.js';
+import { getAllProductsController, addProductController } from './controllers/productController.js';
 import { getChatsController, addChatsController } from './controllers/chatController.js';
 import dotenv from 'dotenv';
 import path from 'path';
@@ -75,7 +75,7 @@ io.on('connection', async socket => {
 
 //tabla productos
   socket.on('getProduct', async (product) => {
-    const products = await getProductsController(product);
+    const products = await getAllProductsController(product);
     io.sockets.emit('newProduct', products);
   });
   
@@ -132,14 +132,11 @@ if (mode === 'CLUSTER') {
   }
 } else {
 
-  server.start()
-      .then(() => {
-        app.use('/graphql', expressMiddleware(server));
         httpServer.listen(PORT, () => {
           //benchmark();
           console.log(` (${horaActual}) Servidor en modo fork corriendo en el proceso ${process.pid} en puerto ${PORT}`)
           logger.info(`Servidor en modo fork corriendo en el proceso ${process.pid} en puerto ${PORT}`);
-        });
+        
       });
 };
 

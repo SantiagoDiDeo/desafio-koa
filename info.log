@@ -349,3 +349,300 @@
 [2023-05-02T22:38:21.191] [INFO] default - Servidor en modo fork corriendo en el proceso 14048 en puerto 8080
 [2023-05-02T22:38:24.430] [INFO] default - MongoDB connected succesfully
 [2023-05-02T22:38:24.435] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:25:55.545] [INFO] default - MongoDB connected succesfully
+[2023-05-03T16:25:55.570] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:25:55.841] [INFO] default - Connection with DB already exists
+[2023-05-03T16:25:55.902] [INFO] default - Connection with DB already exists
+[2023-05-03T16:25:55.986] [INFO] default - Connection with DB already exists
+[2023-05-03T16:29:33.324] [INFO] default - MongoDB connected succesfully
+[2023-05-03T16:29:33.342] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:29:33.627] [INFO] default - Connection with DB already exists
+[2023-05-03T16:29:33.880] [INFO] default - Connection with DB already exists
+[2023-05-03T16:29:34.021] [INFO] default - Connection with DB already exists
+[2023-05-03T16:29:34.101] [INFO] default - Connection with DB already exists
+[2023-05-03T16:29:34.151] [INFO] default - Connection with DB already exists
+[2023-05-03T16:29:34.212] [INFO] default - Connection with DB already exists
+[2023-05-03T16:29:34.287] [INFO] default - Connection with DB already exists
+[2023-05-03T16:31:20.649] [INFO] default - MongoDB connected succesfully
+[2023-05-03T16:31:20.670] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:31:21.027] [INFO] default - Connection with DB already exists
+[2023-05-03T16:31:21.359] [INFO] default - Connection with DB already exists
+[2023-05-03T16:31:21.489] [INFO] default - Connection with DB already exists
+[2023-05-03T16:31:21.594] [INFO] default - Connection with DB already exists
+[2023-05-03T16:31:21.651] [INFO] default - Connection with DB already exists
+[2023-05-03T16:31:21.709] [INFO] default - Connection with DB already exists
+[2023-05-03T16:31:21.758] [INFO] default - Connection with DB already exists
+[2023-05-03T16:32:58.916] [INFO] default - MongoDB connected succesfully
+[2023-05-03T16:32:58.929] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:32:59.136] [INFO] default - Connection with DB already exists
+[2023-05-03T16:32:59.356] [INFO] default - Connection with DB already exists
+[2023-05-03T16:32:59.522] [INFO] default - Connection with DB already exists
+[2023-05-03T16:32:59.575] [INFO] default - Connection with DB already exists
+[2023-05-03T16:32:59.631] [INFO] default - Connection with DB already exists
+[2023-05-03T16:32:59.690] [INFO] default - Connection with DB already exists
+[2023-05-03T16:32:59.748] [INFO] default - Connection with DB already exists
+[2023-05-03T16:33:48.623] [INFO] default - MongoDB connected succesfully
+[2023-05-03T16:33:48.633] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:33:48.898] [INFO] default - Connection with DB already exists
+[2023-05-03T16:33:49.002] [INFO] default - Connection with DB already exists
+[2023-05-03T16:33:49.158] [INFO] default - Connection with DB already exists
+[2023-05-03T16:33:49.209] [INFO] default - Connection with DB already exists
+[2023-05-03T16:33:49.271] [INFO] default - Connection with DB already exists
+[2023-05-03T16:33:49.329] [INFO] default - Connection with DB already exists
+[2023-05-03T16:33:49.387] [INFO] default - Connection with DB already exists
+[2023-05-03T16:36:00.494] [INFO] default - MongoDB connected succesfully
+[2023-05-03T16:36:00.512] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:36:00.990] [INFO] default - Connection with DB already exists
+[2023-05-03T16:36:01.071] [INFO] default - Connection with DB already exists
+[2023-05-03T16:36:01.181] [INFO] default - Connection with DB already exists
+[2023-05-03T16:36:01.241] [INFO] default - Connection with DB already exists
+[2023-05-03T16:36:01.309] [INFO] default - Connection with DB already exists
+[2023-05-03T16:36:01.361] [INFO] default - Connection with DB already exists
+[2023-05-03T16:36:01.414] [INFO] default - Connection with DB already exists
+[2023-05-03T16:37:15.184] [INFO] default - MongoDB connected succesfully
+[2023-05-03T16:37:15.205] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:37:15.439] [INFO] default - Connection with DB already exists
+[2023-05-03T16:37:15.521] [INFO] default - Connection with DB already exists
+[2023-05-03T16:37:15.617] [INFO] default - Connection with DB already exists
+[2023-05-03T16:37:15.672] [INFO] default - Connection with DB already exists
+[2023-05-03T16:37:15.722] [INFO] default - Connection with DB already exists
+[2023-05-03T16:37:15.803] [INFO] default - Connection with DB already exists
+[2023-05-03T16:37:15.859] [INFO] default - Connection with DB already exists
+[2023-05-03T16:39:46.944] [INFO] default - MongoDB connected succesfully
+[2023-05-03T16:39:46.964] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:39:47.223] [INFO] default - Connection with DB already exists
+[2023-05-03T16:39:47.373] [INFO] default - Connection with DB already exists
+[2023-05-03T16:39:47.578] [INFO] default - Connection with DB already exists
+[2023-05-03T16:39:47.636] [INFO] default - Connection with DB already exists
+[2023-05-03T16:39:47.684] [INFO] default - Connection with DB already exists
+[2023-05-03T16:39:47.734] [INFO] default - Connection with DB already exists
+[2023-05-03T16:39:47.782] [INFO] default - Connection with DB already exists
+[2023-05-03T16:43:40.324] [INFO] default - MongoDB connected succesfully
+[2023-05-03T16:43:40.337] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:43:40.672] [INFO] default - Connection with DB already exists
+[2023-05-03T16:43:40.769] [INFO] default - Connection with DB already exists
+[2023-05-03T16:43:40.778] [INFO] default - Connection with DB already exists
+[2023-05-03T16:43:40.840] [INFO] default - Connection with DB already exists
+[2023-05-03T16:43:40.886] [INFO] default - Connection with DB already exists
+[2023-05-03T16:43:40.937] [INFO] default - Connection with DB already exists
+[2023-05-03T16:43:41.022] [INFO] default - Connection with DB already exists
+[2023-05-03T16:48:19.130] [INFO] default - MongoDB connected succesfully
+[2023-05-03T16:48:19.144] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:48:19.375] [INFO] default - Connection with DB already exists
+[2023-05-03T16:48:19.447] [INFO] default - Connection with DB already exists
+[2023-05-03T16:48:19.463] [INFO] default - Connection with DB already exists
+[2023-05-03T16:48:19.526] [INFO] default - Connection with DB already exists
+[2023-05-03T16:48:19.578] [INFO] default - Connection with DB already exists
+[2023-05-03T16:48:19.633] [INFO] default - Connection with DB already exists
+[2023-05-03T16:48:19.682] [INFO] default - Connection with DB already exists
+[2023-05-03T16:49:42.647] [INFO] default - MongoDB connected succesfully
+[2023-05-03T16:49:42.666] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:49:43.082] [INFO] default - Connection with DB already exists
+[2023-05-03T16:49:43.152] [INFO] default - Connection with DB already exists
+[2023-05-03T16:49:43.169] [INFO] default - Connection with DB already exists
+[2023-05-03T16:49:43.226] [INFO] default - Connection with DB already exists
+[2023-05-03T16:49:43.274] [INFO] default - Connection with DB already exists
+[2023-05-03T16:49:43.330] [INFO] default - Connection with DB already exists
+[2023-05-03T16:49:43.394] [INFO] default - Connection with DB already exists
+[2023-05-03T16:50:48.102] [INFO] default - MongoDB connected succesfully
+[2023-05-03T16:50:48.114] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:50:48.480] [INFO] default - Connection with DB already exists
+[2023-05-03T16:50:48.671] [INFO] default - Connection with DB already exists
+[2023-05-03T16:50:48.683] [INFO] default - Connection with DB already exists
+[2023-05-03T16:50:48.733] [INFO] default - Connection with DB already exists
+[2023-05-03T16:50:48.998] [INFO] default - Connection with DB already exists
+[2023-05-03T16:50:49.202] [INFO] default - Connection with DB already exists
+[2023-05-03T16:50:49.251] [INFO] default - Connection with DB already exists
+[2023-05-03T16:52:53.584] [INFO] default - MongoDB connected succesfully
+[2023-05-03T16:52:53.602] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:52:53.791] [INFO] default - Connection with DB already exists
+[2023-05-03T16:52:53.848] [INFO] default - Connection with DB already exists
+[2023-05-03T16:52:53.905] [INFO] default - Connection with DB already exists
+[2023-05-03T16:52:53.952] [INFO] default - Connection with DB already exists
+[2023-05-03T16:55:00.188] [INFO] default - MongoDB connected succesfully
+[2023-05-03T16:55:00.205] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:55:00.411] [INFO] default - Connection with DB already exists
+[2023-05-03T16:55:00.477] [INFO] default - Connection with DB already exists
+[2023-05-03T16:55:00.536] [INFO] default - Connection with DB already exists
+[2023-05-03T16:55:50.449] [INFO] default - MongoDB connected succesfully
+[2023-05-03T16:55:50.473] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T16:55:50.718] [INFO] default - Connection with DB already exists
+[2023-05-03T16:55:50.923] [INFO] default - Connection with DB already exists
+[2023-05-03T16:55:50.994] [INFO] default - Connection with DB already exists
+[2023-05-03T16:55:51.044] [INFO] default - Connection with DB already exists
+[2023-05-03T16:55:51.092] [INFO] default - Connection with DB already exists
+[2023-05-03T16:55:51.147] [INFO] default - Connection with DB already exists
+[2023-05-03T17:01:20.918] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:01:20.934] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:01:21.119] [INFO] default - Connection with DB already exists
+[2023-05-03T17:01:21.170] [INFO] default - Connection with DB already exists
+[2023-05-03T17:01:21.281] [INFO] default - Connection with DB already exists
+[2023-05-03T17:01:21.349] [INFO] default - Connection with DB already exists
+[2023-05-03T17:01:21.398] [INFO] default - Connection with DB already exists
+[2023-05-03T17:01:21.443] [INFO] default - Connection with DB already exists
+[2023-05-03T17:01:21.496] [INFO] default - Connection with DB already exists
+[2023-05-03T17:02:38.653] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:02:38.670] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:02:38.889] [INFO] default - Connection with DB already exists
+[2023-05-03T17:02:38.950] [INFO] default - Connection with DB already exists
+[2023-05-03T17:02:39.071] [INFO] default - Connection with DB already exists
+[2023-05-03T17:02:39.132] [INFO] default - Connection with DB already exists
+[2023-05-03T17:02:39.204] [INFO] default - Connection with DB already exists
+[2023-05-03T17:02:39.249] [INFO] default - Connection with DB already exists
+[2023-05-03T17:02:39.299] [INFO] default - Connection with DB already exists
+[2023-05-03T17:03:28.885] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:03:28.898] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:03:29.135] [INFO] default - Connection with DB already exists
+[2023-05-03T17:03:29.190] [INFO] default - Connection with DB already exists
+[2023-05-03T17:03:29.362] [INFO] default - Connection with DB already exists
+[2023-05-03T17:04:35.856] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:04:35.876] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:04:36.051] [INFO] default - Connection with DB already exists
+[2023-05-03T17:04:36.101] [INFO] default - Connection with DB already exists
+[2023-05-03T17:06:07.957] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:06:07.982] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:06:08.178] [INFO] default - Connection with DB already exists
+[2023-05-03T17:06:08.229] [INFO] default - Connection with DB already exists
+[2023-05-03T17:06:08.361] [INFO] default - Connection with DB already exists
+[2023-05-03T17:18:18.952] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:18:18.974] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:27:48.186] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:27:48.206] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:27:48.392] [INFO] default - Connection with DB already exists
+[2023-05-03T17:27:48.493] [INFO] default - Connection with DB already exists
+[2023-05-03T17:39:26.808] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:39:26.829] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:39:27.055] [INFO] default - Connection with DB already exists
+[2023-05-03T17:39:27.141] [INFO] default - Connection with DB already exists
+[2023-05-03T17:42:53.909] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:42:53.926] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:42:54.127] [INFO] default - Connection with DB already exists
+[2023-05-03T17:42:54.210] [INFO] default - Connection with DB already exists
+[2023-05-03T17:42:54.265] [INFO] default - Connection with DB already exists
+[2023-05-03T17:46:21.873] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:46:21.899] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:46:22.139] [INFO] default - Connection with DB already exists
+[2023-05-03T17:46:22.215] [INFO] default - Connection with DB already exists
+[2023-05-03T17:46:22.267] [INFO] default - Connection with DB already exists
+[2023-05-03T17:49:42.418] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:49:42.434] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:49:42.678] [INFO] default - Connection with DB already exists
+[2023-05-03T17:49:42.765] [INFO] default - Connection with DB already exists
+[2023-05-03T17:49:42.817] [INFO] default - Connection with DB already exists
+[2023-05-03T17:52:37.082] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:52:37.104] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:52:37.308] [INFO] default - Connection with DB already exists
+[2023-05-03T17:52:37.405] [INFO] default - Connection with DB already exists
+[2023-05-03T17:54:23.370] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:54:23.385] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:54:23.598] [INFO] default - Connection with DB already exists
+[2023-05-03T17:54:23.697] [INFO] default - Connection with DB already exists
+[2023-05-03T17:54:23.755] [INFO] default - Connection with DB already exists
+[2023-05-03T17:56:38.713] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:56:38.728] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:56:38.995] [INFO] default - Connection with DB already exists
+[2023-05-03T17:56:39.122] [INFO] default - Connection with DB already exists
+[2023-05-03T17:56:39.181] [INFO] default - Connection with DB already exists
+[2023-05-03T17:57:18.360] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:57:18.375] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:57:18.603] [INFO] default - Connection with DB already exists
+[2023-05-03T17:57:18.693] [INFO] default - Connection with DB already exists
+[2023-05-03T17:57:18.752] [INFO] default - Connection with DB already exists
+[2023-05-03T17:58:50.679] [INFO] default - MongoDB connected succesfully
+[2023-05-03T17:58:50.696] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T17:58:50.968] [INFO] default - Connection with DB already exists
+[2023-05-03T17:58:51.110] [INFO] default - Connection with DB already exists
+[2023-05-03T17:58:51.233] [INFO] default - Connection with DB already exists
+[2023-05-03T18:45:51.326] [INFO] default - MongoDB connected succesfully
+[2023-05-03T18:45:51.346] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T18:45:51.574] [INFO] default - Connection with DB already exists
+[2023-05-03T18:45:51.721] [INFO] default - Connection with DB already exists
+[2023-05-03T18:45:51.826] [INFO] default - Connection with DB already exists
+[2023-05-03T18:47:17.488] [INFO] default - MongoDB connected succesfully
+[2023-05-03T18:47:17.503] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T18:47:17.779] [INFO] default - Connection with DB already exists
+[2023-05-03T18:47:17.875] [INFO] default - Connection with DB already exists
+[2023-05-03T18:47:17.962] [INFO] default - Connection with DB already exists
+[2023-05-03T18:54:04.229] [INFO] default - MongoDB connected succesfully
+[2023-05-03T18:54:04.255] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T18:54:04.631] [INFO] default - Connection with DB already exists
+[2023-05-03T18:54:04.724] [INFO] default - Connection with DB already exists
+[2023-05-03T18:54:04.826] [INFO] default - Connection with DB already exists
+[2023-05-03T18:54:04.916] [INFO] default - Connection with DB already exists
+[2023-05-03T18:54:04.967] [INFO] default - Connection with DB already exists
+[2023-05-03T18:54:05.022] [INFO] default - Connection with DB already exists
+[2023-05-03T18:55:11.184] [INFO] default - MongoDB connected succesfully
+[2023-05-03T18:55:11.205] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T18:55:11.510] [INFO] default - Connection with DB already exists
+[2023-05-03T18:55:11.652] [INFO] default - Connection with DB already exists
+[2023-05-03T18:55:11.836] [INFO] default - Connection with DB already exists
+[2023-05-03T18:55:11.903] [INFO] default - Connection with DB already exists
+[2023-05-03T18:55:11.979] [INFO] default - Connection with DB already exists
+[2023-05-03T18:55:12.035] [INFO] default - Connection with DB already exists
+[2023-05-03T18:56:14.155] [INFO] default - MongoDB connected succesfully
+[2023-05-03T18:56:14.171] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T18:56:14.376] [INFO] default - Connection with DB already exists
+[2023-05-03T18:56:14.468] [INFO] default - Connection with DB already exists
+[2023-05-03T18:56:14.586] [INFO] default - Connection with DB already exists
+[2023-05-03T18:56:14.648] [INFO] default - Connection with DB already exists
+[2023-05-03T18:56:14.752] [INFO] default - Connection with DB already exists
+[2023-05-03T18:56:14.804] [INFO] default - Connection with DB already exists
+[2023-05-03T18:57:08.298] [INFO] default - MongoDB connected succesfully
+[2023-05-03T18:57:08.313] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T18:57:08.493] [INFO] default - Connection with DB already exists
+[2023-05-03T18:57:08.579] [INFO] default - Connection with DB already exists
+[2023-05-03T18:57:08.649] [INFO] default - Connection with DB already exists
+[2023-05-03T18:57:08.711] [INFO] default - Connection with DB already exists
+[2023-05-03T18:57:08.764] [INFO] default - Connection with DB already exists
+[2023-05-03T18:57:08.823] [INFO] default - Connection with DB already exists
+[2023-05-03T19:21:12.875] [INFO] default - MongoDB connected succesfully
+[2023-05-03T19:21:12.974] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T19:21:13.257] [INFO] default - Connection with DB already exists
+[2023-05-03T19:21:13.343] [INFO] default - Connection with DB already exists
+[2023-05-03T19:21:13.395] [INFO] default - Connection with DB already exists
+[2023-05-03T19:21:13.452] [INFO] default - Connection with DB already exists
+[2023-05-03T19:21:13.508] [INFO] default - Connection with DB already exists
+[2023-05-03T19:21:13.572] [INFO] default - Connection with DB already exists
+[2023-05-03T19:21:13.621] [INFO] default - Connection with DB already exists
+[2023-05-03T19:23:02.307] [INFO] default - MongoDB connected succesfully
+[2023-05-03T19:23:02.327] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T19:23:02.517] [INFO] default - Connection with DB already exists
+[2023-05-03T19:23:02.622] [INFO] default - Connection with DB already exists
+[2023-05-03T19:23:02.755] [INFO] default - Connection with DB already exists
+[2023-05-03T19:23:02.825] [INFO] default - Connection with DB already exists
+[2023-05-03T19:23:02.887] [INFO] default - Connection with DB already exists
+[2023-05-03T19:23:02.956] [INFO] default - Connection with DB already exists
+[2023-05-03T19:23:03.023] [INFO] default - Connection with DB already exists
+[2023-05-03T19:23:03.078] [INFO] default - Connection with DB already exists
+[2023-05-03T19:26:57.270] [INFO] default - MongoDB connected succesfully
+[2023-05-03T19:26:57.290] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T19:26:57.507] [INFO] default - Connection with DB already exists
+[2023-05-03T19:26:57.583] [INFO] default - Connection with DB already exists
+[2023-05-03T19:26:57.686] [INFO] default - Connection with DB already exists
+[2023-05-03T19:26:57.760] [INFO] default - Connection with DB already exists
+[2023-05-03T19:26:57.830] [INFO] default - Connection with DB already exists
+[2023-05-03T19:26:57.914] [INFO] default - Connection with DB already exists
+[2023-05-03T19:26:57.963] [INFO] default - Connection with DB already exists
+[2023-05-03T19:31:48.006] [INFO] default - MongoDB connected succesfully
+[2023-05-03T19:31:48.022] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-03T19:31:48.257] [INFO] default - Connection with DB already exists
+[2023-05-03T19:31:48.336] [INFO] default - Connection with DB already exists
+[2023-05-03T19:31:48.399] [INFO] default - Connection with DB already exists
+[2023-05-03T19:31:48.455] [INFO] default - Connection with DB already exists
+[2023-05-03T19:31:48.525] [INFO] default - Connection with DB already exists
+[2023-05-03T19:31:48.583] [INFO] default - Connection with DB already exists
+[2023-05-04T10:20:00.122] [INFO] default - Servidor en modo fork corriendo en el proceso 8044 en puerto 8080
+[2023-05-04T10:20:36.936] [INFO] default - MongoDB connected succesfully
+[2023-05-04T10:20:36.960] [INFO] default - MongoAtlasDB Connected succesfully
+[2023-05-04T10:20:37.156] [INFO] default - Connection with DB already exists
+[2023-05-04T10:20:37.219] [INFO] default - Connection with DB already exists
+[2023-05-04T10:20:37.274] [INFO] default - Connection with DB already exists
+[2023-05-04T10:20:37.320] [INFO] default - Connection with DB already exists
+[2023-05-04T10:20:37.373] [INFO] default - Connection with DB already exists
+[2023-05-04T10:20:37.433] [INFO] default - Connection with DB already exists
+[2023-05-04T12:46:11.192] [INFO] default - MongoDB connected successfully
+[2023-05-04T12:46:11.217] [INFO] default - MongoAtlasDB Connected successfully
+[2023-05-04T12:46:11.416] [INFO] default - Connection with DB already exists
+[2023-05-04T12:50:12.823] [INFO] default - MongoDB connected successfully
+[2023-05-04T12:50:12.840] [INFO] default - MongoAtlasDB Connected successfully
+[2023-05-04T12:50:13.091] [INFO] default - Connection with DB already exists
