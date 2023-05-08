@@ -1,19 +1,14 @@
-import express from  'express';
-import passport from 'passport';
+import passport from 'koa-passport';
 import multer from 'multer';
 import '../DB/config/auth.js';
 
-const { Router } = express;
-const sessRouter = Router();
 import {getAllUsersController, createUserController, getUserControllerByUsername} from '../controllers/userController.js';
-import logger from '../logger/logger.js';
-import  sendEmail  from '../messages/email.js';
-import  sendWhatsapp  from '../messages/whatsapp.js';
-import  sendSMS  from '../messages/message.js';
-import  {getAllProductsController}  from '../controllers/productController.js';
 
-sessRouter.use(passport.initialize());
-sessRouter.use(passport.session());
+
+import Router from '@koa/router';
+const sessRouter =  new Router({ prefix: '/'});
+
+
 
 const upload = multer.diskStorage({
     destination: '../public/uploads',
@@ -29,54 +24,51 @@ const upload = multer.diskStorage({
 
   /* signup y login */
 
-  sessRouter.get('/', async (req, res) => {
+  sessRouter.get('/', async (ctx) => {
     const users = await getAllUsersController()
-    res.render('form.handlebars', {users: users});
+    ctx.body = users;
   });
 
- 
-
-sessRouter.post('/signup', 
-passport.authenticate('signup'),
- async (req, res) => {
-
-    const existentUser = await getUserControllerByUsername(req.body.username);
+  sessRouter.post('/signup', passport.authenticate('signup'), async (ctx) => {
+    const existentUser = await getUserControllerByUsername(ctx.request.body.username);
     if (existentUser) {
-        res.status(403).send('el usuario ya existe');
-        return;
-    }; 
-    const user = req.body;
-    await createUserController(user);
-      
-    req.session.username = req.body.username;
-
-    res.redirect('/products');
-});
-
-sessRouter.post('/login',
-  passport.authenticate('login'),
-  async (req, res) => {
-    const { username, password } = req.body;
-
-    const existentUser = await getUserControllerByUsername(username);
-
-    if (!existentUser || !compareSync(password, existentUser.password)) {
-      res.status(403).send('el usuario no existe o es incorrecto');
+      ctx.status = 403;
+      ctx.body = 'el usuario ya existe';
       return;
     }
+    
+    const user = ctx.request.body;
+    await createUserController(user);
+    
+    ctx.session.username = ctx.request.body.username;
+    ctx.redirect('/products');
+  });
+  
 
-    req.session.username = existentUser.username;
-    res.redirect('/products');
-  }
-);
+  sessRouter.post('/login', passport.authenticate('login'), async (ctx) => {
+    const { username, password } = ctx.request.body;
+    
+    const existentUser = await getUserControllerByUsername(username);
+  
+    if (!existentUser || !compareSync(password, existentUser.password)) {
+      ctx.status = 403;
+      ctx.body = 'el usuario no existe o es incorrecto';
+      return;
+    }
+  
+    ctx.session.username = existentUser.username;
+    ctx.redirect('/products');
+  });
+  
 
 
- sessRouter.get('/logout',  (req,res) => {
-     req.session.destroy(  () => {
-      res.send(`Hasta luego ${req.session.username}`);
-   });
-   res.redirect('/');
-});
-
+  sessRouter.get('/logout', async (ctx) => {
+    await ctx.session.destroy();
+    ctx.body = `Hasta luego ${ctx.session.username}`;
+    ctx.redirect('/');
+  });
+  
+sessRouter.use(passport.initialize());
+sessRouter.use(passport.session());
 
 export default sessRouter;

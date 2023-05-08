@@ -1,10 +1,9 @@
-import express from 'express';
-import { engine } from 'express-handlebars';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 import http from 'http';
 import { Server } from 'socket.io';
 
-import session from 'express-session';
-import passport from 'passport';
+
 import cluster from 'cluster';
 import logger from './logger/logger.js';
 import benchmark from './autocannon/autocannon.js';
@@ -16,12 +15,18 @@ import { getChatsController, addChatsController } from './controllers/chatContro
 import dotenv from 'dotenv';
 import path from 'path';
 import * as url from 'url';
-import { PORT } from './enviroments/enviroment.js';
+import { PORT } from './environments/environment.js';
 import connectToDb from './DB/config/connectToDb.js';
 
-import {expressMiddleware} from '@apollo/server/express4';
-import { server } from './graphql/server.js';
+import  Koa  from 'koa';
+import { koaBody} from 'koa-body';
+import views from 'koa-views';
+import session from 'koa-session';
+import passport from 'koa-passport';
+import koaStatic from 'koa-static';
+import koaBodyParser from 'koa-bodyparser';
 
+import handlebars from 'handlebars';
 
 dotenv.config();
 
@@ -33,17 +38,18 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 
 
-const app = express();
+const app = new Koa();
 const httpServer = http.createServer(app);
 const io = new Server(httpServer, {cors: {origin: "*"}});
 
+app.use(koaBody());
+app.use(koaStatic(`${__dirname}/public`));
+app.use(koaBodyParser());
+app.use(koaStatic(path.join(__dirname, 'public')));
 
-app.use(express.json());
-app.use(express.static(`${__dirname}/public`));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use(session({connectToDb, secret: 'secreto1', resave: true, saveUninitialized: true}));
+app.keys = ['secreto1']; // Clave de cifrado para la sesión, reemplázala con tu valor deseado
+app.use(session({ connectToDb }, app));
+//app.use(session({connectToDb, secret: 'secreto1', resave: true, saveUninitialized: true}));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -57,13 +63,15 @@ httpServer.on('error', (error) => {
 
 //HANDLEBARS
 
- app.set('views', path.join(__dirname, 'views', 'hbs', 'partials'));
-app.set('view engine', 'handlebars');
-app.engine('handlebars', engine({
-  extname: '.hbs',
-  defaultLayout: 'main.handlebars',
-  layoutsDir: path.join(__dirname, 'views', 'hbs', 'layouts'),
-  partialsDir: path.join(__dirname, 'views', 'hbs', 'partials')
+app.use(views(path.join(__dirname, 'views'), {
+  extension: 'handlebars',
+  map: { handlebars: 'handlebars' },
+  options: {
+    defaultLayout: 'main.handlebars',
+    layoutsDir: path.join(__dirname, 'views', 'hbs', 'layouts'),
+    partialsDir: path.join(__dirname, 'views', 'hbs', 'partials'),
+    handlebars: handlebars
+  }
 }));
 
 
@@ -88,16 +96,20 @@ io.on('connection', async socket => {
 
   //tabla chat
   socket.on('newChat', async (msg) => {
-   await getChatsController()
-   const chatToAdd =  await addChatsController(msg)
-   io.sockets.emit('newChat', chatToAdd);
+    await getChatsController()
+    const chatToAdd =  await addChatsController(msg)
+    io.sockets.emit('newChat', chatToAdd);
   });
   
 });
 
-app.use('/', sessRouter);
-app.use('/products', prodRouter);
-app.use('/info', infoRouter);
+app.use(sessRouter.routes()).use(sessRouter.allowedMethods({
+  prefix: '/' 
+}));
+app.use(prodRouter.routes()).use(prodRouter.allowedMethods({
+  prefix: '/products' 
+}));
+app.use(infoRouter.routes());
 
 
 
@@ -134,7 +146,8 @@ if (mode === 'CLUSTER') {
 
         httpServer.listen(PORT, () => {
           //benchmark();
-          console.log(` (${horaActual}) Servidor en modo fork corriendo en el proceso ${process.pid} en puerto ${PORT}`)
+          const address = httpServer.address();
+          console.log(` (${horaActual}) Servidor en modo fork corriendo en el proceso ${process.pid}  link: http://localhost:${address.port}`)
           logger.info(`Servidor en modo fork corriendo en el proceso ${process.pid} en puerto ${PORT}`);
         
       });

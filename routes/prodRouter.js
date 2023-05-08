@@ -1,83 +1,61 @@
-import express from  'express';
 import {addProductController, getAllProductsController, getProductByIdController, deleteProductByIdController } from '../controllers/productController.js';
-import { faker } from '@faker-js/faker';
-import  mockProducts  from '../class/mockClass.js';
-faker.locate = 'es';
-const { Router } = express;
-import passport from 'passport';
+import passport from 'koa-passport';
 import '../DB/config/auth.js';
-const prodRouter = Router();
-import { fork } from 'child_process';
-import logger from '../logger/logger.js';
+
+import Router from '@koa/router';
+const prodRouter =  new Router({ prefix: '/products'});
 
 prodRouter.use(passport.initialize());
 prodRouter.use(passport.session());
 
 
 //get all products
-prodRouter.get('/', async ( req, res ) => {
+prodRouter.get('/', async ( ctx ) => {
     const allProducts = await getAllProductsController();
-    res.render('products', {product: allProducts, productExist: true});
-
+    ctx.body = allProducts;
 });
 
 //get products by id
-prodRouter.get('/:id', async ( req, res ) => {
+prodRouter.get('/:id', async (ctx) => {
     const id = req.params.id;
     const product = await getProductByIdController(id);
-    product ? res.json( product )
-    : res.status(404).send({ error: 'producto no encontrado'})  ;
+    product ? ctx.body = product
+    : ctx.status = 404  ;
 
 });
 
 //post product
-prodRouter.post('/productos', async (req, res) => {
-    const productToAdd = await req.body;
+prodRouter.post('/productos', async (ctx) => {
+    const productToAdd = await ctx.request.body;
     await addProductController(productToAdd);
-    res.send({ message: 'producto agregado', product: productToAdd});
+    ctx.body = productToAdd;
 
   });
 
 //update product
-prodRouter.put('/:id', async ( req, res ) => {
-    const id = req.params.id;
-    const  replace  = req.body;
+prodRouter.put('/:id', async ( ctx) => {
+    const id = ctx.params.id;
+    const  replace  = ctx.body;
+    const productToReplace = await getProductByIdController(id)
 
-    if(await addProductController( id )){
-        res.send({ message: 'producto modificado', product: replace});
+    if(productToReplace) {
+      await addProductController( id )
+        ctx.body = replace;
       } else {
-        res.status(404).send({ error: 'producto no encontrado'});
+        ctx.status = 404
       };
     
 });
 
 //delete product
-prodRouter.delete('/:id', async ( req, res ) => {
-    const { id } = req.params;
+prodRouter.delete('/:id', async ( ctx ) => {
+    const { id } = ctx.params;
 
     if (await deleteProductByIdController(id)) {
-        res.send({ message: 'producto borrado'});
+        ctx.body = 'product deleted'
       } else {
-        res.status(404).send({ error: 'producto no encontrado'});
+        ctx.status = 404
       };
 });
-
-prodRouter.get('/productos-test', (req, res) => {
-  const products = mockProducts.getArray();
-  logger.info(products);
-  res.json(products);
-});
-
-/* apirandoms */
-
-prodRouter.get('/api/randoms', (req, res) => {
-  const cant = req.query.cant || 100000000;
-  const child = fork('./randoms.js');
-  child.send(cant);
-  child.on('message', (data) => {
-    res.json(data);
-  });
-});
-
 
 export default prodRouter;
