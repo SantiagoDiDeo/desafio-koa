@@ -1,4 +1,4 @@
-import passport from 'koa-passport';
+import passport from '../DB/config/auth.js';
 import multer from 'multer';
 import '../DB/config/auth.js';
 
@@ -6,7 +6,7 @@ import {getAllUsersController, createUserController, getUserControllerByUsername
 
 
 import Router from '@koa/router';
-const sessRouter =  new Router({ prefix: '/'});
+const sessRouter =  new Router();
 
 
 
@@ -26,7 +26,7 @@ const upload = multer.diskStorage({
 
   sessRouter.get('/', async (ctx) => {
     const users = await getAllUsersController()
-    ctx.body = users;
+    ctx.body = {users: ''};
   });
 
   sessRouter.post('/signup', passport.authenticate('signup'), async (ctx) => {

@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-export  const PORT = process.argv.slice(2)[0] ?? 8080;
+export  const PORT = process.argv.slice(2)[0] ?? 3000;
 export  const mongoUrl = process.env.MONGO_URI;
 export  const persistence = process.env.PERSISTENCE;
 export  const emailService = process.env.EMAIL_SERVICE;

@@ -1,4 +1,4 @@
-import passport from 'passport';
+import passport from 'koa-passport';
 import {Strategy as LocalStrategy} from 'passport-local';
 import { compareSync, hashSync} from 'bcrypt';
 import { getAllUsersController, createUserController, getUserControllerByUsername } from '../../controllers/userController.js';
@@ -50,3 +50,5 @@ passport.use('login', new LocalStrategy(async (username, password, done) => {
       done(error);
     }
   }));
+
+  export default passport;

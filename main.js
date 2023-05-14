@@ -1,7 +1,6 @@
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 import http from 'http';
-import { Server } from 'socket.io';
 
 
 import cluster from 'cluster';
@@ -10,13 +9,10 @@ import benchmark from './autocannon/autocannon.js';
 import prodRouter from './routes/prodRouter.js';
 import sessRouter from './routes/sessionRouter.js';
 import infoRouter from './routes/infoRouter.js';
-import { getAllProductsController, addProductController } from './controllers/productController.js';
-import { getChatsController, addChatsController } from './controllers/chatController.js';
 import dotenv from 'dotenv';
 import path from 'path';
 import * as url from 'url';
 import { PORT } from './environments/environment.js';
-import connectToDb from './DB/config/connectToDb.js';
 
 import  Koa  from 'koa';
 import { koaBody} from 'koa-body';
@@ -39,17 +35,14 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 
 const app = new Koa();
-const httpServer = http.createServer(app);
-const io = new Server(httpServer, {cors: {origin: "*"}});
+const httpServer = http.createServer(app.callback());
 
 app.use(koaBody());
 app.use(koaStatic(`${__dirname}/public`));
 app.use(koaBodyParser());
-app.use(koaStatic(path.join(__dirname, 'public')));
 
-app.keys = ['secreto1']; // Clave de cifrado para la sesión, reemplázala con tu valor deseado
-app.use(session({ connectToDb }, app));
-//app.use(session({connectToDb, secret: 'secreto1', resave: true, saveUninitialized: true}));
+app.keys = ['secreto1']; 
+app.use(session({}, app));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -57,7 +50,6 @@ app.use(passport.session());
 
 httpServer.on('error', (error) => {
   logger.error('ocurrio un error: ', error)
-  //console.log(`ERRORRRR ${error}`);
 });
 
 
@@ -76,39 +68,8 @@ app.use(views(path.join(__dirname, 'views'), {
 
 
 
-  
-//socket
-io.on('connection', async socket => {
-  logger.info(`New connection id: ${socket.id}`);
-
-//tabla productos
-  socket.on('getProduct', async (product) => {
-    const products = await getAllProductsController(product);
-    io.sockets.emit('newProduct', products);
-  });
-  
-
-// nuevo producto
-  socket.on('newProduct', async (product) => {
-    const productToAdd = await addProductController(product);
-    io.sockets.emit('newProduct', productToAdd);
-  });
-
-  //tabla chat
-  socket.on('newChat', async (msg) => {
-    await getChatsController()
-    const chatToAdd =  await addChatsController(msg)
-    io.sockets.emit('newChat', chatToAdd);
-  });
-  
-});
-
-app.use(sessRouter.routes()).use(sessRouter.allowedMethods({
-  prefix: '/' 
-}));
-app.use(prodRouter.routes()).use(prodRouter.allowedMethods({
-  prefix: '/products' 
-}));
+app.use(sessRouter.routes()).use(sessRouter.allowedMethods({prefix: '/' }));
+app.use(prodRouter.routes()).use(prodRouter.allowedMethods({prefix: '/products' }));
 app.use(infoRouter.routes());
 
 
